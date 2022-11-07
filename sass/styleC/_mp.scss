@@ -1,0 +1,219 @@
+// 首頁區塊設定
+//大圖區塊
+.mpBanner .container {
+  overflow: hidden;
+  padding: 90px 50px 70px;
+  position: relative;
+  @include screen('tablet') {
+    padding: 100px 40px 60px;
+  }
+  @include screen('mobile') {
+    padding: 50px 20px 40px;
+  }
+  &::before {
+    content: '';
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    background: #d0d9e9;
+    top: 95px;
+    left: 0;
+    @include screen('mobile') {
+      top: 55px;
+    }
+  }
+  .titleBox {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    color: #32307c;
+    padding: 30px 0 0;
+    position: relative;
+    font-weight: 500;
+    line-height: 1;
+    z-index: 9;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0px;
+      width: 27px;
+      height: 4px;
+      background: #32307c;
+    }
+  }
+  .txtBox {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    .slideCon {
+      white-space: nowrap;
+      font-size: 180px;
+      line-height: 0.9;
+      font-weight: 100;
+      color: #fff;
+      opacity: 0.5;
+      letter-spacing: -4px;
+      padding-right: 30px;
+      animation: rightAnimationIn 20s linear infinite;
+      @include screen('mobile') {
+        font-size: 100px;
+      }
+    }
+  }
+}
+.main {
+  z-index: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 481px;
+    background: url('../images/inner_bannerC.jpg') left top no-repeat;
+    z-index: -1;
+  }
+}
+
+//index btn
+.moreBtn {
+  max-width: 230px;
+  border-radius: 0px;
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 17px 30px 15px;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-size: 1.12rem;
+  font-weight: 500;
+  margin: 0 auto;
+  z-index: 0;
+  overflow: hidden;
+  background: rgb(51, 13, 105);
+  background: -moz-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%);
+  background: -webkit-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%);
+  background: linear-gradient(to right, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d69', endColorstr='#30c9cd',GradientType=1 );
+
+  &::after {
+    content: '';
+    width: 22px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    left: 100%;
+    margin-left: -50px;
+    background: url('../images/index/styleC_arrow.svg') no-repeat;
+  }
+  &:focus,
+  &:hover {
+    color: #fff !important;
+    &::after {
+      animation: rightAnimation 1s infinite $cubic;
+    }
+  }
+}
+
+.infoListBlock .container,
+.searchBlock .container {
+  margin-left: 50px;
+  margin-right: 50px;
+  @include screen('tablet') {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include screen('mobile') {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.searchBlock {
+  margin-bottom: 40px;
+  .container {
+    padding: 4% 20px;
+    background: rgb(51, 13, 105);
+    background: -moz-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%);
+    background: linear-gradient(to right, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d69', endColorstr='#30c9cd',GradientType=1 );
+
+    .searchBtn {
+      background: #034f78;
+    }
+  }
+}
+
+//其他色系/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .mpBanner .container {
+      .titleBox {
+        @if $item == nth($colorStyle, 1) {
+          color: nth($fourthColor, 1);
+        } @else {
+          color: nth($fourthColor, 2);
+        }
+        &::before {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($fourthColor, 1);
+          } @else {
+            color: nth($fourthColor, 2);
+          }
+        }
+      }
+    }
+    .searchBlock {
+      .container {
+        @if $item == nth($colorStyle, 1) {
+          background: nth($mainColor, 1);
+          background: -moz-linear-gradient(left, nth($mainColor, 1) 0%, nth($secColor, 1) 100%);
+          background: -webkit-linear-gradient(left, nth($mainColor, 1) 0%, nth($secColor, 1) 100%);
+          background: linear-gradient(to right, nth($mainColor, 1) 0%, nth($secColor, 1) 100%);
+        } @else {
+          background: nth($mainColor, 2);
+          background: -moz-linear-gradient(left, nth($mainColor, 2) 0%, nth($secColor, 2) 100%);
+          background: -webkit-linear-gradient(left, nth($mainColor, 2) 0%, nth($secColor, 2) 100%);
+          background: linear-gradient(to right, nth($mainColor, 2) 0%, nth($secColor, 2) 100%);
+        }
+
+        .searchBtn {
+          @if $item == nth($colorStyle, 1) {
+            background: nth($thirdColor, 1);
+          } @else {
+            background: nth($thirdColor, 2);
+          }
+        }
+      }
+    }
+
+    //index btn
+    .moreBtn {
+      @if $item == nth($colorStyle, 1) {
+        background: nth($mainColor, 1);
+        background: -moz-linear-gradient(left, nth($mainColor, 1) 0%, nth($secColor, 1) 100%);
+        background: -webkit-linear-gradient(left, nth($mainColor, 1) 0%, nth($secColor, 1) 100%);
+        background: linear-gradient(to right, nth($mainColor, 1) 0%, nth($secColor, 1) 100%);
+      } @else {
+        background: nth($mainColor, 2);
+        background: -moz-linear-gradient(left, nth($mainColor, 2) 0%, nth($secColor, 2) 100%);
+        background: -webkit-linear-gradient(left, nth($mainColor, 2) 0%, nth($secColor, 2) 100%);
+        background: linear-gradient(to right, nth($mainColor, 2) 0%, nth($secColor, 2) 100%);
+      }
+    }
+  }
+}
+
+.colorMenu {
+  .itemC {
+    display: block;
+  }
+}

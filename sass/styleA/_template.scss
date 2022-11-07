@@ -1,0 +1,159 @@
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+  @include screen('mobile') {
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: 96px;
+  }
+
+  @include screen('xs_mobile') {
+    padding-top: 60px;
+  }
+}
+
+.innerBanner {
+  margin: 0;
+  margin-bottom: -80px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  @include screen('tablet') {
+    margin-bottom: -50px;
+  }
+  @include screen('mobile') {
+    margin-bottom: 0px;
+  }
+  img {
+    max-width: none;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include screen('tablet') {
+      height: 250px;
+    }
+    @include screen('mobile') {
+      height: 150px;
+    }
+  }
+  h2.pageTitle {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    @include screen('tablet') {
+      font-size: 1.6em;
+      transform: translateY(-30%);
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 1px;
+      background: #fff;
+      margin: 20px auto 0;
+      font-size: 0.1em;
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+  }
+  .blockB,
+  .blockC {
+    display: none;
+  }
+}
+.innerpage {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    height: 50%;
+    z-index: -2;
+    background: -moz-linear-gradient(top, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 0) 100%);
+    background: linear-gradient(to bottom, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#00f7f7f7',GradientType=0 );
+  }
+  > .container {
+    z-index: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      opacity: 0.7;
+      width: 100%;
+      height: 300px;
+      left: 0;
+      z-index: -2;
+      display: block;
+      background: url('../images/index/styleA_banner_bg.jpg') center bottom repeat-x;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      opacity: 1;
+      width: 100%;
+      height: 300px;
+      left: 0;
+      z-index: -2;
+      display: block;
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}
+//main
+.main {
+  // padding-top: 129px;
+  position: relative;
+  margin: 0 auto;
+  // 可先設定一個中央區塊最大寬，限制accesskey對齊
+}
+.menuFix {
+  .header {
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    .navlist {
+      display: none;
+    }
+  }
+  &.pcMenuUse {
+    .wrapper {
+      position: relative;
+      padding-top: 149px;
+    }
+  }
+  &.mobileMenuUse {
+    .wrapper {
+      position: relative;
+      padding-top: 85px;
+    }
+  }
+  .wrapper {
+    @include screen('mobile') {
+      padding-top: 96px;
+    }
+
+    @include screen('xs_mobile') {
+      padding-top: 60px;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@mixin fontSetting($FONT-SIZE: $font-size, $WEIGHT: normal) {
+  font-size: $FONT-SIZE;
+  font-weight: $WEIGHT;
+  color: $color-word;
+}
+
+@mixin aSetting($COLOR: $aColor, $NOLINE: none) {
+  color: $COLOR;
+  text-decoration: $NOLINE;
+  &:hover,
+  &:focus {
+    // color: $aHover;
+    cursor: pointer;
+  }
+}
+
+@mixin aSetting_nocolor($COLOR: $color-word, $NOLINE: none) {
+  color: $COLOR;
+  text-decoration: $NOLINE;
+  &:hover,
+  &:focus {
+    color: $aHover;
+    cursor: pointer;
+  }
+}
+body {
+  @include fontSetting(1em);
+  line-height: 1.5em;
+  font-family: $font-family;
+  -webkit-text-size-adjust: none;
+}
+a {
+  @include aSetting();
+}
+// kbd
+kbd {
+  background: #fff;
+  border-radius: 0.2em;
+  color: #555;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  font-size: 0.938em;
+  font-family: sans-serif;
+  margin-right: 0.4em;
+  margin-bottom: 0.1em;
+  vertical-align: middle;
+  border-top: 1px solid #bbb;
+  border-bottom: 3px solid #bbb;
+  border-left: 2px solid #bbb;
+  border-right: 2px solid #bbb;
+  ~ kbd {
+    margin-left: 0.4em;
+  }
+  kbd {
+    border: none;
+  }
+}
+
+// 字級
+.font_size {
+  display: flex;
+  flex: 0 1 auto;
+  position: relative;
+  z-index: 100;
+  > a {
+    flex-shrink: 0;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border: rgb(176, 176, 176) 1px solid;
+    font-size: 1em;
+    border-radius: 50%;
+    transition: 0.3s $cubic;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background: $primaryColor;
+    }
+  }
+
+  ul {
+    @include li-reset;
+    display: none;
+    position: absolute;
+    top: 100%;
+    li {
+      flex: 0 0 auto;
+      margin: 2px;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        border-radius: 50%;
+        background: #f1f1f1;
+        width: 3.2rem;
+        height: 3.2rem;
+        color: #333;
+        &:hover,
+        &:focus {
+          background: $aHover;
+          color: #fff;
+        }
+        &.active {
+          background: $aHover;
+          color: #fff;
+          &:hover,
+          &:focus {
+            background: $aHover;
+            color: #fff;
+          }
+        }
+        &.small {
+          font-size: 0.938em;
+        }
+        &.large {
+          font-size: 1.125em;
+        }
+      }
+      &:nth-child(1) a {
+        &::before {
+          content: '小';
+        }
+      }
+      &:nth-child(2) a {
+        &::before {
+          content: '中';
+        }
+      }
+      &:nth-child(3) a {
+        &::before {
+          content: '大';
+        }
+      }
+    }
+  }
+  @include screen('mobile') {
+    display: none;
+  }
+}

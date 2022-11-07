@@ -1,0 +1,60 @@
+// 此變數為框架之整體變數，控制整體網站之設定，包含 顏色、文字、格線系統
+// 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
+
+// $colorStyle: (
+//   colorStyleA: (
+//     class: 'colorStyleA',
+//     primaryColor: #1b2865,
+//     aColor: #1b2865,
+//     aHover: lighten(#1b2865, 20),
+//     aFocus: lighten(#1b2865, 30),
+//     colorOrange: (
+//       #ff5001,
+//       #c9a66c,
+//     ),
+//     colorGold: #c9a66c,
+//   ),
+// );
+
+$colorStyle: '.colorStyleA', '.colorStyleB';
+$mainColor: #1b2865, #751829;
+$secColor: #d75528, #d75528;
+$thirdColor: #1b2865, #d75528;
+$fourthColor: #0d5f76, #ab274a;
+$dlColor: #3148b5, #751829;
+$aTagColor: #1b2865, #751829;
+$iColor: #ff5001, #caa76d;
+$aTagHover: lighten(nth($aTagColor, 1), 0), lighten(nth($aTagColor, 2), 0);
+$aTagFocus: lighten(nth($secColor, 1), 0), lighten(nth($secColor, 2), 0);
+// $length: length($colorStyle);
+//---------------------------------------------------顏色---------//
+// 定義顏色 此顏色可自由變換
+$primaryColor: #1b2865; //主色
+$secondaryColor: #ff5001; //輔色
+$lightColor: #fec003; //點綴
+$linkColor: #0066cc; //連結
+$importantColor: #eb0202; //重要
+// 但注意真實顏色與語意的關聯必須易於辨識
+$color-blue: #0066cc;
+$color-green: #298729;
+$color-orange: #c6461a;
+$color-gold: #c9a66c;
+$color-red: #d30000;
+$color-yellow: #fec003;
+$color-purple: #781f79;
+$color-gray: #ccc;
+$color-dark: #333333;
+$color-hr: #666; //hr顏色
+$color-word: #313131; //一般字的顏色
+$btn-word: #222; //按鈕字的顏色
+// 連結顏色
+$aColor: #1b2865;
+$aHover: lighten($aColor, 20);
+$aFocus: lighten($aColor, 30);
+// 表單focus顏色
+$form-focus: #d75528; //表單
+$form-btn: #0066cc; //表單
+
+$downloadColor: #1b2865; //下載icon
+
+//------------------------------------------------------字型--------//

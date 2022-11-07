@@ -1,0 +1,177 @@
+footer {
+  box-sizing: border-box;
+  @include clearfix;
+  text-align: left;
+  padding: 50px 10px 40px;
+  background: #00050a;
+  color: #fff;
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    @include gutter;
+    display: flex;
+    @include screen('tablet') {
+      flex-wrap: wrap;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: lighten($primaryColor, 10);
+    }
+  }
+  .footerBottomInfo {
+    display: flex;
+    flex-wrap: wrap;
+    @include screen('tablet') {
+      span {
+        display: block;
+      }
+    }
+  }
+  .footerLogo {
+    flex: 0 1 auto;
+  }
+  .footerInfo {
+    width: 45%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include screen('tablet') {
+      width: 100%;
+      padding-right: 0;
+    }
+    @include screen('mobile') {
+      text-align: center;
+    }
+  }
+  .footerData {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    @include screen('mobile') {
+      justify-content: center;
+    }
+    .footerUpdate {
+      display: flex;
+      em {
+        margin-left: 10px;
+      }
+      .update {
+        margin-left: 20px;
+      }
+      @include screen('mobile') {
+        flex-direction: column;
+        align-items: flex-end;
+        .update {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+
+  // 版權連結
+  .footer_link {
+    @include li-reset();
+    @include clearfix();
+    display: flex;
+    @include screen('mobile') {
+      flex-direction: column;
+    }
+    li {
+      flex: 0 1 auto;
+      margin: 0px 5px 5px 0px;
+      @include screen('mobile') {
+        flex: 1 1 100%;
+      }
+      a {
+        display: block;
+        padding: 0.5em 1em;
+        color: #fff;
+        border-radius: 4px;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        &:hover,
+        &:focus {
+          color: darken($color-orange, 10);
+        }
+      }
+    }
+  }
+  .footerIcon {
+    max-width: 150px;
+    margin: 0 0 0 auto;
+    @include screen('mobile') {
+      margin: 0 0 0 10px;
+    }
+    a {
+      display: block;
+      position: relative;
+      &:focus {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+  }
+}
+
+.footerMenu {
+  width: 54%;
+  position: relative;
+  margin: 0 0 0 auto;
+  @include screen('tablet') {
+    display: none;
+  }
+  nav {
+    margin-bottom: 10%;
+    & > ul > li {
+      width: calc((100% / 4) - 20px);
+      margin: 0 0 20px 20px !important;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+    li {
+      list-style: none;
+      & + li {
+        margin: 0 0 20px 30px;
+      }
+      a {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1em;
+        transition: 0.3s $cubic;
+        &:hover {
+          color: lighten($aColor, 10);
+        }
+      }
+      ul {
+        display: block;
+        opacity: 0.8;
+        padding-top: 10px;
+
+        li {
+          margin: 0 0 10px 0;
+          a {
+            font-weight: normal;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,433 @@
+// 首頁區塊設定
+
+//大圖區塊
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background: #f5f7f9 url('../images/index/styleB_footer_bg.jpg') center bottom no-repeat;
+}
+.mpSliderBlock {
+  .container {
+    position: relative;
+  }
+  .img-container {
+    @include aspect-ratio(100, 39);
+  }
+  .txtBox {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 18%;
+    max-width: 500px;
+    max-height: 100px;
+    padding: 0 20px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    @include screen('xs_mobile') {
+      bottom: 0;
+    }
+    .title {
+      margin-bottom: 35px;
+      position: relative;
+      font-family: $ff-noto-serif;
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 1.6;
+      letter-spacing: 10px;
+      text-indent: 10px;
+      color: #003e61;
+      @include screen('tablet') {
+        font-size: 4rem;
+        line-height: 1.4;
+      }
+      @include screen('xs_mobile') {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+      .sub {
+        line-height: 1;
+        font-size: 2.8rem;
+        letter-spacing: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #049061;
+        @include screen('tablet') {
+          font-size: 2rem;
+        }
+        span {
+          display: block;
+          padding: 0 12px;
+          position: relative;
+          text-align: center;
+          & + span {
+            &::before {
+              content: '';
+              position: absolute;
+              left: 2px;
+              width: 2px;
+              height: 100%;
+              background: #049061;
+            }
+          }
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        z-index: -1;
+        box-shadow: 0 0 100px 50px rgba(255, 255, 255, 1), 0 0 100px 50px rgba(255, 255, 255, 1);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .mpSlider {
+    padding-bottom: 0;
+
+    .slick-arrow {
+      display: none !important;
+      background-color: transparent;
+      background-size: 100%;
+      width: 80px !important;
+      height: 80px !important;
+      @include screen('mobile') {
+        display: block !important;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    right: 15px;
+    justify-content: center;
+    @include screen('mobile') {
+      right: 0;
+      bottom: -40px;
+      justify-content: center;
+      padding-right: 110px;
+    }
+    @include screen('xs_mobile') {
+      padding-right: 75px;
+    }
+    li {
+      width: auto;
+      height: 2px;
+      @include screen('mobile') {
+        width: 16px;
+        height: 16px;
+      }
+      button {
+        width: 95px;
+        height: 2px;
+        border-radius: 0;
+        background: #fff;
+        position: relative;
+        opacity: 1;
+        @include screen('mobile') {
+          background: #d2d2d2;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+        }
+        &::before {
+          content: '';
+          border-radius: 0;
+          height: 2px;
+          right: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: auto;
+          z-index: 2;
+          background: #049061;
+          @include screen('mobile') {
+            display: none;
+          }
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            animation: bannerLine 5000ms linear forwards;
+          }
+          @include screen('mobile') {
+            background: #001827;
+          }
+        }
+      }
+    }
+  }
+}
+.titleBox {
+  max-width: 170px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 5%;
+  text-align: left;
+  position: relative;
+  line-height: 1;
+  text-transform: uppercase;
+  @include screen('mobile') {
+    margin-bottom: 30px;
+  }
+  @include screen('xs_mobile') {
+    max-width: 140px;
+    margin: 0 auto 5% 10px;
+  }
+  .en {
+    font-family: $ff-tenor-sans;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.5rem;
+    order: 0;
+    transform-origin: 0;
+    transform: scale(1.1, 1);
+    left: 0;
+    margin-bottom: 10px;
+    @include screen('mobile') {
+      font-size: 1.2rem;
+    }
+  }
+  .zh {
+    font-size: 2.25rem;
+    font-family: $ff-noto-serif;
+    font-weight: 600;
+    letter-spacing: 5px;
+    order: 1;
+    @include screen('mobile') {
+      font-size: 1.8rem;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 66px;
+    height: 4px;
+    background: #313131;
+    left: calc(100% + 20px);
+    bottom: 0;
+    @include screen('xs_mobile') {
+      left: calc(100% + 10px);
+    }
+  }
+}
+
+.newsBlock {
+  .container {
+    padding: 40px 80px 10% 0;
+    background: url('../images/index/styleB_news_bg.jpg') right top no-repeat;
+    position: relative;
+    // overflow: hidden;
+    @include screen('mobile') {
+      padding: 40px 40px 10% 0;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      top: 40%;
+      left: 0;
+      right: 0;
+      background: -moz-linear-gradient(top, rgba(245, 247, 249, 0) 0%, rgba(245, 247, 249, 1) 70%, rgba(245, 247, 249, 1) 100%);
+      background: -webkit-linear-gradient(top, rgba(245, 247, 249, 0) 0%, rgba(245, 247, 249, 1) 70%, rgba(245, 247, 249, 1) 100%);
+      background: linear-gradient(to bottom, rgba(245, 247, 249, 0) 0%, rgba(245, 247, 249, 1) 70%, rgba(245, 247, 249, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ebedef', endColorstr='#ebedef',GradientType=0 );
+      z-index: 1;
+    }
+  }
+  .news {
+    border-radius: 0 80px 80px 0;
+    padding: 5% 10px 8%;
+    background: #fff url('../images/index/styleB_news_bg2.jpg') right bottom no-repeat;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    @include screen('mobile') {
+      padding: 40px 10px 8%;
+    }
+  }
+  .tabSet {
+    max-width: 820px;
+    margin: 0 auto;
+    .tabContent {
+      ul {
+        padding: 0;
+        margin-bottom: 45px;
+      }
+      li {
+        list-style: none;
+        border-bottom: #ebedef 1px solid;
+        a {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 20px 0;
+          transition: 0.3s $cubic;
+          &:focus,
+          &:hover {
+            transform: translateX(-5px);
+            .title {
+              color: #0d5f76;
+            }
+          }
+        }
+        .date,
+        .tag {
+          font-size: 0.87rem;
+          color: #999999;
+          padding: 0;
+          margin: 0 0 20px 0;
+        }
+        .date {
+          &::after {
+            content: '/';
+            margin: 0 10px;
+          }
+        }
+        .tag {
+          &::before {
+            display: none;
+          }
+        }
+        .title {
+          width: 100%;
+          font-size: 1em;
+          color: #535353;
+          font-weight: 500;
+          padding: 0;
+          margin: 0;
+          transition: 0.3s $cubic;
+        }
+        .txt {
+          width: 100%;
+          line-height: 1.8;
+          margin: 10px 0 0;
+          color: #666666;
+        }
+      }
+      .moreBtn {
+        font-size: 1em;
+        color: #535353;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        transition: 0.3s $cubic;
+        &::after {
+          content: '';
+          width: 38px;
+          height: 19px;
+          // background: url('../images/index/styleB_news_arrow.png') no-repeat;
+          position: absolute;
+          left: calc(100% + 10px);
+          bottom: 0;
+        }
+        &:hover {
+          color: $aColor;
+          &::after {
+            animation: leftAnimation 1.8s 0s $cubic infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+//其他色系/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .mpSliderBlock {
+      .txtBox {
+        .title {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($thirdColor, 1);
+          } @else {
+            color: nth($thirdColor, 2);
+          }
+          .sub {
+            @if $item == nth($colorStyle, 1) {
+              color: nth($aTagColor, 1);
+            } @else {
+              color: nth($aTagColor, 2);
+            }
+            span {
+              & + span {
+                &::before {
+                  @if $item == nth($colorStyle, 1) {
+                    background: nth($aTagColor, 1);
+                  } @else {
+                    background: nth($aTagColor, 2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .slick-dots {
+        li {
+          button {
+            &::before {
+              @if $item == nth($colorStyle, 1) {
+                background: nth($aTagColor, 1);
+              } @else {
+                background: nth($aTagColor, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .newsBlock {
+      .news {
+        @if $item == nth($colorStyle, 1) {
+          background: #fff url('../images/index/styleB_news_bg2.jpg') right bottom no-repeat;
+        } @else {
+          background: #fff url('../images/index/styleB_news_bg2_2.jpg') right bottom no-repeat;
+        }
+      }
+      .tabSet {
+        .tabContent {
+          li {
+            a {
+              &:focus,
+              &:hover {
+                .title {
+                  @if $item == nth($colorStyle, 1) {
+                    color: nth($fourthColor, 1);
+                  } @else {
+                    color: nth($fourthColor, 2);
+                  }
+                }
+              }
+            }
+          }
+          .moreBtn {
+            &:hover {
+              @if $item == nth($colorStyle, 1) {
+                color: nth($secColor, 1);
+              } @else {
+                color: nth($secColor, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+    //end//
+  }
+}
+
+.colorMenu {
+  .itemB {
+    display: block;
+  }
+}

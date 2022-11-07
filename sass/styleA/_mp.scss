@@ -1,0 +1,575 @@
+// 首頁區塊設定
+// 大圖區塊
+.mpSliderBlock {
+  background: url('../images/index/styleA_banner_bg.jpg') center top repeat-x;
+  .container {
+    display: flex;
+    padding-bottom: 45px;
+    position: relative;
+    @include screen('mobile') {
+      padding-bottom: 70px;
+    }
+  }
+  .mpSlider {
+    padding-bottom: 0;
+
+    .img-container {
+      padding-left: 256px;
+      background: none;
+      @include screen('tablet') {
+        padding-left: 150px;
+      }
+      @include screen('mobile') {
+        padding-left: 110px;
+      }
+      @include screen('xs_mobile') {
+        padding-left: 75px;
+      }
+      .picBox {
+        right: 0;
+        left: auto;
+        position: absolute;
+        width: calc(100% - 256px);
+        height: 100%;
+        top: 0;
+        @include screen('tablet') {
+          width: calc(100% - 150px);
+        }
+        @include screen('mobile') {
+          width: calc(100% - 110px);
+        }
+        @include screen('xs_mobile') {
+          width: calc(100% - 75px);
+        }
+      }
+    }
+    .slick-list {
+      .slick-active {
+        // animation: bannerFade 5000ms linear forwards;
+      }
+    }
+    .slick-arrow {
+      display: none !important;
+      background-color: transparent;
+      background-size: 100%;
+      width: 80px !important;
+      height: 80px !important;
+      @include screen('mobile') {
+        display: block !important;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.slick-prev {
+        left: 0px;
+      }
+      &.slick-next {
+        @include screen('xs_mobile') {
+          right: 0px;
+        }
+      }
+    }
+  }
+  .txtBox {
+    width: 100%;
+    max-width: 370px;
+    top: 10%;
+    left: 86px;
+    position: absolute;
+    z-index: 2;
+    @include screen('tablet') {
+      max-width: 300px;
+      left: 40px;
+      top: 15%;
+    }
+    @include screen('mobile') {
+      left: 140px;
+    }
+    @include screen('xs_mobile') {
+      max-width: 250px;
+      left: 100px;
+    }
+    .title {
+      margin-bottom: 35px;
+      position: relative;
+      font-family: $ff-noto-serif;
+      font-size: 3.6rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 2px;
+      @include screen('tablet') {
+        font-size: 3rem;
+      }
+      @include screen('xs_mobile') {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+      span {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        display: block;
+        @include screen('xs_mobile') {
+          font-size: 1em;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        z-index: -1;
+        box-shadow: 0 0 100px 50px rgba(255, 255, 255, 1), 0 0 100px 50px rgba(255, 255, 255, 1);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    right: 15px;
+    justify-content: flex-end;
+    @include screen('mobile') {
+      right: 0;
+      bottom: -40px;
+      justify-content: center;
+    }
+    li {
+      width: auto;
+      height: 2px;
+      @include screen('mobile') {
+        width: 16px;
+        height: 16px;
+      }
+      button {
+        width: 95px;
+        height: 2px;
+        border-radius: 0;
+        background: #fff;
+        position: relative;
+        opacity: 1;
+        @include screen('mobile') {
+          background: #d2d2d2;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+        }
+        &::before {
+          content: '';
+          border-radius: 0;
+          height: 2px;
+          right: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: auto;
+          z-index: 2;
+          background: $color-orange;
+          @include screen('mobile') {
+            display: none;
+          }
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            animation: bannerLine 5000ms linear forwards;
+          }
+          @include screen('mobile') {
+            background: #001827;
+          }
+        }
+      }
+    }
+  }
+}
+//index btn
+.moreBtn {
+  max-width: 200px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  background: $primaryColor;
+  color: #fff;
+  padding: 25px 30px 25px 50px;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin: 0 auto;
+  z-index: 0;
+  overflow: hidden;
+  @include screen('mobile') {
+    max-width: 170px;
+    padding: 20px 15px 20px 20px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: $color-orange;
+    transition: 0.3s $cubic;
+  }
+  &::after {
+    content: '';
+    width: 18px;
+    height: 14px;
+    margin-left: 20px;
+    display: block;
+    background: url('../images/index/reserve_arrow.svg') no-repeat;
+  }
+  &:focus,
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+      left: 0;
+    }
+    &::after {
+      animation: rightAnimation 1s infinite $cubic;
+    }
+  }
+}
+//title區塊
+.titleBox {
+  text-align: center;
+  margin-bottom: 3%;
+  position: relative;
+  @include screen('mobile') {
+    margin-bottom: 30px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    background: #a1abb6;
+    left: 50%;
+    margin-left: -100px;
+    width: 2px;
+    height: 150px;
+    transform: rotate(60deg);
+    top: -90px;
+  }
+  .zh {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 7px;
+    position: relative;
+    @include screen('mobile') {
+      letter-spacing: 5px;
+    }
+  }
+  .en {
+    text-transform: uppercase;
+    color: $color-orange;
+    font-family: $ff-urbanist;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.12rem;
+  }
+}
+
+//申請程序
+
+.newsBlock {
+  .titleBox {
+    width: 100%;
+    height: 390px;
+    max-width: 315px;
+    margin-bottom: 0;
+    margin-right: -12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: #1b2865;
+    background: -moz-linear-gradient(-45deg, #1b2865 45%, #c6461a 100%);
+    background: -webkit-linear-gradient(-45deg, #1b2865 45%, #c6461a 100%);
+    background: linear-gradient(-45deg, #1b2865 45%, #c6461a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2865', endColorstr='#c6461a',GradientType=1 );
+    @include screen('tablet') {
+      margin-right: -13%;
+    }
+    @media screen and (max-width: 830px) {
+      max-width: 380px;
+      height: auto;
+      padding: 100px 20px;
+      margin: -90px auto;
+    }
+    @include screen('mobile') {
+      max-width: 300px;
+      height: 200px;
+      padding: 60px 20px 30px;
+      margin: -70px auto;
+      background: -moz-linear-gradient(-45deg, #1b2865 50%, #c6461a 110%);
+      background: -webkit-linear-gradient(-45deg, #1b2865 50%, #c6461a 110%);
+      background: linear-gradient(-45deg, #1b2865 50%, #c6461a 110%);
+    }
+    &::before {
+      left: 160px;
+      height: 290px;
+      margin-left: unset;
+      top: -80px;
+      transform: rotate(57deg);
+      @media screen and (max-width: 830px) {
+        top: -130px;
+        left: 150px;
+      }
+      @include screen('mobile') {
+        top: -80px;
+        height: 200px;
+        left: 110px;
+      }
+    }
+    .zh {
+      color: #fff;
+      letter-spacing: 2px;
+    }
+    .en {
+      color: #fff;
+    }
+  }
+
+  .container {
+    padding: 156px 0px 60px;
+    background: url('../images/index/styleA_news_bg.jpg') center bottom no-repeat;
+    @include screen('tablet') {
+      background-size: cover;
+      background-position: center top;
+    }
+    @media screen and (max-width: 830px) {
+      padding: 0px 0px 40px;
+    }
+    @include screen('mobile') {
+      background: url('../images/index/styleA_news_bg_m.jpg') center bottom no-repeat;
+    }
+  }
+  .news {
+    background-size: 100%;
+    display: flex;
+    position: relative;
+    z-index: 0;
+    @media screen and (max-width: 830px) {
+      flex-direction: column;
+    }
+    .conBox {
+      position: relative;
+      flex-grow: 1;
+      @media screen and (max-width: 830px) {
+        margin-top: 140px;
+      }
+      ul {
+        padding: 0 90px 0 200px;
+        margin: 0 0 120px 0;
+        position: relative;
+        @include screen('tablet') {
+          padding: 0 60px 0 160px;
+        }
+        @media screen and (max-width: 830px) {
+          padding: 0 0px 0 110px;
+          margin: 0 0 100px 0;
+        }
+        @include screen('xs_mobile') {
+          padding: 0 0px 0 60px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: -70px;
+          bottom: -70px;
+          right: 0;
+          left: 0%;
+          background: #fff;
+          opacity: 0.95;
+          z-index: -1;
+          @media screen and (max-width: 830px) {
+            margin-top: -60px;
+            bottom: -60px;
+            left: 40px;
+          }
+          @include screen('xs_mobile') {
+            left: 20px;
+          }
+        }
+        li {
+          list-style: none;
+          padding-bottom: 25px;
+          margin-bottom: 25px;
+          border-bottom: #dddddd 1px solid;
+          transition: 0.3s $cubic;
+          position: relative;
+          @media screen and (max-width: 830px) {
+            padding-right: 30px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          a {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+          }
+          .title {
+            width: 100%;
+            padding: 0;
+            margin: 0 0 15px 0;
+            font-weight: 500;
+            font-size: 1.12em;
+            letter-spacing: 2px;
+            color: $color-word;
+            transition: 0.3s $cubic;
+            @include screen('xs_mobile') {
+              margin: 0 0 10px 0;
+            }
+          }
+          .tag {
+            padding: 0;
+            margin: 0 20px;
+            background: $color-word;
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.87rem;
+            padding: 5px 9px;
+            white-space: nowrap;
+            &::before {
+              display: none;
+            }
+          }
+          .date {
+            width: 100px;
+            color: $color-word;
+            font-size: 1em;
+            font-weight: 400;
+            padding-top: 2px;
+            font-family: 'Verdana';
+          }
+          .txt {
+            width: calc(100% - 250px);
+            color: $color-word;
+            margin: 0;
+            font-size: 1em;
+            padding-top: 2px;
+            @include screen('tablet') {
+              width: 100%;
+              padding-top: 10px;
+            }
+            @media screen and (max-width: 830px) {
+              padding-top: 20px;
+            }
+          }
+
+          @for $i from 1 through 3 {
+            &.wow:nth-child(#{$i}) {
+              animation-delay: #{0.2 * $i + 0.4}s;
+            }
+          }
+          &:hover {
+            .title {
+              color: $color-orange;
+            }
+          }
+        }
+      }
+    }
+    .indexBtn {
+      max-width: 310px;
+      margin: 0 auto;
+      @include screen('xs_mobile') {
+        max-width: 210px;
+      }
+    }
+  }
+}
+
+//其他色系/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    //大圖
+    .mpSliderBlock {
+      .slick-dots {
+        li {
+          button {
+            &::before {
+              @if $item == nth($colorStyle, 1) {
+                color: nth($secColor, 1);
+              } @else {
+                color: nth($secColor, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //index btn
+    .moreBtn {
+      @if $item == nth($colorStyle, 1) {
+        background: nth($mainColor, 1);
+      } @else {
+        background: nth($mainColor, 2);
+      }
+      &::before {
+        @if $item == nth($colorStyle, 1) {
+          background: nth($secColor, 1);
+        } @else {
+          background: nth($secColor, 2);
+        }
+      }
+    }
+
+    .newsBlock {
+      .titleBox {
+        @if $item == nth($colorStyle, 1) {
+          background: nth($mainColor, 1);
+          background: -moz-linear-gradient(-45deg, nth($mainColor, 1) 45%, nth($secColor, 1) 100%);
+          background: -webkit-linear-gradient(-45deg, nth($mainColor, 1) 45%, nth($secColor, 1) 100%);
+          background: linear-gradient(-45deg, nth($mainColor, 1) 45%, nth($secColor, 1) 100%);
+          @include screen('mobile') {
+            background: -moz-linear-gradient(-45deg, nth($mainColor, 1) 50%, nth($secColor, 1) 110%);
+            background: -webkit-linear-gradient(-45deg, nth($mainColor, 1) 50%, nth($secColor, 1) 110%);
+            background: linear-gradient(-45deg, nth($mainColor, 1) 50%, nth($secColor, 1) 110%);
+          }
+        } @else {
+          color: #fff !important;
+          background: nth($mainColor, 2);
+          background: -moz-linear-gradient(-45deg, nth($mainColor, 2) 45%, nth($secColor, 2) 100%);
+          background: -webkit-linear-gradient(-45deg, nth($mainColor, 2) 45%, nth($secColor, 2) 100%);
+          background: linear-gradient(-45deg, nth($mainColor, 2) 45%, nth($secColor, 2) 100%);
+          @include screen('mobile') {
+            background: -moz-linear-gradient(-45deg, nth($mainColor, 2) 50%, nth($secColor, 2) 110%);
+            background: -webkit-linear-gradient(-45deg, nth($mainColor, 2) 50%, nth($secColor, 2) 110%);
+            background: linear-gradient(-45deg, nth($mainColor, 2) 50%, nth($secColor, 2) 110%);
+          }
+        }
+      }
+      .news {
+        .conBox {
+          li {
+            &:hover {
+              .title {
+                @if $item == nth($colorStyle, 1) {
+                  color: nth($aTagHover, 1);
+                } @else {
+                  color: nth($aTagHover, 2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.colorMenu {
+  .itemA {
+    display: block;
+  }
+}

@@ -1,0 +1,381 @@
+@keyframes scrollZ {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes bannerLine {
+  50% {
+    right: 0;
+    left: 0;
+  }
+  100% {
+    right: 0;
+    left: 100%;
+  }
+}
+@keyframes bannerLine {
+  50% {
+    right: 0;
+    left: 0;
+  }
+  100% {
+    right: 0;
+    left: 100%;
+  }
+}
+@keyframes bannerFade {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes leftAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes rightAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rightAnimationIn {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+//datepick
+.ui-datepicker {
+  background: #fff;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+  .ui-datepicker-header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border: solid #333;
+      border-width: 0 0 1px 1px;
+      transform: rotate(45deg);
+    }
+    .ui-datepicker-next {
+      border-width: 0 1px 1px 0;
+      transform: rotate(-45deg);
+      order: 3;
+    }
+  }
+  .ui-datepicker-title {
+    display: flex;
+    align-items: center;
+    select {
+      min-width: 60px;
+      padding: 5px 15px 5px 5px;
+      border: none;
+      -webkit-appearance: none; /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+      -moz-appearance: none; /* FireFox */
+      appearance: none;
+      &::-ms-expand {
+        display: none;
+      }
+      & + select {
+        min-width: 70px;
+      }
+    }
+  }
+  table {
+    th {
+      background: none;
+      border: none;
+      padding: 0px;
+      width: 34px;
+      height: 34px;
+      span {
+        display: block;
+        font-size: 14px;
+        color: #bbb;
+        font-family: $font-family;
+        font-weight: 400;
+      }
+    }
+    td {
+      padding: 0px;
+      border: none;
+      a {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        border-radius: 100%;
+        text-align: center;
+        display: block;
+        font-family: $ff-rajdhani;
+        &.ui-state-highlight {
+          border: 1px solid #bbb;
+          border-radius: 100%;
+        }
+        &.ui-state-active {
+          color: $color-orange;
+        }
+      }
+      &.ui-datepicker-unselectable.ui-state-disabled {
+        color: #bbb;
+      }
+    }
+  }
+}
+
+//選單切換
+.colorMenu,
+.controlMenu {
+  position: fixed;
+  left: 0;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 90px;
+  z-index: 999;
+  background: rgba(243, 243, 243, 0.8);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0 10px 10px 0;
+  padding: 15px 15px 10px;
+  overflow: hidden;
+  @include screen('mobile') {
+    display: none;
+  }
+  span {
+    font-weight: 300;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 3px;
+  }
+  .item {
+    margin-bottom: 7px;
+  }
+  .switch-box {
+    position: relative;
+    height: 24px;
+    width: 60px;
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+    font-size: 11px;
+    font-weight: bold;
+
+    .switch {
+      width: 60px;
+      cursor: pointer;
+      position: relative;
+      padding: 0;
+      margin: 0;
+
+      &:before {
+        content: '';
+        z-index: 3;
+        width: 26px;
+        height: 26px;
+        display: block;
+        border-radius: 100%;
+        position: absolute;
+        overflow: hidden;
+        right: -1px;
+        top: -1px;
+        background: white;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), to(#cdcdcd));
+        background: linear-gradient(to bottom, white 10%, #cdcdcd 100%);
+        -webkit-box-shadow: inset 5px -5px 10px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 5px -5px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .box {
+        width: 60px;
+        border-radius: 13px;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        pointer-events: none;
+      }
+
+      .on {
+        text-align: center;
+        display: block;
+        color: #fff;
+        width: 60px;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        padding: 0 0 0 20px;
+        background: #008fbf;
+        background: -webkit-gradient(linear, left top, left bottom, from(#008fbf), color-stop(60%, #00a3d8));
+        background: linear-gradient(to bottom, #008fbf 0%, #00a3d8 60%);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:before {
+          content: 'ON';
+        }
+      }
+
+      .off {
+        text-align: center;
+        display: block;
+        color: #fff;
+        width: 60px;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        padding: 0 20px 0 0;
+        background: #111111;
+        background: -webkit-gradient(linear, left top, left bottom, from(#111111), color-stop(60%, #3a3a3a));
+        background: linear-gradient(to bottom, #111111 0%, #3a3a3a 60%);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:before {
+          content: 'OFF';
+        }
+      }
+    }
+
+    input[type='checkbox'] {
+      position: absolute;
+      visibility: hidden;
+
+      &:checked + .switch {
+        &:before {
+          -webkit-transform: translateX(-36px);
+          transform: translateX(-36px);
+        }
+
+        .on,
+        .off {
+          -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+        }
+      }
+    }
+  }
+  .radioBox {
+    font-size: 13px;
+  }
+}
+
+.colorMenu {
+  display: block !important;
+  overflow: hidden;
+  top: calc(30% + 150px);
+  span {
+    cursor: pointer;
+    display: none;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      display: block;
+      list-style: none;
+      cursor: pointer;
+      & + li {
+        margin-top: 5px;
+      }
+    }
+  }
+  .item {
+    display: none;
+  }
+  .itemA {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        background: #1b2865;
+        & + li {
+          background: #751829;
+        }
+      }
+    }
+  }
+  .itemB {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        background: #1a7e83;
+        & + li {
+          background: #751829;
+        }
+      }
+    }
+  }
+  .itemC {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        background: #32307c;
+        & + li {
+          background: #751829;
+        }
+      }
+    }
+  }
+}
+.innerpage {
+  .colorMenu {
+    span,
+    .item {
+      display: block;
+    }
+  }
+}
+
+.vdi.innerpage {
+  .colorMenu {
+    span,
+    .item {
+      display: none;
+    }
+    .itemA {
+      display: block;
+    }
+  }
+}

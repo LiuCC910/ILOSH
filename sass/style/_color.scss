@@ -1,0 +1,830 @@
+//其他色系/////////////////////////////////////////////
+//_accessibility/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    //accordion//////////////////
+    // tab的外框線
+    a:focus {
+      outline: none;
+      @if $item == nth($colorStyle, 1) {
+        box-shadow: 0 0px 0px 2px nth($aTagFocus, 1) inset;
+      } @else {
+        box-shadow: 0 0px 0px 2px nth($aTagFocus, 2) inset;
+      }
+      @include screen('mobile') {
+        box-shadow: none;
+      }
+    }
+    a.goCenter {
+      @if $item == nth($colorStyle, 1) {
+        background: nth($mainColor, 1);
+      } @else {
+        background: nth($mainColor, 2);
+      }
+    }
+    // no-js
+    .no-js {
+      noscript {
+        @if $item == nth($colorStyle, 1) {
+          border: 2px solid nth($aTagHover, 1);
+        } @else {
+          border: 2px solid nth($aTagHover, 2);
+        }
+        a {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($mainColor, 1);
+          } @else {
+            color: nth($mainColor, 2);
+          }
+          &:hover,
+          &:focus {
+            @if $item == nth($colorStyle, 1) {
+              color: nth($aTagHover, 1);
+            } @else {
+              color: nth($aTagHover, 2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//_fonts/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    //字級//////////////////
+    .font_size {
+      > a {
+        &:hover,
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            background: nth($mainColor, 1);
+          } @else {
+            background: nth($mainColor, 2);
+          }
+        }
+      }
+      ul {
+        li {
+          a {
+            background: #f1f1f1;
+            &:hover,
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                background: nth($aTagHover, 1);
+              } @else {
+                background: nth($aTagHover, 2);
+              }
+            }
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                box-shadow: 0 0 0 2px nth($secColor, 1);
+              } @else {
+                box-shadow: 0 0 0 2px nth($secColor, 2);
+              }
+            }
+            &.active {
+              @if $item == nth($colorStyle, 1) {
+                background: nth($aTagHover, 1);
+              } @else {
+                background: nth($aTagHover, 2);
+              }
+              &:hover,
+              &:focus {
+                @if $item == nth($colorStyle, 1) {
+                  background: nth($aTagHover, 1);
+                } @else {
+                  background: nth($aTagHover, 2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//_menu/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    //menu//////////////////
+    .menu {
+      // 預設選單 ul
+      > ul {
+        > li {
+          &:hover {
+            > a {
+              @if $item == nth($colorStyle, 1) {
+                color: nth($aTagHover, 1);
+              } @else {
+                color: nth($aTagHover, 2);
+              }
+              &:after {
+                @if $item == nth($colorStyle, 1) {
+                  border: 2px solid nth($aTagHover, 1);
+                } @else {
+                  border: 2px solid nth($aTagHover, 2);
+                }
+              }
+            }
+          }
+        }
+      }
+      ul {
+        li {
+          ul {
+            li {
+              a {
+                &:hover,
+                &:focus {
+                  @if $item == nth($colorStyle, 1) {
+                    background: nth($aTagHover, 1);
+                  } @else {
+                    background: nth($aTagHover, 2);
+                  }
+                }
+              }
+            }
+            li.hasChild {
+              > a {
+                &:hover,
+                &:focus {
+                  @if $item == nth($colorStyle, 1) {
+                    background: nth($mainColor, 1);
+                  } @else {
+                    background: nth($mainColor, 2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar .menu > ul > li:hover > a {
+  color: #fff !important;
+}
+//_slick/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    //slick//////////////////
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+      opacity: 1;
+      @if $item == nth($colorStyle, 1) {
+        color: lighten(nth($mainColor, 1), 20);
+        box-shadow: 0px 0px 0px 1px lighten(nth($mainColor, 1), 20); /* 讓滑過去的點大一些 */
+      } @else {
+        color: lighten(nth($mainColor, 2), 20);
+        box-shadow: 0px 0px 0px 1px lighten(nth($mainColor, 2), 20); /* 讓滑過去的點大一些 */
+      }
+    }
+    /* focus 過去的點變色 */
+    .slick-dots li button:focus:before {
+      opacity: 1;
+      @if $item == nth($colorStyle, 1) {
+        background: nth($secColor, 1);
+        box-shadow: 0px 0px 0px 1px nth($secColor, 1);
+      } @else {
+        background: nth($secColor, 2);
+        box-shadow: 0px 0px 0px 1px nth($secColor, 2);
+      }
+    }
+    /* 點 active 的樣子 */
+    .slick-dots li.slick-active button:before {
+      opacity: 1;
+      @if $item == nth($colorStyle, 1) {
+        background: lighten(nth($mainColor, 1), 20);
+      } @else {
+        background: lighten(nth($mainColor, 2), 20);
+      }
+    }
+  }
+}
+
+//_head/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .header {
+      > .container {
+        .sidebarCtrl {
+          span {
+            @if $item == nth($colorStyle, 1) {
+              background: nth($mainColor, 1);
+            } @else {
+              background: nth($mainColor, 2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//_tab/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .tabSet {
+      .tabItems {
+        .item {
+          &::before {
+            @if $item == nth($colorStyle, 1) {
+              background: nth($mainColor, 1);
+              background: -moz-linear-gradient(45deg, nth($mainColor, 1) 0%, nth($fourthColor, 1) 50%, nth($secColor, 1) 100%);
+              background: -webkit-linear-gradient(45deg, nth($mainColor, 1) 0%, nth($fourthColor, 1) 50%, nth($secColor, 1) 100%);
+              background: linear-gradient(45deg, nth($mainColor, 1) 0%, nth($fourthColor, 1) 50%, nth($secColor, 1) 100%);
+            } @else {
+              background: nth($thirdColor, 2);
+              background: -moz-linear-gradient(45deg, nth($thirdColor, 2) 40%, nth($secColor, 2) 100%);
+              background: -webkit-linear-gradient(45deg, nth($thirdColor, 2) 40%, nth($secColor, 2) 100%);
+              background: linear-gradient(45deg, nth($thirdColor, 2) 40%, nth($secColor, 2) 100%);
+            }
+          }
+        }
+      }
+
+      .tabContent {
+        button:focus,
+        a:focus {
+          @if $item == nth($colorStyle, 1) {
+            box-shadow: 0 0px 0px 2px nth($secColor, 1) inset;
+          } @else {
+            box-shadow: 0 0px 0px 2px nth($secColor, 2) inset;
+          }
+        }
+      }
+    }
+  }
+}
+
+//_function_panel/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    // 放進function_panel樣式
+    .function_panel {
+      .function {
+        ul {
+          li {
+            &.active {
+              a {
+                @if $item == nth($colorStyle, 1) {
+                  background: darken(nth($aTagHover, 1), 0);
+                  border-color: darken(nth($aTagHover, 1), 0);
+                } @else {
+                  background: darken(nth($aTagHover, 2), 0);
+                  border-color: darken(nth($aTagHover, 2), 0);
+                }
+                color: #fff;
+                &:before {
+                  filter: invert(100%);
+                }
+              }
+            }
+            a {
+              &:hover,
+              &:focus {
+                @if $item == nth($colorStyle, 1) {
+                  background: darken(nth($aTagHover, 1), 0);
+                  border-color: darken(nth($aTagHover, 1), 0);
+                } @else {
+                  background: darken(nth($aTagHover, 2), 0);
+                  border-color: darken(nth($aTagHover, 2), 0);
+                }
+                color: #fff;
+                &:before {
+                  filter: invert(100%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 放進function_panel樣式
+    .function_panel {
+      .share {
+        a.shareButton {
+          &:hover,
+          &:focus {
+            @if $item == nth($colorStyle, 1) {
+              background: darken(nth($aTagHover, 1), 0);
+            } @else {
+              background: darken(nth($aTagHover, 2), 0);
+            }
+          }
+        }
+      }
+    }
+    //end
+  }
+}
+
+//mp/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    //mp1 申請程序
+    .procedureBlock {
+      .titleBox {
+        .en {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($secColor, 1);
+          } @else {
+            color: nth($mainColor, 2);
+          }
+        }
+      }
+      .item {
+        &:nth-child(2) {
+          .box {
+            @if $item == nth($colorStyle, 1) {
+              background: nth($mainColor, 1);
+              background: -moz-linear-gradient(30deg, nth($mainColor, 1) 40%, nth($secColor, 2) 100%);
+              background: -webkit-linear-gradient(30deg, nth($mainColor, 1) 40%, nth($secColor, 2) 100%);
+              background: linear-gradient(30deg, nth($mainColor, 1) 40%, nth($secColor, 2) 100%);
+            } @else {
+              background: #936e3d;
+              background: -moz-linear-gradient(30deg, #936e3d 40%, #caa76d 100%);
+              background: -webkit-linear-gradient(30deg, #936e3d 40%, #caa76d 100%);
+              background: linear-gradient(30deg, #936e3d 40%, #caa76d 100%);
+            }
+          }
+        }
+        .box {
+          @if $item == nth($colorStyle, 1) {
+            .icon:nth-child(1) {
+              display: block;
+            }
+          } @else {
+            .icon:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    //mp2 mp3 首頁中間搜尋功能
+    .searchBlock {
+      .container {
+        @if $item == nth($colorStyle, 1) {
+          background: nth($mainColor, 1);
+        } @else {
+          background: nth($mainColor, 2);
+        }
+      }
+      .searchBtn {
+        @if $item == nth($colorStyle, 1) {
+          background: nth($aTagColor, 1);
+        } @else {
+          background: nth($secColor, 2);
+        }
+        &::before {
+          @if $item == nth($colorStyle, 1) {
+            background: darken(nth($mainColor, 1), 10);
+          } @else {
+            background: darken(nth($mainColor, 2), 10);
+          }
+        }
+      }
+    }
+
+    //mapBlock
+    .mapInfoBlock {
+      .txtBox {
+        .linkBtn {
+          &::after {
+            @if $item == nth($colorStyle, 1) {
+              background-color: #d94912;
+            } @else {
+              background-color: nth($mainColor, 2);
+            }
+          }
+        }
+      }
+    }
+
+    //mp3 table
+    .infoListBlock {
+      .infoList {
+        th,
+        td {
+          &:nth-child(6) {
+            .downloadBtnBlock {
+              a {
+                @if $item == nth($colorStyle, 1) {
+                  background: nth($dlColor, 1);
+                } @else {
+                  background: nth($dlColor, 2);
+                }
+                &:focus {
+                  @if $item == nth($colorStyle, 1) {
+                    box-shadow: 0 0 0 2px nth($secColor, 1);
+                  } @else {
+                    box-shadow: 0 0 0 2px nth($secColor, 2);
+                  }
+                }
+              }
+            }
+          }
+        }
+        thead {
+          th {
+            background: #000;
+          }
+        }
+      }
+    }
+    //end//
+  }
+}
+
+//cp/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .cp {
+      a {
+        @if $item == nth($colorStyle, 1) {
+          color: nth($aTagColor, 1);
+        } @else {
+          color: nth($aTagColor, 2);
+        }
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($aTagHover, 1);
+          } @else {
+            color: nth($aTagHover, 2);
+          }
+          cursor: pointer;
+        }
+      }
+
+      blockquote {
+        @if $item == nth($colorStyle, 1) {
+          border-left: 5px solid nth($mainColor, 1);
+        } @else {
+          border-left: 5px solid nth($mainColor, 2);
+        }
+      }
+    }
+    // 外部連結
+    .web_link {
+      h3 {
+        @if $item == nth($colorStyle, 1) {
+          border-bottom: 1px solid nth($mainColor, 1);
+        } @else {
+          border-bottom: 1px solid nth($mainColor, 2);
+        }
+      }
+    }
+    .publish_info {
+      @if $item == nth($colorStyle, 1) {
+        border-left: solid 5px nth($mainColor, 1);
+      } @else {
+        border-left: solid 5px nth($mainColor, 2);
+      }
+    }
+    //faq
+    .faqBlock {
+      ul {
+        li {
+          .num {
+            @if $item == nth($colorStyle, 1) {
+              color: lighten(nth($mainColor, 1), 15);
+            } @else {
+              color: lighten(nth($mainColor, 2), 15);
+            }
+          }
+        }
+      }
+    }
+
+    .publications_cp {
+      .downloadBtnBlock {
+        display: flex;
+        a {
+          background: $downloadColor;
+        }
+      }
+
+      .downloadBlock {
+        .downloadTitle {
+          a {
+            @if $item == nth($colorStyle, 1) {
+              background: nth($mainColor, 1);
+            } @else {
+              background: nth($mainColor, 2);
+            }
+            &::before {
+              @if $item == nth($colorStyle, 1) {
+                background: lighten(nth($aTagHover, 1), 25);
+              } @else {
+                background: lighten(nth($aTagHover, 2), 25);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//sitemap/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .cascading {
+      li {
+        a {
+          @if $item == nth($colorStyle, 1) {
+            border-bottom: 2px solid nth($mainColor, 1);
+          } @else {
+            border-bottom: 2px solid nth($mainColor, 2);
+          }
+          &:hover,
+          &:focus {
+            @if $item == nth($colorStyle, 1) {
+              color: nth($mainColor, 1) !important;
+            } @else {
+              color: nth($mainColor, 2) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//footer/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    footer {
+      a {
+        &:hover,
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($secColor, 1);
+          } @else {
+            color: nth($secColor, 2);
+          }
+        }
+      }
+
+      .footer_link {
+        li {
+          a {
+            &:hover,
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                color: nth($secColor, 1);
+              } @else {
+                color: nth($secColor, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footerMenu {
+      ul {
+        li {
+          a {
+            &:hover {
+              @if $item == nth($colorStyle, 1) {
+                color: lighten(nth($secColor, 1), 10);
+              } @else {
+                color: lighten(nth($secColor, 2), 10);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//category/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .category {
+      a {
+        @if $item == nth($colorStyle, 1) {
+        } @else {
+        }
+        &:hover,
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            background: nth($aTagHover, 1);
+            background: linear-gradient(180deg, nth($aTagHover, 1) 59%, lighten(nth($aTagHover, 1), 10) 100%);
+            border: nth($aTagHover, 1) solid 1px;
+          } @else {
+            background: linear-gradient(180deg, nth($aTagHover, 2) 59%, lighten(nth($aTagHover, 2), 10) 100%);
+            border: nth($aTagHover, 2) solid 1px;
+          }
+        }
+        &.active {
+          @if $item == nth($colorStyle, 1) {
+            background: darken(nth($aTagColor, 1), 0);
+            border: 1px solid darken(nth($aTagColor, 1), 0);
+          } @else {
+            background: darken(nth($aTagColor, 2), 0);
+            border: 1px solid darken(nth($aTagColor, 2), 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+//lp/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .lp {
+      table {
+        td {
+          a {
+            @if $item == nth($colorStyle, 1) {
+              color: nth($mainColor, 1);
+            } @else {
+              color: nth($mainColor, 2);
+            }
+            &:hover,
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                color: nth($aTagHover, 1);
+              } @else {
+                color: nth($aTagHover, 2);
+              }
+            }
+          }
+        }
+      }
+      .list {
+        & > ul,
+        ol {
+          & > li {
+            & > a {
+              &:hover {
+                @if $item == nth($colorStyle, 1) {
+                  color: nth($aTagHover, 1);
+                } @else {
+                  color: nth($aTagHover, 2);
+                }
+              }
+            }
+            span.dept {
+              @if $item == nth($colorStyle, 1) {
+                color: nth($aTagHover, 1);
+              } @else {
+                color: nth($aTagHover, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//pagination/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .pagination {
+      span {
+        @if $item == nth($colorStyle, 1) {
+          color: lighten(nth($mainColor, 1), 10);
+        } @else {
+          color: lighten(nth($mainColor, 2), 10);
+        }
+      }
+      .page {
+        li {
+          a {
+            &:hover,
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                background: nth($aTagHover, 1);
+                border: nth($aTagHover, 1) solid 1px;
+              } @else {
+                background: nth($aTagHover, 2);
+                border: nth($aTagHover, 2) solid 1px;
+              }
+            }
+          }
+          &.active {
+            a {
+              @if $item == nth($colorStyle, 1) {
+                background: nth($aTagHover, 1);
+                border: darken(nth($aTagHover, 1), 5) solid 1px;
+              } @else {
+                background: nth($aTagHover, 2);
+                border: darken(nth($aTagHover, 2), 5) solid 1px;
+              }
+            }
+          }
+        }
+      }
+      .items {
+        a {
+          @if $item == nth($colorStyle, 1) {
+            color: nth($mainColor, 1);
+          } @else {
+            color: nth($mainColor, 2);
+          }
+        }
+      }
+    }
+  }
+}
+
+//btn/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .btn-submit {
+      transition: all 0.3s linear;
+      @if $item == nth($colorStyle, 1) {
+        background: nth($aTagHover, 1);
+        background: linear-gradient(180deg, nth($aTagHover, 1) 59%, lighten(nth($aTagHover, 1), 10) 100%);
+        border: nth($aTagHover, 1) solid 1px;
+      } @else {
+        background: linear-gradient(180deg, nth($aTagHover, 2) 59%, lighten(nth($aTagHover, 2), 10) 100%);
+        border: nth($aTagHover, 2) solid 1px;
+      }
+      &:hover {
+        @if $item == nth($colorStyle, 1) {
+          background: linear-gradient(180deg, lighten(nth($aTagHover, 1), 10) 0%, darken(nth($aTagHover, 1), 10) 59%);
+          border: 1px solid darken(nth($aTagHover, 1), 20);
+        } @else {
+          background: linear-gradient(180deg, lighten(nth($aTagHover, 2), 10) 0%, darken(nth($aTagHover, 2), 10) 59%);
+          border: 1px solid darken(nth($aTagHover, 2), 20);
+        }
+      }
+      &:focus {
+        @if $item == nth($colorStyle, 1) {
+          box-shadow: 0 0px 0px 2px nth($aTagFocus, 1) !important;
+        } @else {
+          box-shadow: 0 0px 0px 2px nth($aTagFocus, 2) !important;
+        }
+      }
+      &.active {
+        @if $item == nth($colorStyle, 1) {
+          background: lighten(nth($aTagHover, 1), 5);
+        } @else {
+          background: lighten(nth($aTagHover, 2), 5);
+        }
+      }
+    }
+  }
+}
+
+//header/////////////////////////////////////////////
+@each $item in $colorStyle {
+  #{$item} {
+    .header {
+      > .container {
+        .sidebarCtrl {
+          span {
+            @if $item == nth($colorStyle, 1) {
+              background: nth($mainColor, 1);
+            } @else {
+              background: nth($mainColor, 2);
+            }
+          }
+        }
+      }
+      // 導覽列
+      .navigation {
+        .secNavList {
+          .loginBtn {
+            @if $item == nth($colorStyle, 1) {
+              background: nth($mainColor, 1);
+            } @else {
+              background: nth($mainColor, 2);
+            }
+            &::before {
+              @if $item == nth($colorStyle, 1) {
+                background: nth($secColor, 1);
+              } @else {
+                background: nth($secColor, 2);
+              }
+            }
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                box-shadow: 0 0 0 2px nth($secColor, 1);
+              } @else {
+                box-shadow: 0 0 0 2px nth($secColor, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.tabSet {
+  .tabItems {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    .item {
+      flex: 1 1 auto;
+      font-size: 1em;
+      padding: 1.2rem;
+      margin: 0 10px;
+      text-align: center;
+      background: none;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(100% - 4px);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 50px;
+        background: #1a2e72;
+        background: -moz-linear-gradient(left, #1a2e72 0%, #0d5f76 50%, #00a556 100%);
+        background: -webkit-linear-gradient(left, #1a2e72 0%, #0d5f76 50%, #00a556 100%);
+        background: linear-gradient(to right, #1a2e72 0%, #0d5f76 50%, #00a556 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2e72', endColorstr='#00a556',GradientType=1 );
+        transition: 0.3s $cubic;
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        background: #c9c9c9;
+        top: calc(100% - 4px);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 50px;
+        z-index: 0;
+        transition: 0.3s $cubic;
+      }
+      i {
+        &::before,
+        &::after {
+          content: '';
+          transition: 0.3s $cubic;
+          position: absolute;
+          left: 50%;
+          width: 2px;
+          height: 15px;
+          opacity: 0;
+        }
+
+        &::before {
+          top: 0;
+          background: #fff;
+        }
+        &::after {
+          bottom: 100%;
+          background: #000;
+        }
+      }
+      &.active,
+      &:hover {
+        cursor: default;
+        border-radius: 50px;
+        color: #fff;
+        &::before {
+          top: 0;
+        }
+        &::after {
+          top: 0;
+          opacity: 0;
+        }
+        i {
+          &::before,
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .tabContent {
+    display: none;
+    position: relative;
+    padding: 15px;
+
+    a {
+      display: block;
+    }
+
+    button:focus,
+    a:focus {
+      box-shadow: 0 0px 0px 2px #00a556 inset;
+    }
+  }
+}

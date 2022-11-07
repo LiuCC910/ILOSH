@@ -1,0 +1,152 @@
+// 以下皆是設定 測試無障礙關閉js 的純css排版
+
+// tab的外框線
+a:focus {
+  outline: none;
+  box-shadow: 0 0px 0px 2px $aFocus inset;
+  @include screen('mobile') {
+    box-shadow: none;
+  }
+}
+// 導盲磚
+.accesskey {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 9;
+  opacity: 1;
+  // color: $color-word;
+  color: transparent;
+  font-size: $font-size;
+  @include screen('mobile') {
+    display: none;
+  }
+  &:focus {
+    color: $color-word;
+  }
+}
+
+a.goCenter {
+  position: absolute;
+  top: -2.2em;
+  left: 50%;
+  margin-left: -480px;
+  padding: 0 0.5em;
+  height: 2em;
+  line-height: 2em;
+  background: $primaryColor;
+  text-decoration: none;
+  z-index: 999999999999;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 0px 0px 4px 4px;
+  color: #fff;
+  @include screen('mobile') {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: none;
+    top: 0;
+    opacity: 1;
+  }
+}
+// no-js
+.no-js {
+  noscript {
+    display: block;
+    padding: 0.5em;
+    border: 2px solid $primaryColor;
+    background: #fff;
+    color: #666;
+    overflow: hidden;
+    line-height: 1.45em;
+    font-size: 0.813em;
+    margin: 0 0.5em 0.5em;
+    border-radius: 4px;
+    box-sizing: border-box;
+    a {
+      color: $primaryColor;
+      &:hover,
+      &:focus {
+        color: $aHover;
+      }
+    }
+  }
+  .mpSlider {
+    .img-container {
+      display: none;
+      img {
+        object-fit: cover;
+      }
+      &:nth-child(1) {
+        display: block;
+      }
+    }
+  }
+  .navigation {
+    padding-right: 170px;
+    .language {
+      width: auto;
+      position: absolute;
+      right: 160px;
+      > a {
+        display: none;
+      }
+      ul {
+        top: 0;
+        width: 160px;
+        li {
+          display: block;
+          width: auto;
+        }
+      }
+    }
+  }
+  .search {
+    noscript {
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+  }
+  // cl_slider
+  .cp_slider {
+    .img-container {
+      display: inline-block;
+      width: 30%;
+      margin: 0 1% 1em;
+      @include screen('mobile') {
+        width: 47%;
+        margin: 0 1% 1em;
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  .adSlider {
+    .img-container {
+      display: inline-block;
+      width: 22%;
+      margin: 0 1% 1em;
+      border: 1px solid #ddd;
+      @include screen('mobile') {
+        width: 47%;
+        margin: 0 1% 1em;
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  img.lazy {
+    display: none;
+    & + noscript {
+      img {
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+}
