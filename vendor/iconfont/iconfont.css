@@ -1,0 +1,54 @@
+
+@font-face {
+  font-family: "Iconify Explorer Font";
+  src: url("./iconfont.eot");
+  src: url("./iconfont.eot") format("embedded-opentype"),
+       url("./iconfont.ttf") format("truetype"),
+       url("./iconfont.woff") format("woff"),
+       url("./iconfont.woff2") format("woff2"),
+       url("./iconfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.i {
+  font-family: "Iconify Explorer Font" !important;
+  font-size: 1em;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.i.fa-solid\:mouse-pointer:before {
+content: "\e001";
+}
+
+.i.material-symbols\:check-box-outline:before {
+content: "\e002";
+}
+
+.i.material-symbols\:check-box-outline-blank:before {
+content: "\e003";
+}
+
+.i.material-symbols\:check-small-rounded:before {
+content: "\e004";
+}
+
+.i.material-symbols\:close-rounded:before {
+content: "\e005";
+}
+
+.i.material-symbols\:how-to-reg-rounded:before {
+content: "\e006";
+}
+
+.i.material-symbols\:person-add-rounded:before {
+content: "\e007";
+}
+
+.i.material-symbols\:person-rounded:before {
+content: "\e008";
+}
+
