@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>條件查詢+Table欄位條列頁</title>
+    <title>出版品條列頁</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
-    <!-- style css -->
+    <!-- hyUI css -->
     <link rel="stylesheet" href="css/styleC.css" id="changeStyle" />
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
@@ -55,6 +55,8 @@
                 <li><a href="mp3.htm">回首頁</a></li>
                 <li><a href="#">回勞安所主網</a></li>
                 <li><a href="#">網站導覽</a></li>
+                <!--li><a href="#">常見問答</a></li>
+                <li><a href="#">聯絡我們</a></li-->
               </ul>
             </div>
             <!-- font_size -->
@@ -110,14 +112,14 @@
           </div>
         </div>
         <!-- h2節點 -->
-        <h2 class="pageTitle">各年度研究報告</h2>
+        <h2 class="pageTitle">簡訊</h2>
       </div>
       <div id="center" class="main innerpage">
         <!-- 內頁新增一個classname-->
-        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
         <div class="container">
           <!-- 主要內容區 -->
           <div class="center_block">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
             <!-- breadcrumb路徑 -->
             <div class="breadcrumb">
               <ul>
@@ -126,20 +128,22 @@
                 <li>節點</li>
               </ul>
             </div>
-            <!-- h2節點 -->
-            <!--和上方的標題重複了-->
-            <!--h2 class="title">節點標題</h2-->
             <!-- function_panel -->
             <div class="function_panel">
               <!--條列頁不會有發布日期-->
               <!--div class="publish_time"><span>發布日期：</span><time>2019-01-01</time></div-->
               <!-- function功能區塊 -->
+              <div class="function switchBlock">
+                <ul class="switch">
+                  <li class="typeList"><a href="#" title="條列式"></a></li>
+                  <li class="typeGrid active"><a href="#" title="區塊式"></a></li>
+                </ul>
+              </div>
+              <!-- function功能區塊 -->
               <div class="function">
                 <ul>
-                  <!--固定使用原生 javascript-->
-                  <li class="back"><a href="javascript:history.back()" title="回上一頁">回上一頁</a></li>
-                  <li class="print"><a href="#" title="友善列印" onclick="window.print()">友善列印</a></li>
-                  <!--li class="forward"><a href="#" title="轉寄友人">轉寄友人</a></li-->
+                    <li class="back"><a href="javascript:history.back()" title="回上一頁">回上一頁</a></li>
+                    <li class="print"><a href="#" title="友善列印" onclick="window.print()">友善列印</a></li>
                 </ul>
               </div>
               <!-- 社群分享 -->
@@ -165,173 +169,144 @@
                 </ul>
               </div>
             </div>
-            <!-- 搜尋  start-->
-            <section class="searchBlock">
-              <div class="container">
-                <form class="indexSearch" action>
-                  <div class="searchBox list">
-                    <div class="label">關鍵字</div>
-                    <div class="inputBox">
-                      <input type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
-                    </div>
-                  </div>
-                  <div class="dateSelectBox list">
-                    <div class="label">年度</div>
-                    <div class="inputBox">
-                        <select name="selectDepartment" id="selectDepartment">
-                            <option>請選擇</option>
-                            <option>111</option>
-                            <option>110</option>
-                        </select>
-                        ～
-                        <select name="selectDepartment" id="selectDepartment">
-                            <option>請選擇</option>
-                            <option>111</option>
-                            <option>110</option>
-                        </select>
-                    </div>
-                  </div>
-                  <div class="departmentBox list">
-                    <div class="label">研究單位</div>
-                    <div class="inputBox">
-                      <select name="selectDepartment" id="selectDepartment">
-                        <option>請選擇</option>
-                        <option>單位一單位一</option>
-                        <option>單位二</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!--搜尋的按鈕不該包在條件裡-->
-                  <button class="searchBtn">搜尋</button>
-                  <!--是否可以增加一個重設=清空搜尋條件鈕-->
-                  <button class="searchBtn">重設</button>
-                </form>
+            <!-- LP Start -->
+            <section class="lp listGrid publications">
+              <!-- category -->
+              <div class="category">
+                <ul>
+                  <li><a href="#">資料大類</a></li>
+                  <li><a href="#">標籤2</a></li>
+                  <li><a href="#">標籤3</a></li>
+                  <li><a href="#">標籤4</a></li>
+                  <li><a href="#">標籤5</a></li>
+                  <li><a href="#">標籤6</a></li>
+                  <li><a href="#">標籤7</a></li>
+                  <li><a href="#">標籤8</a></li>
+                  <li><a href="#">標籤9</a></li>
+                  <li><a href="#">標籤10</a></li>
+                </ul>
+              </div>
+              <!-- 文字列表 -->
+              <div class="list">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <h3 class="title">透過勞保資料觀測臺灣勞動市場人力變化</h3>
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化...</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/02.jpg" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <h3 class="title">勞工健康指標研究</h3>
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化...</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <h3 class="title">透過勞保資料觀測臺灣勞動市場人力變化</h3>
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化...</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <h3 class="title">透過勞保資料觀測臺灣勞動市場人力變化</h3>
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化...</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/02.jpg" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <h3 class="title">勞工健康指標研究</h3>
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化...</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic"><img data-src="images/noimage.png" class="lazy" /></div>
+                      <div class="contentBlock">
+                        <h3 class="title">透過勞保資料觀測臺灣勞動市場人力變化</h3>
+                        <ul class="info">
+                          <li>
+                            <div class="label">出版時間</div>
+                            <div class="infoTxt">111年10月</div>
+                          </li>
+                          <li>
+                            <div class="label">期別</div>
+                            <div class="infoTxt">35</div>
+                          </li>
+                        </ul>
+                        <div class="txt">透過勞保資料觀測臺灣勞動市場人力變化...</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </section>
-            <!-- 搜尋  end-->
-            <!-- list  start-->
-            <section class="infoListBlock">
-              <div class="container">
-                <div class="infoList tableList">
-                    <table>
-                        <thead>
-                          <tr>
-                            <th>出版年</th>
-                            <th>計畫編號</th>
-                            <th>研究單位</th>
-                            <th>研究報告名稱</th>
-                            <th>發布日期</th>
-                            <th>下載</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-A302</td>
-                            <td>職業危害評估研究組</td>
-                            <td><a href="#">職業災害勞工使用自費醫療材料情形評估研究</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M308</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">善用中高齡及高齡員工活化企業人力資源</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-A703</td>
-                            <td>職業危害評估研究組</td>
-                            <td><a href="#">表面處理業勞工健康指標評估研究</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                        </tbody>
-                    </table>
-    
-                </div>
-              </div>
-            </section>
-            <!-- list  end-->
+            <!-- LP End -->
             <!-- Pagination -->
             <div class="pagination">
               <form action="">
@@ -369,11 +344,11 @@
               <div class="footerLogo">
                 <img src="images/footer_logo.png" alt="" class="img-responsive" />
               </div>
-              <p class="Copyright">勞動部勞動及職業安全衛生研究所版權所有 Copyright 2022 © ILOSH</p>
+              <p class="Copyright">勞動部勞動及職業安全衛生研究所版權所有</p>
               <p>
-                本所服務專線：(02)2660-7600<br />
-                傳真號碼：(02)2660-7732<br />
-                本所地址：22143新北市汐止區橫科路407巷99號 [<a href="https://www.google.com.tw/maps/place/%E5%8B%9E%E5%8B%95%E9%83%A8%E5%8B%9E%E5%8B%95%E5%8F%8A%E8%81%B7%E6%A5%AD%E5%AE%89%E5%85%A8%E8%A1%9B%E7%94%9F%E7%A0%94%E7%A9%B6%E6%89%80/@25.050737,121.630764,17z/data=!3m1!4b1!4m2!3m1!1s0x345d54aaf704fb15:0xed8b4ace0eaf7db5?hl=zh-TW">MAP</a>]<br />
+                本所服務專線:(02)2660-7600 傳真號碼:(02)2660-7732<br />
+                本所服務專線:(02)2660-7600 傳真號碼:(02)2660-7732<br />
+                本所地址:22143新北市汐止區橫科路407巷99號<br />
                 本網站最佳瀏覽解析度為 1280*800 以上
               </p>
             </div>
@@ -381,19 +356,36 @@
             <div class="footerMenu">
               <nav>
                 <ul>
-                    <li>
-                        <a href="#">各年度研究報告</a>
-                        <!--ul>
-                          <li><a href="#">關於虛擬環境VDI預約 </a></li>
-                          <li><a href="#">位置圖與交通資訊</a></li>
-                        </ul-->
-                      </li>
-                      <li><a href="#">簡訊</a></li>
-                      <li><a href="#">研究季刊</a></li>
-                      <li><a href="#">技術叢書</a></li>
-                      <li><a href="#">研究年報</a></li>
-                      <li><a href="#">其他出版品</a></li>
-                      <li><a href="#">專利技術</a></li>
+                  <li>
+                    <a href="#">關於我們</a>
+                    <ul>
+                      <li><a href="#">關於虛擬環境VDI預約</a></li>
+                      <li><a href="#">位置圖與交通資訊</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">訊息公告</a>
+                    <ul>
+                      <li><a href="#">系統公告</a></li>
+                      <li><a href="#">最新消息</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">資源服務</a>
+                    <ul>
+                      <li><a href="#">申請表單下載</a></li>
+                      <li><a href="#">常見問答</a></li>
+                      <li><a href="#">相關網站連結</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">線上預約</a>
+                    <ul>
+                      <li><a href="#">可預約資源查詢</a></li>
+                      <li><a href="#">填寫預約申請</a></li>
+                      <li><a href="#">案件與預約資料</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -417,8 +409,6 @@
     <!-- JQ -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <!-- 外掛 plugin js -->
-    <script src="vendor/air-datepicker/air-datepicker.js"></script>
-    <!-- datepick UI -->
     <script src="vendor/jquery.easing.min.js"></script>
     <!-- ease -->
     <script src="vendor/slick/slick.min.js "></script>
