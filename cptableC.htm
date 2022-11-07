@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LIST/GRID切換條列頁</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/styleC.css" id="changeStyle" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body class="colorStyleA pcMenuUse">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm">
+              <picture>
+                <source media="(min-width: 1100px)" data-srcset="images/logo.png" />
+                <source media="(max-width: 1100px)" data-srcset="images/logo_m.png" />
+                <img data-src="images/logo.png" class="lazy" />
+              </picture>
+
+              <span>研究成果網</span>
+            </a>
+          </h1>
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="Site">
+            <!-- 新增div navlist -->
+            <div class="navlist">
+              <ul>
+                <li><a href="mp3.htm">回首頁</a></li>
+                <li><a href="#">回勞安所主網</a></li>
+                <li><a href="#">網站導覽</a></li>
+              </ul>
+            </div>
+            <!-- font_size -->
+            <div class="secNavList">
+              <div class="font_size">
+                <a href="#" title="字型大小">A +</a>
+                <!-- 英文用<span>font-size：</span> -->
+                <ul>
+                  <li><a href="#" class="small"></a></li>
+                  <li><a href="#" class="medium"></a></li>
+                  <li><a href="#" class="large"></a></li>
+                </ul>
+              </div>
+              <a class="loginBtn" href="#">預約登入<i></i></a>
+            </div>
+          </nav>
+        </div>
+        <!-- navigation End -->
+        <!-- menu Start -->
+        <div class="container">
+          <nav class="menu" role="navigation" aria-label="About page">
+            <ul>
+                <li>
+                    <a href="#">各年度研究報告</a>
+                    <!--ul>
+                      <li><a href="#">關於虛擬環境VDI預約</a></li>
+                      <li><a href="#">位置圖與交通資訊</a></li>
+                    </ul-->
+                  </li>
+                  <li><a href="#">簡訊</a></li>
+                  <li><a href="#">研究季刊</a></li>
+                  <li><a href="#">技術叢書</a></li>
+                  <li><a href="#">研究年報</a></li>
+                  <li><a href="#">其他出版品</a></li>
+                  <li><a href="#">專利技術</a></li>
+            </ul>
+          </nav>
+          <!-- menu End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div class="innerBanner">
+        <div class="blockA">
+          <img src="images/inner_bannerA.jpg" alt="" />
+        </div>
+        <div class="blockB">
+          <img src="images/inner_bannerB.jpg" alt="" />
+        </div>
+        <div class="blockC">
+          <div class="txtBox">
+            <div class="slideCon"></div>
+          </div>
+        </div>
+        <!-- h2節點 -->
+        <h2 class="pageTitle">各年度研究報告</h2>
+      </div>
+      <div id="center" class="main innerpage">
+        <!-- 內頁新增一個classname-->
+        <div class="container">
+          <!-- 主要內容區 -->
+          <div class="center_block">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">節點</a></li>
+                <li>節點</li>
+              </ul>
+            </div>
+            <!-- h2節點，重複 -->
+            <!--h2 class="title">節點標題</h2-->
+            <!-- function_panel -->
+            <div class="function_panel">
+              <div class="publish_time"><span>發布日期：</span><time>2019-01-01</time></div>
+              <!-- function功能區塊 -->
+              <div class="function">
+                <ul>
+                    <li class="back"><a href="javascript:history.back()" title="回上一頁">回上一頁</a></li>
+                    <li class="print"><a href="#" title="友善列印" onclick="window.print()">友善列印</a></li>
+                    <!--li class="forward"><a href="#" title="轉寄友人">轉寄友人</a></li-->
+                </ul>
+              </div>
+              <!-- 社群分享 -->
+              <div class="share" title="分享">
+                <ul>
+                  <!--只留fb, twitter, line, plurk-->
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a></li>
+                  <li><a href="http://twitter.com/share?text=標題&url=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a></li>
+                  <li><a href="https://social-plugins.line.me/lineit/share?url=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_line.svg" alt="line" /></a></li>
+                  <li><a href="https://www.plurk.com/?qualifier=shares&status=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a></li>
+                  <!--li>
+                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                  </li-->
+                </ul>
+              </div>
+              <!--div class="viewCount">瀏覽次數: 111</div-->
+            </div>
+            <!-- table Start -->
+            <div class="tableBlock">
+              <div class="tableTitle">
+                <sup>研究報告名稱</sup>
+                <h2>奈米微粒作業人員職業危害調查研究</h2>
+              </div>
+              <div class="tableList">
+                <ul>
+                  <li>
+                    <div class="label">出版年</div>
+                    <div class="txt">111年</div>
+                  </li>
+                  <li>
+                    <div class="label">計畫編號</div>
+                    <div class="txt">ILOSH110-A701</div>
+                  </li>
+                  <li>
+                    <div class="label">出版單位</div>
+                    <div class="txt">勞動部勞動及職業安全衛生研究所</div>
+                  </li>
+                  <li>
+                    <div class="label">研究單位</div>
+                    <div class="txt">職業危害評估研究組</div>
+                  </li>
+                  <li>
+                    <div class="label">研究主持人</div>
+                    <div class="txt">潘致弘、莊凱任</div>
+                  </li>
+                  <li>
+                    <div class="label">中文摘要</div>
+                    <div class="txt">
+                        奈米微粒對人體健康危害之影響，包括引起肺部發炎、肺部纖維化反應、引起血栓與心血管危害效應，甚至導致癌症的發生等，但我國目前尚未訂定奈米微粒安全衛生相關法規，以保護奈米微粒暴露作業勞工的健康，爰此本研究主要目的為進行奈米微粒引發健康危害之職業危害調查研究，以應用於訂定奈米微粒安全衛生相關法規與改善勞工作業環境，保護奈米微粒暴露作業勞工的健康。
+                        <br>
+                        本研究透過國內外文獻探討、法規查詢與產業現況調查分析，以研擬我國奈米微粒危害預防之有效對策，並藉由勞工保險職業傷病資料分析，以及建立奈米微粒暴露高風險事業單位資料庫與生化指標資料庫，評估我國奈米物質對勞工健康危害之情形。此外，本研究針對奈米微粒危害高風險事業單位進行職業危害介入改善評估，以實務改善方法作為其他事業單位執行作業環境改善時之參考依據。
+                        <br>
+                        由先進國家奈米相關職業安全衛生法規現況彙整結果顯示，使用奈米微粒與及含奈米微粒的材料與物質對勞工健康有潛在危害風險，但除了銀粒子、二氧化鈦、氧化鋅、碳黑與無定形二氧化矽外，其他奈米微粒及含奈米微粒的材料與物質之實際法令規定或建議仍不完備。此外，國內奈米相關產業亦使用這上述奈米微粒及含奈米微粒的材料與物質進行加工製造，爰此我國奈米相關作業勞工有暴露奈米微粒的健康危害風險；我國奈米微粒與勞工健康相關研究結果亦顯示，奈米微粒暴露與我國勞工心肺不良健康效應呈顯著相關性；根據我國奈米微粒與勞工健康相關研究結果顯示，奈米微粒暴露與勞工心肺不良健康效應有顯著相關性。而根據15家奈米微粒暴露高風險事業單位作業環境測定與尿液生化指標分析結果顯示，作業區奈米微粒微粒濃度(平均濃度4.32 µg/m3)顯著高於辦公室(平均濃度0.17 µg/m3)，而作業區工作人員無論是心血管效應指標－介白素6(interleukin-6, IL-6)，以及DNA氧化傷害指標(8-iso-Prostaglandin F2α, 8-iso-PGF2α)濃度均顯著高於辦公室工作人員。由勞工保險職業傷病資料流行病學研究結果顯示，暴露於奈米微粒相關事業單位的勞工，具顯著較高哮喘、以及顯著較高的全因死亡勝算比，分別為辦公室工作人員之2.29倍、2.74倍。而關於國家因應工業重大污染事件應扮演角色、危害認定方法及協助事項探討方面，我國若要避免工業事故的發生與化學物質造成的危害，應強化對化學物質的源頭管理及預防事故發生，才能做到相關之環境影響評估以及暴露評估，以提早對高危害風險廠家或物質進行定期查驗與督導，方可大量避免等到污染發生後才事倍功半的進行相關整治作業。
+                    </div>
+                  </li>
+                </ul>
+                <div class="downloadBlock">
+                  <div class="downloadTitle">
+                    <div class="title">檔案下載</div>
+                    <a href="#" class="download">全部下載</a> (.zip, 已下載次數: 1111)
+                    <!--增加一個打包下載-->
+                  </div>
+                  <ul>
+                    <li class="item">
+                      <a href="#">05科研採購--標單(招標文件).odt </a>
+                      <div class="infoTxt">.odt, 已下載次數: 1234</div>
+                    </li>
+                    <li class="item">
+                      <a href="#">06科研採購--標價清單(招標文件).odt </a>
+                      <div class="infoTxt">.odt, 已下載次數: 1111</div>
+                    </li>
+                    <li class="item">
+                        <a href="#">07科研採購--出席代理授權書(招標文件).odt </a>
+                        <div class="infoTxt">.odt, 已下載次數: 1112</div>
+                    </li>
+                    <li class="item">
+                        <a href="#">08科研採購--科研採購投標暨審查須知(招標文件).odt </a>
+                        <div class="infoTxt">.odt, 已下載次數: 999</div>
+                    </li>
+                    <li class="item">
+                        <a href="#">09科研採購--投標廠商聲明書(含公職人員及關係人身分關係揭露表)(招標文件).odt </a>
+                        <div class="infoTxt">.odt, 已下載次數: 1234</div>
+                      </li>
+                      <li class="item">
+                        <a href="#">10科研採購--聲明書(招標文件)(廠商交期末報告時檢附).odt </a>
+                        <div class="infoTxt">.odt, 已下載次數: 1111</div>
+                      </li>
+                      <li class="item">
+                          <a href="#">11科研勞務--採購契約書(招標文件).odt </a>
+                          <div class="infoTxt">.odt, 已下載次數: 1112</div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+              <div class="publish_time"><span>最後更新日期：</span><time>2019-01-01</time></div>
+              <div class="viewCount">瀏覽次數: 111</div>
+            </div>
+            <!-- table End -->
+            <!-- Pagination -->
+            <div class="function">
+                <ul>
+                  <li class="icon_back"><a href="javascript:history.back()">回上一頁</a></li>
+                </ul>
+            </div>
+            <!-- Pagination -->
+          </div>
+        </div>
+      </div>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <div class="footerBottomInfo">
+            <div class="footerInfo">
+              <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+              <div class="footerLogo">
+                <img src="images/footer_logo.png" alt="" class="img-responsive" />
+              </div>
+              <p class="Copyright">勞動部勞動及職業安全衛生研究所版權所有 Copyright 2022 © ILOSH</p>
+              <p>
+                本所服務專線：(02)2660-7600<br />
+                傳真號碼：(02)2660-7732<br />
+                本所地址：22143新北市汐止區橫科路407巷99號 [<a href="https://www.google.com.tw/maps/place/%E5%8B%9E%E5%8B%95%E9%83%A8%E5%8B%9E%E5%8B%95%E5%8F%8A%E8%81%B7%E6%A5%AD%E5%AE%89%E5%85%A8%E8%A1%9B%E7%94%9F%E7%A0%94%E7%A9%B6%E6%89%80/@25.050737,121.630764,17z/data=!3m1!4b1!4m2!3m1!1s0x345d54aaf704fb15:0xed8b4ace0eaf7db5?hl=zh-TW">MAP</a>]<br />
+                本網站最佳瀏覽解析度為 1280*800 以上
+              </p>
+            </div>
+
+            <div class="footerMenu">
+              <nav>
+                <ul>
+                    <li>
+                        <a href="#">各年度研究報告</a>
+                        <!--ul>
+                          <li><a href="#">關於虛擬環境VDI預約</a></li>
+                          <li><a href="#">位置圖與交通資訊</a></li>
+                        </ul-->
+                      </li>
+                      <li><a href="#">簡訊</a></li>
+                      <li><a href="#">研究季刊</a></li>
+                      <li><a href="#">技術叢書</a></li>
+                      <li><a href="#">研究年報</a></li>
+                      <li><a href="#">其他出版品</a></li>
+                      <li><a href="#">專利技術</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footerData">
+              <div class="footerUpdate">
+                <span class="counter">瀏覽人次<em>46476653</em></span>
+                <span class="update">系統最後更新日期<em>2022-12-12</em></span>
+              </div>
+              <div class="footerIcon">
+                <a target="_blank" href="javascript:;" title="另開視窗">
+                  <img src="images/basic/accessibility.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- ILOSH -->
+    <script src="js/ILOSH.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

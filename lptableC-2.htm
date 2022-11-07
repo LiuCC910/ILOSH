@@ -112,7 +112,7 @@
           </div>
         </div>
         <!-- h2節點 -->
-        <h2 class="pageTitle">各年度研究報告</h2>
+        <h2 class="pageTitle">季刊</h2>
       </div>
       <div id="center" class="main innerpage">
         <!-- 內頁新增一個classname-->
@@ -178,6 +178,22 @@
                     </div>
                   </div>
                   <div class="dateSelectBox list">
+                    <div class="label">卷期</div>
+                    <div class="inputBox">
+                        <select name="selectDepartment" id="selectDepartment">
+                            <option>請選擇卷別</option>
+                            <option>30</option>
+                            <option>29</option>
+                            <option>創刊號</option>
+                        </select>
+                        ～
+                        <select name="selectDepartment" id="selectDepartment">
+                            <option>請選擇期別</option>
+                            <option disabled>請先選擇卷別</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="dateSelectBox list">
                     <div class="label">年度</div>
                     <div class="inputBox">
                         <select name="selectDepartment" id="selectDepartment">
@@ -193,20 +209,8 @@
                         </select>
                     </div>
                   </div>
-                  <div class="departmentBox list">
-                    <div class="label">研究單位</div>
-                    <div class="inputBox">
-                      <select name="selectDepartment" id="selectDepartment">
-                        <option>請選擇</option>
-                        <option>單位一單位一</option>
-                        <option>單位二</option>
-                      </select>
-                    </div>
-                  </div>
                   <!--搜尋的按鈕不該包在條件裡-->
                   <button class="searchBtn">搜尋</button>
-                  <!--是否可以增加一個重設=清空搜尋條件鈕-->
-                  <button class="searchBtn">重設</button>
                 </form>
               </div>
             </section>
@@ -219,9 +223,9 @@
                         <thead>
                           <tr>
                             <th>出版年</th>
-                            <th>計畫編號</th>
-                            <th>研究單位</th>
-                            <th>研究報告名稱</th>
+                            <th>出版月</th>
+                            <th>卷期</th>
+                            <th>篇名</th>
                             <th>發布日期</th>
                             <th>下載</th>
                           </tr>
@@ -229,9 +233,22 @@
                         <tbody>
                           <tr>
                             <td>111年</td>
-                            <td>ILOSH110-A302</td>
-                            <td>職業危害評估研究組</td>
-                            <td><a href="#">職業災害勞工使用自費醫療材料情形評估研究</a></td>
+                            <td>11月</td>
+                            <td><a href="#">第30卷第3期</a></td>
+                            <td>
+                              <ol>
+                                <li><a href="#">水平安全母索於建築工程使用 之安全管理問題探討</a></li>
+                                <li><a href="#">離岸風電「危害鑑別、 風險評估和控制」職能課程</a></li>
+                                <li><a href="#">長照機構地板抗滑性 與照服員跌倒經驗調查</a></li>
+                                <li><a href="#">職業傷害的發生與社會分布： 全民健保資料分析</a></li>
+                                <li><a href="#">我國大數據於職業病 流行病學研究之現況挑戰</a></li>
+                                <li><a href="#">大量解僱勞工 再就業追蹤資料之觀察與分析</a></li>
+                                <li><a href="#">各國自然人移動執行職務 之勞動法令探討</a></li>
+                                <li><a href="#">船員法對船員工作時間 規範之初探</a></li>
+                                <li><a href="#">稿約</a></li>
+                                <li><a href="#">封面封底</a></li>
+                              </ol>
+                            </td>
                             <td>2022/5/12</td>
                             <td>
                               <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
@@ -239,92 +256,48 @@
                           </tr>
                           <tr>
                             <td>111年</td>
-                            <td>ILOSH110-M308</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">善用中高齡及高齡員工活化企業人力資源</a></td>
+                            <td>7月</td>
+                            <td><a href="#">第30卷第2期</a></td>
+                            <td>
+                              <ol>
+                                <li><a href="#">封面封底</a></li>
+                                <li><a href="#">施工安全風險管理導向的數位科技整合決策支援系統</a></li>
+                                <li><a href="#">手套與零件尺寸對手部靈巧性之影響</a></li>
+                                <li><a href="#">物流業配送員下背受力分析</a></li>
+                                <li><a href="#">利用小型室內環境暴露艙評估三種生物氣膠控制技術之去除效能</a></li>
+                                <li><a href="#">美國職場肌肉骨骼職業病預防指引與我國比較</a></li>
+                                <li><a href="#">工作型態對電子業勞工體內氧化壓力指標影響</a></li>
+                                <li><a href="#">臺灣日語教師、學生及社會上一般人對「前往日本工作」的價值認知</a></li>
+                                <li><a href="#">我國演藝經紀契約關係之定性與糾紛原因分析</a></li>
+                                <li><a href="#">稿約</a></li>
+                              </ol>
+                            </td>
                             <td>2022/5/12</td>
                             <td>
-                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                              <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
                             </td>
                           </tr>
                           <tr>
                             <td>111年</td>
-                            <td>ILOSH110-A703</td>
-                            <td>職業危害評估研究組</td>
-                            <td><a href="#">表面處理業勞工健康指標評估研究</a></td>
-                            <td>2022/5/12</td>
+                            <td>4月</td>
+                            <td><a href="#">第30卷第1期</a></td>
                             <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
+                              <ol>
+                                <li><a href="#">封面封底</a></li>
+                                <li><a href="#">施工安全風險管理導向的數位科技整合決策支援系統</a></li>
+                                <li><a href="#">手套與零件尺寸對手部靈巧性之影響</a></li>
+                                <li><a href="#">物流業配送員下背受力分析</a></li>
+                                <li><a href="#">利用小型室內環境暴露艙評估三種生物氣膠控制技術之去除效能</a></li>
+                                <li><a href="#">美國職場肌肉骨骼職業病預防指引與我國比較</a></li>
+                                <li><a href="#">工作型態對電子業勞工體內氧化壓力指標影響</a></li>
+                                <li><a href="#">Exposure and Health Risk Assessment of Polycyclic Aromatic Hydrocarbons for Motorcycle Mechanics</a></li>
+                                <li><a href="#">我國演藝經紀契約關係之定性與糾紛原因分析</a></li>
+                                <li><a href="#">稿約</a></li>
+                              </ol>
                             </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
                             <td>2022/5/12</td>
                             <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>111年</td>
-                            <td>ILOSH110-M301</td>
-                            <td>勞動市場研究組</td>
-                            <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                            <td>2022/5/12</td>
-                            <td>
-                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
+                              <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
                             </td>
                           </tr>
                         </tbody>
