@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>勞動部勞動及職業安全衛生研究所 關於虛擬環境VDI預約系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- web css -->
+    <link rel="stylesheet" href="css/styleA.css" id="changeStyle" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="reservationForm">
+      <div class="title">確認預約資訊</div>
+      <div class="conInfo">
+        <div class="topInfo">
+          <ul>
+            <li data-title="請選擇案號">
+              <select name="selectDepartment" id="selectDepartment">
+                <option>請選擇</option>
+              </select>
+              <div class="notice">已使用 3 / 30天</div>
+            </li>
+            <li data-title="預約編號">1001001101</li>
+            <li data-title="預約帳號">xxx@gmail.com</li>
+            <li data-title="預約日期">2022/09/20(五)</li>
+            <li data-title="預約時段">
+              09:00-12:00
+              <div class="notice">剩餘空位：8</div>
+            </li>
+            <li data-title="預約場地">101教室</li>
+          </ul>
+        </div>
+        <form class="bottomInfo">
+          <ul>
+            <li class="swh" data-title="選擇虛擬主機">
+              <div class="num"><span class="now">0</span>/ <span class="all">4</span></div>
+              <div class="con">
+                <ul>
+                  <li><input type="checkbox" name="swh1" id="swh1" /><label for="swh1">主機編號1</label></li>
+                  <li><input type="checkbox" name="swh2" id="swh2" /><label for="swh2">主機編號2</label></li>
+                  <li><input type="checkbox" name="swh3" id="swh3" /><label for="swh3">主機編號3</label></li>
+                  <li><input type="checkbox" name="swh1" id="swh1" /><label for="swh1">主機編號4</label></li>
+                  <li><input type="checkbox" name="swh2" id="swh2" /><label for="swh2">主機編號5</label></li>
+                  <li><input type="checkbox" name="swh3" id="swh3" /><label for="swh3">主機編號6</label></li>
+                </ul>
+              </div>
+            </li>
+            <li class="seat" data-title="選擇位置">
+              <div class="num">一名人員最多預約<span class="now">2</span> 個位置</div>
+              <div class="con">
+                <div class="seatBox">
+                  <!--li增加class full會變為無法點選，li增加class close 就會顯示Ｘ-->
+                  <ul>
+                    <li><input type="checkbox" id="st1" /><label title="可預訂" for="st1"></label></li>
+                    <li class="close"><input type="checkbox" id="st2" /><label title="未開放" for="st2"></label></li>
+                    <li><input type="checkbox" id="st3" /><label title="可預訂" for="st3"></label></li>
+                    <li class="close"><input type="checkbox" id="st4" /><label title="未開放" for="st4"></label></li>
+                    <li class="full"><input type="checkbox" id="st5" /><label title="已預訂" for="st5"></label></li>
+                    <li class="close"><input type="checkbox" id="st6" /><label title="未開放" for="st6"></label></li>
+                    <li><input type="checkbox" id="st7" /><label title="可預訂" for="st7"></label></li>
+                    <li class="close"><input type="checkbox" id="st8" /><label title="未開放" for="st8"></label></li>
+                    <li><input type="checkbox" id="st9" /><label title="可預訂" for="st9"></label></li>
+                    <li class="close"><input type="checkbox" id="st10" /><label title="未開放" for="st10"></label></li>
+                    <li class="full"><input type="checkbox" id="st11" /><label title="已預訂" for="st11"></label></li>
+                    <li class="close"><input type="checkbox" id="st12" /><label title="未開放" for="st12"></label></li>
+                  </ul>
+                </div>
+                <div class="seatBox">
+                  <ul>
+                    <li><input type="checkbox" id="st13" /><label title="可預訂" for="st13"></label></li>
+                    <li class="close"><input type="checkbox" id="st14" /><label title="未開放" for="st14"></label></li>
+                    <li><input type="checkbox" id="st15" /><label title="可預訂" for="st15"></label></li>
+                    <li class="close"><input type="checkbox" id="st16" /><label title="未開放" for="st16"></label></li>
+                    <li><input type="checkbox" id="st17" /><label title="可預訂" for="st17"></label></li>
+                    <li class="close"><input type="checkbox" id="st18" /><label title="未開放" for="st18"></label></li>
+                    <li class="full"><input type="checkbox" id="st19" /><label title="已預訂" for="st19"></label></li>
+                    <li class="close"><input type="checkbox" id="st20" /><label title="未開放" for="st20"></label></li>
+                    <li><input type="checkbox" id="st21" /><label title="可預訂" for="st21"></label></li>
+                    <li class="close"><input type="checkbox" id="st22" /><label title="未開放" for="st22"></label></li>
+                    <li class="full"><input type="checkbox" id="st23" /><label title="已預訂" for="st23"></label></li>
+                    <li class="close"><input type="checkbox" id="st24" /><label title="未開放" for="st24"></label></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <div class="bottomNotice">
+          請注意，14天內，同一案號僅可預約最多5個工作天。<br />
+          預約成功後若無法出席，最遲須於預約前一日取消，若超過兩次未準時報到，則將鎖定預約資格。
+        </div>
+        <div class="btn_grp form_inline">
+          <button class="btn btn-reset">清除</button>
+          <button class="btn btn-submit">確認預約</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var unSelect = document.querySelectorAll('.full label,.close label');
+        unSelect.forEach(function (i) {
+          i.setAttribute('for', '');
+        });
+      })();
+    </script>
+  </body>
+</html>
