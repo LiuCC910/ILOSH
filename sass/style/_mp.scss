@@ -440,6 +440,14 @@
 }
 
 //mp3 table
+table {
+  th,
+  td {
+    &.nowrap {
+      white-space: nowrap;
+    }
+  }
+}
 .infoListBlock {
   min-height: 200px;
   padding-bottom: 40px;
@@ -458,9 +466,6 @@
       background: none;
       text-align: center;
       padding: 10px;
-      &.nowrap {
-        white-space: nowrap;
-      }
       // &:nth-child(1) {
       //   min-width: 80px;
       // }

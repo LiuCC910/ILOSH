@@ -10453,6 +10453,11 @@ body.large_size .innerpage {
   opacity: 1;
 }
 
+table th.nowrap,
+table td.nowrap {
+  white-space: nowrap;
+}
+
 .infoListBlock {
   min-height: 200px;
   padding-bottom: 40px;
@@ -10474,10 +10479,6 @@ body.large_size .innerpage {
   background: none;
   text-align: center;
   padding: 10px;
-}
-.infoListBlock .infoList th.nowrap,
-.infoListBlock .infoList td.nowrap {
-  white-space: nowrap;
 }
 .infoListBlock .infoList th:nth-child(2),
 .infoListBlock .infoList td:nth-child(2) {
