@@ -1,3 +1,6 @@
+@page {
+  margin: 1cm; /*print邊界*/
+}
 @media print {
   %no-bg {
     background: none;
@@ -7,7 +10,9 @@
   .fatfooter,
   footer,
   .accesskey,
-  .submenu {
+  .submenu,
+  .breadcrumb,
+  .category {
     display: none;
   }
   /* -------------------------------各別顯示設定----//*/
@@ -169,5 +174,87 @@
   }
   .innerpage > .container {
     box-shadow: none;
+  }
+  .pagination {
+    flex-direction: column;
+    page-break-inside: avoid;
+  }
+  .listGrid .list > ul > li time,
+  .listGrid .list ol > li time {
+    font-size: 13px;
+  }
+  .listGrid .list > ul > li span.dept,
+  .listGrid .list ol > li span.dept {
+    color: #000 !important;
+    padding: 2px 10px 3px 0;
+  }
+  .function_panel {
+    padding: 0;
+    margin: 0;
+    .share {
+      display: none;
+    }
+  }
+  .cp blockquote {
+    padding: 1em 2em;
+  }
+  .publications_cp .downloadBlock .downloadTitle a,
+  .publications_cp .downloadBlock table th:nth-child(4),
+  .publications_cp .downloadBlock table td:nth-child(4),
+  .publications_cp .topBlock ul.download,
+  .function_panel .publish_time:before,
+  .infoListBlock .infoList th:nth-child(6),
+  .infoListBlock .infoList td:nth-child(6),
+  .file_download li span.file_doc a,
+  .file_download li span.file_docx a,
+  .file_download li span.file_odt a,
+  .searchBlock,
+  .icon_back,
+  .tooltip,
+  .tag {
+    display: none;
+  }
+  .tableList table td {
+    padding: 5px 5px;
+  }
+  .tableBlock .tableList > ul li {
+    padding: 5px;
+    line-height: 1.4;
+  }
+  .publications .list ul li ul.info li {
+    margin-bottom: 0;
+  }
+  .listGrid .list > ul > li .info + .txt,
+  .listGrid .list ol > li .info + .txt {
+    margin-top: 5px;
+  }
+  .listGrid .list > ul > li > a,
+  .listGrid .list ol > li > a {
+    padding: 2px 0;
+  }
+  .publications_cp .topBlock {
+    margin-bottom: 30px !important;
+  }
+  .publications .gridList > li {
+    width: calc(100% / 2 - 20px) !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  .newsBlock .container {
+    padding: 0 !important;
+  }
+  .mpSliderBlock {
+    width: 100%;
+  }
+  .titleBox {
+    margin-bottom: 30px;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  .titleBox .en,
+  .titleBox .zh {
+    font-size: 30px;
+    margin: 0 10px;
   }
 }

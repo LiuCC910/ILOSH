@@ -12,7 +12,11 @@ $m-gutter: 4px; // Flex grid system default margin
   box-sizing: border-box;
   border-radius: $f_radius;
   transition: all 0.3s ease-out;
-
+  &:focus-visible {
+    box-shadow: 0 0 0 2px #0066cc !important;
+    border: none;
+    outline: 0px;
+  }
   // @include screen('mobile') {
   //     margin: 0 0 .3em 0;
   // }

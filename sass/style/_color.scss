@@ -47,6 +47,13 @@
         }
       }
     }
+    .tableList a {
+      @if $item == nth($colorStyle, 1) {
+        color: nth($aTagHover, 1);
+      } @else {
+        color: nth($aTagHover, 2);
+      }
+    }
   }
 }
 

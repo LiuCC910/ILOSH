@@ -491,13 +491,14 @@ $(function () {
 
     tabSet.each(function () {
       var _tabBtnBlock = $(this).find('.tabItems'); //頁籤按鈕區塊
+      var _checkItem = _tabBtnBlock.find('.active').index(); //頁籤按鈕區塊
       var _tabBtn = _tabBtnBlock.find('button'); //頁籤按鈕
       var _tabBtnLength = _tabBtn.length; //頁籤按鈕數量
       var _tabContentBlock = $(this).find('.tabContentGroup'); //頁籤內容區塊
       var _tabContent = _tabContentBlock.find('.tabContent'); //頁籤內容
       var _tabContentLength = _tabContent.length; //頁籤內容數量
-      _tabBtn.eq(1).addClass(activeClass); //第一個頁籤按鈕active
-      _tabContent.eq(1).show(); //第一個頁籤內容顯示
+      // _tabBtn.eq(1).addClass(activeClass); //第一個頁籤按鈕active
+      _tabContent.eq(_checkItem).show(); //第一個頁籤內容顯示
 
       for (var i = 0; i < _tabBtnLength; i++) {
         //綁定是哪一個頁籤

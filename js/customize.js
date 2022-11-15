@@ -293,6 +293,18 @@ $(function () {
       });
   });
 });
+
+$(function () {
+  $('.inputBox select').change(function () {
+    var current = $('#select').val();
+    if (current != 'null') {
+      $('#select').css('color', '#fff');
+    } else {
+      $('#select').css('color', '#000');
+    }
+  });
+});
+
 /*! WOW wow.js - v1.3.0 - 2016-10-04
  * https://wowjs.uk
  * Copyright (c) 2016 Thomas Grainger; Licensed MIT */ !(function (a, b) {

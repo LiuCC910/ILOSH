@@ -14,7 +14,7 @@ $aTagFocus: lighten(nth($aTagColor, 1), 0), lighten(nth($aTagColor, 2), 0);
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
 $primaryColor: #049160; //主色
-$secondaryColor: #781f79; //輔色
+$secondaryColor: #3c3d82; //輔色
 $lightColor: #fec003; //點綴
 $linkColor: #0066cc; //連結
 $importantColor: #eb0202; //重要
@@ -31,9 +31,9 @@ $color-hr: #666; //hr顏色
 $color-word: #313131; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
-$aColor: #159ba0;
-$aHover: darken($aColor, 10);
-$aFocus: darken($aColor, 10);
+$aColor: #000;
+$aHover: #159ba0;
+$aFocus: #159ba0;
 // 表單focus顏色
 $form-focus: #0066cc; //表單
 $form-btn: #0066cc; //表單

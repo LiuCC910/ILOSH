@@ -729,11 +729,11 @@
     transform: scale(1);
   }
 }
-.sitemap, .publish_info, .web_link, .pagination, div.function, .Syncing_slider, .slick-lightbox-slick-caption, .thumbnail .btn_grp, .fatfooter, .header .navigation, .header, div.tag, .category, .divider, .divider-vertical, .container, .row {
+.sitemap, .web_link, .pagination, div.function, .Syncing_slider, .slick-lightbox-slick-caption, .thumbnail .btn_grp, .fatfooter, .header .navigation, .header, div.tag, .category, .divider, .divider-vertical, .container, .row {
   clear: both;
   zoom: 1;
 }
-.sitemap:after, .publish_info:after, .web_link:after, .pagination:after, div.function:after, .Syncing_slider:after, .slick-lightbox-slick-caption:after, .thumbnail .btn_grp:after, .fatfooter:after, .header .navigation:after, .header:after, div.tag:after, .category:after, .divider:after, .divider-vertical:after, .container:after, .row:after {
+.sitemap:after, .web_link:after, .pagination:after, div.function:after, .Syncing_slider:after, .slick-lightbox-slick-caption:after, .thumbnail .btn_grp:after, .fatfooter:after, .header .navigation:after, .header:after, div.tag:after, .category:after, .divider:after, .divider-vertical:after, .container:after, .row:after {
   clear: both;
 }
 
@@ -811,15 +811,15 @@
   padding-right: 15px;
 }
 
-.sitemap, .publish_info, .web_link, .pagination, div.function, .Syncing_slider, .slick-lightbox-slick-caption, .thumbnail .btn_grp, .fatfooter, .header .navigation, .header, div.tag, .category, .divider, .divider-vertical, .row, .container {
+.sitemap, .web_link, .pagination, div.function, .Syncing_slider, .slick-lightbox-slick-caption, .thumbnail .btn_grp, .fatfooter, .header .navigation, .header, div.tag, .category, .divider, .divider-vertical, .row, .container {
   clear: both;
   zoom: 1;
 }
-.sitemap:before, .publish_info:before, .web_link:before, .pagination:before, div.function:before, .Syncing_slider:before, .slick-lightbox-slick-caption:before, .thumbnail .btn_grp:before, .fatfooter:before, .header .navigation:before, .header:before, div.tag:before, .category:before, .divider:before, .divider-vertical:before, .row:before, .container:before, .sitemap:after, .publish_info:after, .web_link:after, .pagination:after, div.function:after, .Syncing_slider:after, .slick-lightbox-slick-caption:after, .thumbnail .btn_grp:after, .fatfooter:after, .header .navigation:after, .header:after, div.tag:after, .category:after, .divider:after, .divider-vertical:after, .row:after, .container:after {
+.sitemap:before, .web_link:before, .pagination:before, div.function:before, .Syncing_slider:before, .slick-lightbox-slick-caption:before, .thumbnail .btn_grp:before, .fatfooter:before, .header .navigation:before, .header:before, div.tag:before, .category:before, .divider:before, .divider-vertical:before, .row:before, .container:before, .sitemap:after, .web_link:after, .pagination:after, div.function:after, .Syncing_slider:after, .slick-lightbox-slick-caption:after, .thumbnail .btn_grp:after, .fatfooter:after, .header .navigation:after, .header:after, div.tag:after, .category:after, .divider:after, .divider-vertical:after, .row:after, .container:after {
   content: "";
   display: table;
 }
-.sitemap:after, .publish_info:after, .web_link:after, .pagination:after, div.function:after, .Syncing_slider:after, .slick-lightbox-slick-caption:after, .thumbnail .btn_grp:after, .fatfooter:after, .header .navigation:after, .header:after, div.tag:after, .category:after, .divider:after, .divider-vertical:after, .row:after, .container:after {
+.sitemap:after, .web_link:after, .pagination:after, div.function:after, .Syncing_slider:after, .slick-lightbox-slick-caption:after, .thumbnail .btn_grp:after, .fatfooter:after, .header .navigation:after, .header:after, div.tag:after, .category:after, .divider:after, .divider-vertical:after, .row:after, .container:after {
   clear: both;
 }
 
@@ -7384,6 +7384,14 @@ button {
   border-radius: 0.2em;
   transition: all 0.3s ease-out;
 }
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  box-shadow: 0 0 0 2px #0066cc !important;
+  border: none;
+  outline: 0px;
+}
 
 input,
 select,
@@ -7463,6 +7471,11 @@ textarea {
   transition: all 0.3s ease-out;
   height: 5em;
   overflow-y: scroll;
+}
+textarea:focus-visible {
+  box-shadow: 0 0 0 2px #0066cc !important;
+  border: none;
+  outline: 0px;
 }
 @media screen and (max-width: 575px) {
   textarea {
@@ -8048,7 +8061,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .lp .list > ul > li .txt,
 .lp .list ol > li .txt {
-  color: #7f7f7f;
+  color: #333;
   font-size: 0.9em;
 }
 .lp .list > ul > li span.dept,
@@ -9277,7 +9290,11 @@ div.function ul li {
   flex: 0 0 auto;
 }
 div.function ul li.active a {
+  background: #3148b5;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+div.function ul li.active a::before {
+  filter: invert(100%);
 }
 div.function ul li button,
 div.function ul li a {
@@ -9954,6 +9971,15 @@ body.large_size .innerpage {
   background: #1b2865;
   padding: 2.5% 20px;
 }
+.searchBlock .container .list {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .searchBlock .container .list {
+    width: 100% !important;
+  }
+}
 .searchBlock .container .list + .list {
   margin-left: 5px;
 }
@@ -9966,11 +9992,14 @@ body.large_size .innerpage {
   max-width: 970px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: flex-end;
 }
 @media screen and (max-width: 767px) {
   .searchBlock form.indexSearch {
     flex-direction: column;
+    align-items: center;
   }
 }
 .searchBlock .label {
@@ -9986,53 +10015,50 @@ body.large_size .innerpage {
   }
 }
 .searchBlock .inputBox {
+  color: #fff;
   display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 575px) {
   .searchBlock .inputBox {
     flex-direction: column;
   }
 }
+.searchBlock select,
 .searchBlock input {
   width: 100%;
+  height: 42px;
   font-size: 1em;
   color: #808080;
-  border: #c9c9c9 1px solid;
-  background: #fff url("../images/icon02.png") no-repeat;
+  margin: 0 5px;
+  border: #c9c9c9 1px solid !important;
   background-position: calc(100% - 15px) center;
-  margin: 0;
-  padding: 8px 45px 8px 15px;
+  padding: 8px 15px 8px 15px;
 }
+.searchBlock select + input,
 .searchBlock input + input {
   margin-left: 5px;
 }
 @media screen and (max-width: 575px) {
-  .searchBlock input + input {
+  .searchBlock select + input,
+.searchBlock input + input {
     margin: 5px 0 0 0;
   }
 }
-.searchBlock input::-moz-placeholder {
+.searchBlock select::-moz-placeholder, .searchBlock input::-moz-placeholder {
   color: #808080;
 }
-.searchBlock input:-ms-input-placeholder {
+.searchBlock select:-ms-input-placeholder, .searchBlock input:-ms-input-placeholder {
   color: #808080;
 }
+.searchBlock select::placeholder,
 .searchBlock input::placeholder {
   color: #808080;
 }
-.searchBlock .searchBox {
-  flex-basis: 23%;
-}
-.searchBlock .searchBox input {
+.searchBlock .searchBox input.inputType {
   padding: 8px 8px 8px 45px;
   background: #fff url("../images/icon01.png") no-repeat;
   background-position: 15px center;
-}
-.searchBlock .dateSelectBox {
-  flex-basis: 46%;
-}
-.searchBlock .departmentBox {
-  flex-grow: 1;
 }
 .searchBlock .departmentBox select {
   font-size: 1em;
@@ -10053,19 +10079,24 @@ body.large_size .innerpage {
     margin-bottom: 10px;
   }
 }
+.searchBlock .departmentBox select option {
+  color: #000;
+}
+.searchBlock .searchBtnBox {
+  margin: 0 0 10px auto;
+}
 .searchBlock .searchBtn {
   background: #1b2865;
   border: none;
   border-radius: 50px;
   color: #fff;
   white-space: nowrap;
-  margin: 0;
+  margin: 0 0 0 10px;
   padding: 0 15px;
   letter-spacing: 10px;
   font-weight: 500;
   text-indent: 10px;
   height: 42px;
-  margin-left: 15px;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -10095,6 +10126,12 @@ body.large_size .innerpage {
 .searchBlock .searchBtn:hover:before {
   width: 100%;
   left: 0;
+}
+.searchBlock .dateSelectBox {
+  flex-grow: 1.5 !important;
+}
+.searchBlock .departmentBox select {
+  border-width: 0 0 1px 0 !important;
 }
 
 .procedureBlock {
@@ -10436,82 +10473,60 @@ body.large_size .innerpage {
   border: none;
   background: none;
   text-align: center;
+  padding: 10px;
 }
-.infoListBlock .infoList th:nth-child(1),
-.infoListBlock .infoList td:nth-child(1) {
-  min-width: 80px;
+.infoListBlock .infoList th.nowrap,
+.infoListBlock .infoList td.nowrap {
+  white-space: nowrap;
 }
 .infoListBlock .infoList th:nth-child(2),
 .infoListBlock .infoList td:nth-child(2) {
-  min-width: 120px;
+  white-space: nowrap;
   text-align: left;
 }
 .infoListBlock .infoList th:nth-child(3),
 .infoListBlock .infoList td:nth-child(3) {
-  width: calc((100% - 400px) * 0.4);
   text-align: left;
 }
 .infoListBlock .infoList th:nth-child(4),
 .infoListBlock .infoList td:nth-child(4) {
-  width: calc((100% - 400px) * 0.6);
   text-align: left;
 }
-.infoListBlock .infoList th:nth-child(5),
-.infoListBlock .infoList td:nth-child(5) {
-  min-width: 110px;
+.infoListBlock .infoList thead th {
+  background: #000;
+  color: #fff;
 }
-.infoListBlock .infoList th:nth-child(6),
-.infoListBlock .infoList td:nth-child(6) {
-  min-width: 90px;
-}
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a {
-  display: block;
-  font-size: 12px;
-  padding: 2px 3px;
+.infoListBlock .downloadBtnBlock a {
+  font-size: 14px;
+  padding: 3px 3px 1px;
   background: #1b2865;
   line-height: 1;
   color: #fff;
   border-radius: 4px;
+  white-space: nowrap;
   transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a + a,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a + a {
+.infoListBlock .downloadBtnBlock a + a {
   margin-left: 5px;
 }
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:nth-child(3n+1),
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:nth-child(3n+1) {
+.infoListBlock .downloadBtnBlock a:nth-child(3n+1) {
   margin-left: 0;
 }
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:nth-child(n+4),
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:nth-child(n+4) {
+.infoListBlock .downloadBtnBlock a:nth-child(n+4) {
   margin-top: 5px;
 }
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:focus, .infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:hover,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:focus,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:hover {
+.infoListBlock .downloadBtnBlock a:focus, .infoListBlock .downloadBtnBlock a:hover {
+  color: #fff;
   transform: scale(1.4);
   opacity: 1 !important;
   z-index: 2;
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
 }
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:focus,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:focus {
+.infoListBlock .downloadBtnBlock a:focus {
   box-shadow: 0 0 0 2px #ff5001;
 }
-.infoListBlock .infoList th:nth-child(6) .downloadBtnBlock:hover a,
-.infoListBlock .infoList td:nth-child(6) .downloadBtnBlock:hover a {
+.infoListBlock .downloadBtnBlock:hover a {
   opacity: 0.5;
-}
-.infoListBlock .infoList thead th {
-  background: #000;
-  color: #fff;
 }
 
 .tableList table thead {
@@ -10546,7 +10561,7 @@ body.large_size .innerpage {
   }
 }
 .tableList table td {
-  padding: 15px 5px;
+  padding: 15px 10px;
   font-size: 16px;
   font-family: "Urbanist", "Noto Sans TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif, "Iconify Explorer Font";
 }
@@ -10571,6 +10586,22 @@ body.large_size .innerpage {
     border-right: 1px solid #ddd;
   }
 }
+.tableList table td:nth-child(3) {
+  white-space: nowrap;
+}
+.tableList table td:nth-child(4) {
+  padding: 0;
+}
+.tableList table td:nth-child(4) a {
+  padding: 15px 10px;
+}
+.tableList a {
+  display: block;
+  color: #000;
+}
+.tableList a:hover {
+  color: #3148b5;
+}
 
 .colorStyleA a:focus {
   outline: none;
@@ -10593,6 +10624,9 @@ body.large_size .innerpage {
 .colorStyleA .no-js noscript a:hover, .colorStyleA .no-js noscript a:focus {
   color: #1b2865;
 }
+.colorStyleA .tableList a {
+  color: #1b2865;
+}
 
 .colorStyleB a:focus {
   outline: none;
@@ -10613,6 +10647,9 @@ body.large_size .innerpage {
   color: #751829;
 }
 .colorStyleB .no-js noscript a:hover, .colorStyleB .no-js noscript a:focus {
+  color: #751829;
+}
+.colorStyleB .tableList a {
   color: #751829;
 }
 
@@ -12676,6 +12713,10 @@ h2.title {
   cursor: pointer;
 }
 
+.publications_cp .publish_info li:last-child {
+  text-align: right;
+}
+
 .publish_info {
   font-size: 0.875em;
   line-height: 1.5em;
@@ -12690,7 +12731,7 @@ h2.title {
 }
 .publish_info li {
   flex: 1 1 33.3333333333%;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 @media screen and (max-width: 991px) {
   .publish_info li {
@@ -13012,13 +13053,15 @@ h2.title {
   padding-top: 20px !important;
   display: flex !important;
   flex-wrap: wrap;
+  position: relative;
+  margin: 0 -10px;
 }
 .gridList > li {
-  width: calc((100% - 40px) / 3) !important;
+  width: calc(33.3333333333% - 20px) !important;
   border: #ddd 1px solid;
   background: #fff;
   padding: 0 !important;
-  margin-top: 20px;
+  margin: 20px 10px 0;
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 991px) {
@@ -13028,14 +13071,6 @@ h2.title {
 }
 .gridList > li::before {
   border-width: 5px;
-}
-.gridList > li + li {
-  margin-left: 20px;
-}
-@media screen and (min-width: 991px) {
-  .gridList > li:nth-child(3n+1) {
-    margin-left: 0;
-  }
 }
 @media screen and (max-width: 991px) {
   .gridList > li:nth-child(2n+1) {
@@ -13085,7 +13120,7 @@ h2.title {
   .listGrid .list > ul > li,
 .listGrid .list ol > li {
     width: calc((100% - 40px) / 2) !important;
-    margin: 20px 0 0 20px;
+    margin: 20px 10px 0;
     padding: 0;
     border: #ddd 1px solid;
   }
@@ -13219,7 +13254,7 @@ h2.title {
   letter-spacing: 1px;
   font-size: 14px;
   padding-right: 10px;
-  color: #333;
+  color: #888;
   position: relative;
   flex-shrink: 0;
 }
@@ -13233,8 +13268,8 @@ h2.title {
   background: #cfcfcf;
 }
 .publications .list ul li .infoTxt {
+  color: #333;
   margin-left: 10px;
-  color: #888;
   font-size: 0.938em;
 }
 .publications .list ul li ul.info {
@@ -13245,17 +13280,8 @@ h2.title {
   margin-bottom: 5px;
 }
 .publications .gridList > li {
-  margin: 0 !important;
-  width: calc((100% - 90px) / 4) !important;
-}
-.publications .gridList > li + li {
-  margin-left: 30px !important;
-}
-.publications .gridList > li:nth-child(4n+1) {
-  margin-left: 0 !important;
-}
-.publications .gridList > li:nth-child(n+5) {
-  margin-top: 20px !important;
+  margin: 0 10px 20px !important;
+  width: calc(25% - 20px) !important;
 }
 
 .publicationsTime ul {
@@ -13316,6 +13342,7 @@ h2.title {
 .publications_cp .topBlock h2 {
   padding: 0;
   margin: 0 0 20px 0;
+  line-height: 1.4;
 }
 .publications_cp .topBlock .contentBlock {
   display: flex;
@@ -14037,72 +14064,68 @@ h2.title {
   content: "\e003";
 }
 .reservationForm .bottomInfo li.seat .con {
+  overflow-x: auto;
   display: flex;
-  flex-wrap: wrap;
+  padding: 0;
+  min-width: 400px;
 }
 .reservationForm .bottomInfo li.seat .con .seatBox {
-  width: calc((100% - 30px) / 2);
+  flex-grow: 1;
+  padding: 20px;
 }
 @media screen and (max-width: 575px) {
   .reservationForm .bottomInfo li.seat .con .seatBox {
     width: 100%;
   }
-  .reservationForm .bottomInfo li.seat .con .seatBox::before {
-    content: "左邊";
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    display: block;
-  }
 }
-.reservationForm .bottomInfo li.seat .con .seatBox:nth-child(2) {
-  margin-left: 30px;
+.reservationForm .bottomInfo li.seat .con .seatBox + .seatBox {
+  border: 1px solid #ddd;
+  border-width: 0 0 0 1px;
 }
 @media screen and (max-width: 575px) {
-  .reservationForm .bottomInfo li.seat .con .seatBox:nth-child(2) {
-    margin: 30px 0 0 0;
+  .reservationForm .bottomInfo li.seat .con .seatBox + .seatBox {
+    border-width: 1px 0 0;
   }
-  .reservationForm .bottomInfo li.seat .con .seatBox:nth-child(2)::before {
-    content: "右邊";
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: bold;
+}
+.reservationForm .bottomInfo li.seat .con .seatBox .info {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+@media screen and (max-width: 575px) {
+  .reservationForm .bottomInfo li.seat .con .seatBox .info {
     display: block;
   }
 }
-.reservationForm .bottomInfo li.seat .con ul {
+.reservationForm .bottomInfo li.seat .con table {
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 }
-.reservationForm .bottomInfo li.seat .con ul li {
+.reservationForm .bottomInfo li.seat .con table td {
+  border: none;
   color: #888;
-  padding: 0;
-  list-style: none;
-  width: calc((100% - 10px) / 3);
-  margin-left: 5px;
+  padding: 5px;
 }
-.reservationForm .bottomInfo li.seat .con ul li:nth-child(3n+1) {
+.reservationForm .bottomInfo li.seat .con table td:nth-child(3n+1) {
   margin-left: 0;
 }
-.reservationForm .bottomInfo li.seat .con ul li:nth-child(n+4) {
+.reservationForm .bottomInfo li.seat .con table td:nth-child(n+4) {
   margin-top: 5px;
 }
-.reservationForm .bottomInfo li.seat .con ul li input {
+.reservationForm .bottomInfo li.seat .con table td input {
   opacity: 0;
   position: absolute;
 }
-.reservationForm .bottomInfo li.seat .con ul li input:checked + label {
+.reservationForm .bottomInfo li.seat .con table td input:checked + label {
   background: #ff7334;
 }
-.reservationForm .bottomInfo li.seat .con ul li input:checked + label::before {
+.reservationForm .bottomInfo li.seat .con table td input:checked + label::before {
   content: "\e006";
 }
-.reservationForm .bottomInfo li.seat .con ul li input:focus + label {
+.reservationForm .bottomInfo li.seat .con table td input:focus + label {
   box-shadow: 0 0 0 2px #ff5001;
 }
-.reservationForm .bottomInfo li.seat .con ul li label {
+.reservationForm .bottomInfo li.seat .con table td label {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -14117,39 +14140,39 @@ h2.title {
   position: relative;
   cursor: pointer;
 }
-.reservationForm .bottomInfo li.seat .con ul li label::before {
+.reservationForm .bottomInfo li.seat .con table td label::before {
   color: #fff;
   font-size: 20px;
   content: "\e007";
   top: 2px;
   position: relative;
 }
-.reservationForm .bottomInfo li.seat .con ul li label:hover {
+.reservationForm .bottomInfo li.seat .con table td label:hover {
   background: #ff7334;
 }
-.reservationForm .bottomInfo li.seat .con ul li.active label::before {
+.reservationForm .bottomInfo li.seat .con table td.active label::before {
   content: "\e006";
 }
-.reservationForm .bottomInfo li.seat .con ul li.full input {
+.reservationForm .bottomInfo li.seat .con table td.full input {
   display: none;
 }
-.reservationForm .bottomInfo li.seat .con ul li.full label {
+.reservationForm .bottomInfo li.seat .con table td.full label {
   cursor: not-allowed;
   background: #ccc;
   border-color: #ccc;
 }
-.reservationForm .bottomInfo li.seat .con ul li.full label::before {
+.reservationForm .bottomInfo li.seat .con table td.full label::before {
   content: "\e008";
 }
-.reservationForm .bottomInfo li.seat .con ul li.close input {
+.reservationForm .bottomInfo li.seat .con table td.close input {
   display: none;
 }
-.reservationForm .bottomInfo li.seat .con ul li.close label {
+.reservationForm .bottomInfo li.seat .con table td.close label {
   cursor: not-allowed;
   background: none;
   border: 1px solid #ccc;
 }
-.reservationForm .bottomInfo li.seat .con ul li.close label::before {
+.reservationForm .bottomInfo li.seat .con table td.close label::before {
   color: #ccc;
   content: "\e005";
 }
@@ -14750,6 +14773,9 @@ h2.title {
   color: #3148b5;
 }
 
+@page {
+  margin: 1cm; /*print邊界*/
+}
 @media print {
   .main,
 .content, body {
@@ -14760,7 +14786,9 @@ h2.title {
 .fatfooter,
 footer,
 .accesskey,
-.submenu {
+.submenu,
+.breadcrumb,
+.category {
     display: none;
   }
   /* -------------------------------各別顯示設定----//*/
@@ -14945,6 +14973,88 @@ li:first-line {
   }
   .innerpage > .container {
     box-shadow: none;
+  }
+  .pagination {
+    flex-direction: column;
+    page-break-inside: avoid;
+  }
+  .listGrid .list > ul > li time,
+.listGrid .list ol > li time {
+    font-size: 13px;
+  }
+  .listGrid .list > ul > li span.dept,
+.listGrid .list ol > li span.dept {
+    color: #000 !important;
+    padding: 2px 10px 3px 0;
+  }
+  .function_panel {
+    padding: 0;
+    margin: 0;
+  }
+  .function_panel .share {
+    display: none;
+  }
+  .cp blockquote {
+    padding: 1em 2em;
+  }
+  .publications_cp .downloadBlock .downloadTitle a,
+.publications_cp .downloadBlock table th:nth-child(4),
+.publications_cp .downloadBlock table td:nth-child(4),
+.publications_cp .topBlock ul.download,
+.function_panel .publish_time:before,
+.infoListBlock .infoList th:nth-child(6),
+.infoListBlock .infoList td:nth-child(6),
+.file_download li span.file_doc a,
+.file_download li span.file_docx a,
+.file_download li span.file_odt a,
+.searchBlock,
+.icon_back,
+.tooltip,
+.tag {
+    display: none;
+  }
+  .tableList table td {
+    padding: 5px 5px;
+  }
+  .tableBlock .tableList > ul li {
+    padding: 5px;
+    line-height: 1.4;
+  }
+  .publications .list ul li ul.info li {
+    margin-bottom: 0;
+  }
+  .listGrid .list > ul > li .info + .txt,
+.listGrid .list ol > li .info + .txt {
+    margin-top: 5px;
+  }
+  .listGrid .list > ul > li > a,
+.listGrid .list ol > li > a {
+    padding: 2px 0;
+  }
+  .publications_cp .topBlock {
+    margin-bottom: 30px !important;
+  }
+  .publications .gridList > li {
+    width: calc(50% - 20px) !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  .newsBlock .container {
+    padding: 0 !important;
+  }
+  .mpSliderBlock {
+    width: 100%;
+  }
+  .titleBox {
+    margin-bottom: 30px;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  .titleBox .en,
+.titleBox .zh {
+    font-size: 30px;
+    margin: 0 10px;
   }
 }
 /*!

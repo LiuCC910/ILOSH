@@ -87,13 +87,13 @@
                   <li><a href="#">關於虛擬環境VDI預約 </a></li>
                   <li><a href="#">位置圖與交通資訊</a></li>
                 </ul-->
-            </li>
-            <li><a href="#">簡訊</a></li>
-            <li><a href="#">研究季刊</a></li>
-            <li><a href="#">技術叢書</a></li>
-            <li><a href="#">研究年報</a></li>
-            <li><a href="#">其他出版品</a></li>
-            <li><a href="#">專利技術</a></li>
+              </li>
+              <li><a href="#">簡訊</a></li>
+              <li><a href="#">研究季刊</a></li>
+              <li><a href="#">技術叢書</a></li>
+              <li><a href="#">研究年報</a></li>
+              <li><a href="#">其他出版品</a></li>
+              <li><a href="#">專利技術</a></li>
             </ul>
           </nav>
           <!-- menu End -->
@@ -124,7 +124,7 @@
               <div class="searchBox list">
                 <div class="label">研究主題</div>
                 <div class="inputBox">
-                  <input type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
+                  <input class="inputType" type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
                 </div>
               </div>
               <div class="dateSelectBox list">
@@ -137,9 +137,9 @@
                   </select>
                   ～
                   <select name="selectDepartment" id="selectDepartment">
-                      <option>請選擇</option>
-                      <option>111</option>
-                      <option>110</option>
+                    <option>請選擇</option>
+                    <option>111</option>
+                    <option>110</option>
                   </select>
                   <!--input type="text" name="from" placeholder="請選擇日期" id="from" data-language="zh" />
                   <input type="text" name="to" placeholder="請選擇日期" id="to" data-language="zh" /-->
@@ -157,7 +157,10 @@
                 </div>
               </div>
               <!--搜尋按鈕不應該被包在單一條件下-->
-              <button class="searchBtn">搜尋</button>
+              <div class="searchBtnBox">
+                <button class="searchBtn">搜尋</button>
+                <button class="searchBtn">重設</button>
+              </div>
             </form>
           </div>
         </section>
@@ -184,7 +187,7 @@
                     <td>勞動市場研究組</td>
                     <!--除了下載也會有進內頁連結，請協助設定可以整格連結-->
                     <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                    <td>2022/5/12</td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                       <!--一次只會取一個下載連結-->
@@ -195,7 +198,7 @@
                     <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
                     <td><a href="#">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
-                    <td>2022/5/12</td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
@@ -205,7 +208,7 @@
                     <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
                     <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                    <td>2022/5/12</td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                     </td>
@@ -215,67 +218,67 @@
                     <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
                     <td><a href="#">產業人才投資方案訓練效益評估</a></td>
-                    <td>2022/5/12</td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">DOC</a></div>
                     </td>
                   </tr>
                   <tr>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
+                    <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
                   </tr>
                   <tr>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
+                    <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
                   </tr>
                   <tr>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
+                    <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
                   </tr>
                   <tr>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
+                    <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
                   </tr>
                   <tr>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
+                    <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
                   </tr>
                   <tr>
                     <td>111年</td>
-                    <td>ILOSH110-M301</td>
+                    <td><a href="#">ILOSH110-M301</a></td>
                     <td>勞動市場研究組</td>
-                    <td>產業人才投資方案訓練效益評估</td>
-                    <td>2022/5/12</td>
+                    <td><a href="#">產業人才投資方案訓練效益評估</a></td>
+                    <td class="nowrap">2022/5/12</td>
                     <td>
                       <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
                     </td>
@@ -316,13 +319,13 @@
                       <li><a href="#">關於虛擬環境VDI預約 </a></li>
                       <li><a href="#">位置圖與交通資訊</a></li>
                     </ul-->
-                </li>
-                <li><a href="#">簡訊</a></li>
-                <li><a href="#">研究季刊</a></li>
-                <li><a href="#">技術叢書</a></li>
-                <li><a href="#">研究年報</a></li>
-                <li><a href="#">其他出版品</a></li>
-                <li><a href="#">專利技術</a></li>
+                  </li>
+                  <li><a href="#">簡訊</a></li>
+                  <li><a href="#">研究季刊</a></li>
+                  <li><a href="#">技術叢書</a></li>
+                  <li><a href="#">研究年報</a></li>
+                  <li><a href="#">其他出版品</a></li>
+                  <li><a href="#">專利技術</a></li>
                 </ul>
               </nav>
             </div>

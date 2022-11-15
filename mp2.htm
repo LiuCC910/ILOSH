@@ -148,7 +148,7 @@
               <div class="searchBox list">
                 <div class="label">採購案名稱</div>
                 <div class="inputBox">
-                  <input type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
+                  <input class="inputType" type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
                 </div>
               </div>
               <div class="searchBox list">
@@ -178,7 +178,21 @@
                   </select>
                 </div>
               </div>
-              <button class="searchBtn">搜尋</button>
+              <div class="departmentBox list">
+                <div class="label">請購單位</div>
+                <div class="inputBox">
+                  <select name="selectDepartment" id="selectDepartment">
+                    <option>請選擇</option>
+                    <option>單位一</option>
+                    <option>單位二單位二</option>
+                    <option>單位三</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchBtnBox">
+                <button class="searchBtn">搜尋</button>
+                <button class="searchBtn">重設</button>
+              </div>
             </form>
           </div>
         </section>
@@ -194,7 +208,7 @@
               </div>
               <div class="tabSet">
                 <div class="tabItems">
-                  <button class="item"><i></i>招標資訊</button>
+                  <button class="item active"><i></i>招標資訊</button>
                   <button class="item"><i></i>系統公告</button>
                 </div>
 
@@ -214,7 +228,7 @@
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td><a href="#">1110057</a></td>
+                            <td><a href="#">1110056</a></td>
                             <td><time>2022/09/07</time></td>
                             <td><a href="#">人員落海警示裝置之研製與測試</a></td>
                             <td>1,650,000</td>
@@ -339,7 +353,10 @@
               <p>
                 本所服務專線：(02)2660-7600<br />
                 傳真號碼：(02)2660-7732<br />
-                本所地址：22143新北市汐止區橫科路407巷99號 [<a href="https://www.google.com.tw/maps/place/%E5%8B%9E%E5%8B%95%E9%83%A8%E5%8B%9E%E5%8B%95%E5%8F%8A%E8%81%B7%E6%A5%AD%E5%AE%89%E5%85%A8%E8%A1%9B%E7%94%9F%E7%A0%94%E7%A9%B6%E6%89%80/@25.050737,121.630764,17z/data=!3m1!4b1!4m2!3m1!1s0x345d54aaf704fb15:0xed8b4ace0eaf7db5?hl=zh-TW">MAP</a>]<br />
+                本所地址：22143新北市汐止區橫科路407巷99號 [<a
+                  href="https://www.google.com.tw/maps/place/%E5%8B%9E%E5%8B%95%E9%83%A8%E5%8B%9E%E5%8B%95%E5%8F%8A%E8%81%B7%E6%A5%AD%E5%AE%89%E5%85%A8%E8%A1%9B%E7%94%9F%E7%A0%94%E7%A9%B6%E6%89%80/@25.050737,121.630764,17z/data=!3m1!4b1!4m2!3m1!1s0x345d54aaf704fb15:0xed8b4ace0eaf7db5?hl=zh-TW"
+                  >MAP</a
+                >]<br />
                 本網站最佳瀏覽解析度為 1280*800 以上
               </p>
             </div>
@@ -348,15 +365,15 @@
               <nav>
                 <ul>
                   <li><a href="#">系統公告</a></li>
-                    <li><a href="#">法規輯要</a></li>
-                    <li>
-                      <a href="#">標案資訊</a>
-                      <ul>
-                        <li><a href="#">招標資訊</a></li>
-                        <li><a href="#">歷史區</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">資源服務</a></li>
+                  <li><a href="#">法規輯要</a></li>
+                  <li>
+                    <a href="#">標案資訊</a>
+                    <ul>
+                      <li><a href="#">招標資訊</a></li>
+                      <li><a href="#">歷史區</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">資源服務</a></li>
                 </ul>
               </nav>
             </div>
