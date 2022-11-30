@@ -446,6 +446,9 @@ table {
     &.nowrap {
       white-space: nowrap;
     }
+    &.center {
+      text-align: center;
+    }
   }
 }
 .infoListBlock {
@@ -464,24 +467,24 @@ table {
     td {
       border: none;
       background: none;
-      text-align: center;
-      padding: 10px;
+      // text-align: center;
+      // padding: 10px;
       // &:nth-child(1) {
       //   min-width: 80px;
       // }
-      &:nth-child(2) {
-        white-space: nowrap;
-        // min-width: 140px;
-        text-align: left;
-      }
-      &:nth-child(3) {
-        // width: calc((100% - 400px) * 0.4);
-        text-align: left;
-      }
-      &:nth-child(4) {
-        // width: calc((100% - 400px) * 0.6);
-        text-align: left;
-      }
+      // &:nth-child(2) {
+      //   white-space: nowrap;
+      //   min-width: 140px;
+      //   text-align: left;
+      // }
+      // &:nth-child(3) {
+      //   width: calc((100% - 400px) * 0.4);
+      //   text-align: left;
+      // }
+      // &:nth-child(4) {
+      //   width: calc((100% - 400px) * 0.6);
+      //   text-align: left;
+      // }
       // &:nth-child(5) {
       //   min-width: 110px;
       // }
@@ -495,42 +498,39 @@ table {
         color: #fff;
       }
     }
+    // td:nth-child(2),
+    // td:nth-child(3) {
+    //   white-space: nowrap;
+    // }
   }
-  .downloadBtnBlock {
-    a {
-      font-size: 14px;
-      padding: 3px 3px 1px;
-      background: $downloadColor;
-      line-height: 1;
-      color: #fff;
-      border-radius: 4px;
-      white-space: nowrap;
-      transition: 0.3s $cubic;
-      & + a {
-        margin-left: 5px;
-      }
-      &:nth-child(3n + 1) {
-        margin-left: 0;
-      }
-      &:nth-child(n + 4) {
-        margin-top: 5px;
-      }
-      &:focus,
-      &:hover {
-        color: #fff;
-        transform: scale(1.4);
-        opacity: 1 !important;
-        z-index: 2;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-      }
-      &:focus {
-        box-shadow: 0 0 0 2px $secondaryColor;
-      }
-    }
+}
+.downloadBtnBlock {
+  a {
+    font-size: 14px;
+    padding: 3px 3px 1px;
+    background: $downloadColor;
+    line-height: 1;
+    color: #fff !important;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: 0.3s $cubic;
+    text-align: center;
+    margin: 2px;
+    &:focus,
     &:hover {
-      a {
-        opacity: 0.5;
-      }
+      color: #fff;
+      transform: scale(1.4);
+      opacity: 1 !important;
+      z-index: 2;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px $secondaryColor;
+    }
+  }
+  &:hover {
+    a {
+      opacity: 0.5;
     }
   }
 }
@@ -540,7 +540,7 @@ table {
   table {
     thead {
       margin: 0;
-      text-align: center;
+      // text-align: center;
       @include screen('tablet') {
         display: none;
       }
@@ -552,7 +552,7 @@ table {
         font-size: 17px;
         font-weight: normal;
         padding: 15px 5px;
-        text-align: center;
+        // text-align: center;
       }
     }
     tr {
@@ -566,7 +566,7 @@ table {
       }
     }
     td {
-      padding: 15px 10px;
+      // padding: 15px 10px;
       font-size: 16px;
       font-family: $ff-urbanist;
       @include screen('tablet') {
@@ -588,14 +588,17 @@ table {
           border-right: 1px solid #ddd;
         }
       }
-      &:nth-child(3) {
-        white-space: nowrap;
-      }
-      &:nth-child(4) {
-        padding: 0;
-        a {
-          padding: 15px 10px;
-        }
+      // &:nth-child(3) {
+      //   white-space: nowrap;
+      // }
+      // &:nth-child(4) {
+      //   padding: 0;
+      //   a {
+      //     padding: 15px 10px;
+      //   }
+      // }
+      & > a {
+        padding: 5px 0px;
       }
     }
   }

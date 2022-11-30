@@ -7743,7 +7743,6 @@ table th {
   background-color: #f3f3f3;
   color: #333;
   border: #ddd 1px solid;
-  text-align: center;
   white-space: nowrap;
 }
 table.table_hover tr:hover {
@@ -10457,6 +10456,10 @@ table th.nowrap,
 table td.nowrap {
   white-space: nowrap;
 }
+table th.center,
+table td.center {
+  text-align: center;
+}
 
 .infoListBlock {
   min-height: 200px;
@@ -10477,62 +10480,40 @@ table td.nowrap {
 .infoListBlock .infoList td {
   border: none;
   background: none;
-  text-align: center;
-  padding: 10px;
-}
-.infoListBlock .infoList th:nth-child(2),
-.infoListBlock .infoList td:nth-child(2) {
-  white-space: nowrap;
-  text-align: left;
-}
-.infoListBlock .infoList th:nth-child(3),
-.infoListBlock .infoList td:nth-child(3) {
-  text-align: left;
-}
-.infoListBlock .infoList th:nth-child(4),
-.infoListBlock .infoList td:nth-child(4) {
-  text-align: left;
 }
 .infoListBlock .infoList thead th {
   background: #000;
   color: #fff;
 }
-.infoListBlock .downloadBtnBlock a {
+
+.downloadBtnBlock a {
   font-size: 14px;
   padding: 3px 3px 1px;
   background: #00a556;
   line-height: 1;
-  color: #fff;
+  color: #fff !important;
   border-radius: 4px;
   white-space: nowrap;
   transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  text-align: center;
+  margin: 2px;
 }
-.infoListBlock .downloadBtnBlock a + a {
-  margin-left: 5px;
-}
-.infoListBlock .downloadBtnBlock a:nth-child(3n+1) {
-  margin-left: 0;
-}
-.infoListBlock .downloadBtnBlock a:nth-child(n+4) {
-  margin-top: 5px;
-}
-.infoListBlock .downloadBtnBlock a:focus, .infoListBlock .downloadBtnBlock a:hover {
+.downloadBtnBlock a:focus, .downloadBtnBlock a:hover {
   color: #fff;
   transform: scale(1.4);
   opacity: 1 !important;
   z-index: 2;
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
 }
-.infoListBlock .downloadBtnBlock a:focus {
+.downloadBtnBlock a:focus {
   box-shadow: 0 0 0 2px #298729;
 }
-.infoListBlock .downloadBtnBlock:hover a {
+.downloadBtnBlock:hover a {
   opacity: 0.5;
 }
 
 .tableList table thead {
   margin: 0;
-  text-align: center;
 }
 @media screen and (max-width: 991px) {
   .tableList table thead {
@@ -10547,7 +10528,6 @@ table td.nowrap {
   font-size: 17px;
   font-weight: normal;
   padding: 15px 5px;
-  text-align: center;
 }
 .tableList table tr {
   background: #fff;
@@ -10562,7 +10542,6 @@ table td.nowrap {
   }
 }
 .tableList table td {
-  padding: 15px 10px;
   font-size: 16px;
   font-family: "Urbanist", "Noto Sans TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif, "Iconify Explorer Font";
 }
@@ -10587,14 +10566,8 @@ table td.nowrap {
     border-right: 1px solid #ddd;
   }
 }
-.tableList table td:nth-child(3) {
-  white-space: nowrap;
-}
-.tableList table td:nth-child(4) {
-  padding: 0;
-}
-.tableList table td:nth-child(4) a {
-  padding: 15px 10px;
+.tableList table td > a {
+  padding: 5px 0px;
 }
 .tableList a {
   display: block;
@@ -12960,10 +12933,20 @@ h2.title {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media screen and (max-width: 991px) {
+  .tableBlock .tableList {
+    flex-direction: column;
+  }
+}
 .tableBlock .tableList > ul {
-  width: 60%;
+  flex-grow: 1;
   padding: 0;
   margin-top: 0;
+}
+@media screen and (max-width: 991px) {
+  .tableBlock .tableList > ul {
+    align-self: stretch;
+  }
 }
 .tableBlock .tableList > ul li {
   display: flex;
@@ -12973,6 +12956,11 @@ h2.title {
 }
 .tableBlock .tableList > ul li:nth-child(odd) {
   background: #ecf0f4;
+}
+@media screen and (max-width: 575px) {
+  .tableBlock .tableList > ul li {
+    flex-direction: column;
+  }
 }
 .tableBlock .tableList .label {
   width: 160px;
@@ -12985,6 +12973,11 @@ h2.title {
   position: relative;
   flex-shrink: 0;
 }
+@media screen and (max-width: 575px) {
+  .tableBlock .tableList .label {
+    text-align: left;
+  }
+}
 .tableBlock .tableList .label::before {
   content: "";
   position: absolute;
@@ -12993,6 +12986,11 @@ h2.title {
   top: 0;
   bottom: 0;
   background: #cfcfcf;
+}
+@media screen and (max-width: 575px) {
+  .tableBlock .tableList .label::before {
+    display: none;
+  }
 }
 .tableBlock .tableList .txt {
   color: #333;
@@ -13003,6 +13001,12 @@ h2.title {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #ddd;
+  margin-left: 20px;
+}
+@media screen and (max-width: 991px) {
+  .tableBlock .tableList .downloadBlock {
+    margin-left: 0;
+  }
 }
 .tableBlock .tableList .downloadBlock .title {
   font-weight: bold;
@@ -13037,14 +13041,6 @@ h2.title {
 }
 @media screen and (max-width: 991px) {
   .tableBlock .tableList .downloadBlock {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 991px) {
-  .tableBlock .tableList {
-    flex-direction: column;
-  }
-  .tableBlock .tableList ul {
     width: 100%;
   }
 }

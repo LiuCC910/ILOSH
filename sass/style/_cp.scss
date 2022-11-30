@@ -393,10 +393,17 @@ h2.title {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    > ul {
-      width: 60%;
+    @include screen('tablet') {
+      flex-direction: column;
+    }
+    & > ul {
+      // width: 60%;
+      flex-grow: 1;
       padding: 0;
       margin-top: 0;
+      @include screen('tablet') {
+        align-self: stretch;
+      }
       li {
         display: flex;
         list-style: none;
@@ -404,6 +411,9 @@ h2.title {
         margin-bottom: 0px;
         &:nth-child(odd) {
           background: #ecf0f4;
+        }
+        @include screen('xs_mobile') {
+          flex-direction: column;
         }
       }
     }
@@ -417,6 +427,9 @@ h2.title {
       color: #666;
       position: relative;
       flex-shrink: 0;
+      @include screen('xs_mobile') {
+        text-align: left;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -425,6 +438,9 @@ h2.title {
         top: 0;
         bottom: 0;
         background: #cfcfcf;
+        @include screen('xs_mobile') {
+          display: none;
+        }
       }
     }
     .txt {
@@ -436,6 +452,10 @@ h2.title {
       padding: 30px;
       border-radius: 10px;
       border: 1px solid #ddd;
+      margin-left: 20px;
+      @include screen('tablet') {
+        margin-left: 0;
+      }
       .title {
         font-weight: bold;
         display: flex;
@@ -470,12 +490,6 @@ h2.title {
         }
       }
       @include screen('tablet') {
-        width: 100%;
-      }
-    }
-    @include screen('tablet') {
-      flex-direction: column;
-      ul {
         width: 100%;
       }
     }

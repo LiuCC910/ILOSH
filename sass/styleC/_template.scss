@@ -28,12 +28,15 @@
   background: #e1e8ef;
   z-index: 0;
   overflow: hidden;
+  @include screen('mobile') {
+    margin-top: 60px;
+  }
   &::before {
     content: '';
-    height: 250px;
+    height: 80px;
     display: block;
-    background: url('../images/inner_bannerC.jpg') center top no-repeat;
-    background-size: cover;
+    // background: url('../images/inner_bannerC.jpg') center top no-repeat;
+    // background-size: cover;
   }
   .blockC {
     position: absolute;
@@ -78,7 +81,7 @@
   h2.pageTitle {
     position: absolute;
     left: 50px;
-    top: 50%;
+    top: 0%;
     z-index: 5;
     padding: 0 0px;
     letter-spacing: 4px;
@@ -86,6 +89,9 @@
     color: #32307c;
     font-weight: 500;
     line-height: 1;
+    @include screen('mobile') {
+      left: 20px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -187,13 +193,13 @@
   position: relative;
   margin: 0 auto;
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
-  @include screen('mobile') {
-    padding-top: 96px;
-  }
+  // @include screen('mobile') {
+  //   padding-top: 96px;
+  // }
 
-  @include screen('xs_mobile') {
-    padding-top: 60px;
-  }
+  // @include screen('xs_mobile') {
+  //   padding-top: 60px;
+  // }
   h2 {
     line-height: 1.25em;
   }
