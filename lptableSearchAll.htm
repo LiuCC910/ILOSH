@@ -52,11 +52,9 @@
             <!-- 新增div navlist -->
             <div class="navlist">
               <ul>
-                <li><a href="mp2.htm">回首頁</a></li>
+                <li><a href="mp3.htm">回首頁</a></li>
                 <li><a href="#">回勞安所主網</a></li>
                 <li><a href="#">網站導覽</a></li>
-                <!--li><a href="#">常見問答</a></li>
-                <li><a href="#">聯絡我們</a></li-->
               </ul>
             </div>
             <!-- font_size -->
@@ -89,7 +87,8 @@
                 <li><a href="#">簡訊</a></li>
                 <li><a href="#">研究季刊</a></li>
                 <li><a href="#">技術叢書</a></li>
-                <li><a href="#">研究年報</a></li>
+                <!--研究年度單元被移除，不納入搜尋-->
+                <!--li><a href="#">研究年報</a></li-->
                 <li><a href="#">其他出版品</a></li>
                 <li><a href="#">專利技術</a></li>
             </ul>
@@ -106,13 +105,14 @@
         <div class="blockB">
           <img src="images/inner_bannerB.jpg" alt="" />
         </div>
+        <!--依據客戶需求移除頁首設計減低高度-->
         <!--div class="blockC">
           <div class="txtBox">
             <div class="slideCon"></div>
           </div>
         </div-->
         <!-- h2節點 -->
-        <h2 class="pageTitle">季刊</h2>
+        <h2 class="pageTitle">最新研究成果</h2>
       </div>
       <div id="center" class="main innerpage">
         <!-- 內頁新增一個classname-->
@@ -124,8 +124,7 @@
             <div class="breadcrumb">
               <ul>
                 <li><a href="#">首頁</a></li>
-                <li><a href="#">節點</a></li>
-                <li>節點</li>
+                <li>最新研究成果</li>
               </ul>
             </div>
             <!-- h2節點 -->
@@ -133,8 +132,6 @@
             <!--h2 class="title">節點標題</h2-->
             <!-- function_panel -->
             <div class="function_panel">
-              <!--條列頁不會有發布日期-->
-              <!--div class="publish_time"><span>發布日期：</span><time>2019-01-01</time></div-->
               <!-- function功能區塊 -->
               <div class="function">
                 <ul>
@@ -145,159 +142,188 @@
                 </ul>
               </div>
               <!-- 社群分享 -->
-              <div class="share" title="分享">
+              <!--div class="share" title="分享">
                 <ul>
-                  <!--只留fb, twitter, line, plurk-->
                   <li><a href="https://www.facebook.com/sharer/sharer.php?u=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a></li>
                   <li><a href="http://twitter.com/share?text=標題&url=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a></li>
                   <li><a href="https://social-plugins.line.me/lineit/share?url=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_line.svg" alt="line" /></a></li>
                   <li><a href="https://www.plurk.com/?qualifier=shares&status=這裡帶入分享的網址" target="_blank"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a></li>
-                  <!--li>
-                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
-                  </li-->
                 </ul>
-              </div>
+              </div-->
             </div>
             <!-- 搜尋  start-->
             <section class="searchBlock">
-              <div class="container">
+                <div class="container">
                 <form class="indexSearch" action>
-                  <div class="searchBox list">
-                    <div class="label">關鍵字</div>
-                    <div class="inputBox">
-                      <input type="text" name="keywords" placeholder="請輸入關鍵字" id="" />
+                    <div class="searchBox list">
+                        <div class="label">研究主題</div>
+                        <div class="inputBox">
+                            <input type="text" name="keywords" placeholder="請輸入關鍵字，會同時搜尋標題、摘要、關鍵字" id="" value="研究" />
+                        </div>
                     </div>
-                  </div>
-                  <div class="dateSelectBox list">
-                    <div class="label">卷期</div>
-                    <div class="inputBox">
-                        <select name="selectDepartment" id="selectDepartment">
-                            <option>請選擇卷別</option>
-                            <option>30</option>
-                            <option>29</option>
-                            <option>創刊號</option>
-                        </select>
-                        <select name="selectDepartment" id="selectDepartment">
-                            <option>請選擇期別</option>
-                            <option disabled>請先選擇卷別</option>
-                        </select>
-                    </div>
-                  </div>
-                  <div class="dateSelectBox list">
-                    <div class="label">年度</div>
-                    <div class="inputBox">
-                        <select name="selectDepartment" id="selectDepartment">
+                    <div class="dateSelectBox list">
+                        <div class="label">年度</div>
+                        <div class="inputBox">
+                            <select name="selectDepartment" id="selectDepartment">
                             <option>請選擇</option>
                             <option>111</option>
-                            <option>110</option>
-                        </select>
-                        ～
-                        <select name="selectDepartment" id="selectDepartment">
-                            <option>請選擇</option>
-                            <option>111</option>
-                            <option>110</option>
-                        </select>
+                            <option selected>110</option>
+                            <option>109</option>
+                            </select>
+                            ~
+                            <select name="selectDepartment" id="selectDepartment">
+                                <option>請選擇</option>
+                                <option selected>111</option>
+                                <option>110</option>
+                                <option>109</option>
+                            </select>
+                        </div>
                     </div>
-                  </div>
-                  <!--搜尋的按鈕不該包在條件裡-->
-                  <button class="searchBtn">搜尋</button>
+                    <div class="departmentBox list">
+                        <div class="label">搜尋單元</div>
+                        <div class="inputBox">
+                            <select name="selectDepartment" id="selectDepartment">
+                            <option selected>全部</option>
+                            <option>各年度研究報告</option>
+                            <option>簡訊</option>
+                            <option>研究季刊</option>
+                            <option>技術叢書</option>
+                            <option>其他出版品</option>
+                            <option>專利技術</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="searchBtn">搜尋</button>
                 </form>
-              </div>
+                </div>
             </section>
             <!-- 搜尋  end-->
             <!-- list  start-->
             <section class="infoListBlock">
+                <div class="category">
+                    <span class="label">單元篩選：</span>
+                    <ul>
+                      <li><a href="#" class="active">全部 (<em>308</em>)</a></li>
+                      <li><a href="#">各年度研究報告 (<em>158</em>)</a></li>
+                      <li><a href="#">簡訊 (<em>22</em>)</a></li>
+                      <li><a href="#">研究季刊 (<em>28</em>)</a></a></li>
+                      <li><a href="#">技術叢書 (<em>85</em>)</a></a></li>
+                      <li><a href="#">其他出版品 (<em>13</em>)</a></a></li>
+                      <li><a href="#">專利技術 (<em>2</em>)</a></a></li>
+                    </ul>
+                  </div>
               <div class="container">
                 <div class="infoList tableList">
                     <table>
                         <thead>
                           <tr>
+                            <th>單元出處</th>
                             <th>出版年</th>
-                            <th>出版月</th>
-                            <th>卷期</th>
-                            <th>篇名</th>
+                            <th>研究報告名稱</th>
+                            <th>發布日期</th>
                             <th>下載</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
+                            <td class="nowrap">各年度研究報告</td>
                             <td>111年</td>
-                            <td>11月</td>
-                            <td><a href="#">第30卷第3期</a></td>
+                            <!--進內頁連結，設定可以整格連結-->
+                            <td><!--另開到原單元內容頁-->
+                              <a href="http://10.10.4.84:8081/iLosh/wSite/ct?xItem=16942&ctNode=322&mp=3" target="_blank">奈米微粒作業人員職業危害調查研究</a></td>
+                            <!--表格內容若需要不換行，請在該 td 增加class nowrap，需要置中，請在該 td 增加class center-->
+                            <td class="nowrap">2022/5/12</td>
                             <td>
-                              <ol>
-                                <li><a href="#">水平安全母索於建築工程使用 之安全管理問題探討</a></li>
-                                <li><a href="#">離岸風電「危害鑑別、 風險評估和控制」職能課程</a></li>
-                                <li><a href="#">長照機構地板抗滑性 與照服員跌倒經驗調查</a></li>
-                                <li><a href="#">職業傷害的發生與社會分布： 全民健保資料分析</a></li>
-                                <li><a href="#">我國大數據於職業病 流行病學研究之現況挑戰</a></li>
-                                <li><a href="#">大量解僱勞工 再就業追蹤資料之觀察與分析</a></li>
-                                <li><a href="#">各國自然人移動執行職務 之勞動法令探討</a></li>
-                                <li><a href="#">船員法對船員工作時間 規範之初探</a></li>
-                                <li><a href="#">稿約</a></li>
-                                <li><a href="#">封面封底</a></li>
-                              </ol>
-                            </td>
-                            <td>
-                              <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                              <!--一次只會取一個下載連結-->
                             </td>
                           </tr>
                           <tr>
+                            <td class="nowrap">各年度研究報告</td>
                             <td>111年</td>
-                            <td>7月</td>
-                            <td><a href="#">第30卷第2期</a></td>
+                            <td><a href="#" target="_blank">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
+                            <td class="nowrap">2022/5/12</td>
                             <td>
-                              <ol>
-                                <li><a href="#">封面封底</a></li>
-                                <li><a href="#">施工安全風險管理導向的數位科技整合決策支援系統</a></li>
-                                <li><a href="#">手套與零件尺寸對手部靈巧性之影響</a></li>
-                                <li><a href="#">物流業配送員下背受力分析</a></li>
-                                <li><a href="#">利用小型室內環境暴露艙評估三種生物氣膠控制技術之去除效能</a></li>
-                                <li><a href="#">美國職場肌肉骨骼職業病預防指引與我國比較</a></li>
-                                <li><a href="#">工作型態對電子業勞工體內氧化壓力指標影響</a></li>
-                                <li><a href="#">臺灣日語教師、學生及社會上一般人對「前往日本工作」的價值認知</a></li>
-                                <li><a href="#">我國演藝經紀契約關係之定性與糾紛原因分析</a></li>
-                                <li><a href="#">稿約</a></li>
-                              </ol>
-                            </td>
-                            <td>
-                              <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                             </td>
                           </tr>
                           <tr>
+                            <td class="nowrap">各年度研究報告</td>
                             <td>111年</td>
-                            <td>4月</td>
+                            <td><a href="#">善用中高齡及高齡員工活化企業人力資源</a></td>
+                            <td>2022/5/12</td>
+                            <td>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">簡訊</td>
+                            <td>111年</td>
+                            <td><a href="#">守護勞工的最前線「勞安加衛體驗館」隆重開幕</a></td>
+                            <td class="nowrap">2022/5/12</td>
+                            <td>
+                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
+                              <!--簡訊/研究季刊可否取打包的ZIP-->
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">研究季刊</td>
+                            <td>111年</td>
                             <td><a href="#">第30卷第1期</a></td>
+                            <td class="nowrap">2022/5/12</td>
                             <td>
-                              <ol>
-                                <li><a href="#">封面封底</a></li>
-                                <li><a href="#">施工安全風險管理導向的數位科技整合決策支援系統</a></li>
-                                <li><a href="#">手套與零件尺寸對手部靈巧性之影響</a></li>
-                                <li><a href="#">物流業配送員下背受力分析</a></li>
-                                <li><a href="#">利用小型室內環境暴露艙評估三種生物氣膠控制技術之去除效能</a></li>
-                                <li><a href="#">美國職場肌肉骨骼職業病預防指引與我國比較</a></li>
-                                <li><a href="#">工作型態對電子業勞工體內氧化壓力指標影響</a></li>
-                                <li><a href="#">Exposure and Health Risk Assessment of Polycyclic Aromatic Hydrocarbons for Motorcycle Mechanics</a></li>
-                                <li><a href="#">我國演藝經紀契約關係之定性與糾紛原因分析</a></li>
-                                <li><a href="#">稿約</a></li>
-                              </ol>
+                              <div class="downloadBtnBlock"><a href="#">ZIP</a></div>
+                              <!--簡訊/研究季刊可否取打包的ZIP-->
                             </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">技術叢書</td>
+                            <td>111年</td>
+                            <td><a href="#">高空工作車使用安全管理指引</a></td>
+                            <td>2022/5/12</td>
                             <td>
-                              <div class="downloadBtnBlock"><!--a href="#">DOC</a><a href="#">PDF</a--><a href="#">ZIP</a></div>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">其他出版品</td>
+                            <td>111年</td>
+                            <td><a href="#">防疫旅宿通風空調換氣情形檢視重點</a></td>
+                            <td>2022/5/12</td>
+                            <td>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">專利技術</td>
+                            <td>111年</td>
+                            <td><a href="#">携帯式ナノ粒子サンプラ</a></td>
+                            <td>2022/5/12</td>
+                            <td>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">各年度研究報告</td>
+                            <td>111年</td>
+                            <td><a href="#" target="_blank">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
+                            <td class="nowrap">2022/5/12</td>
+                            <td>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nowrap">各年度研究報告</td>
+                            <td>111年</td>
+                            <td><a href="#" target="_blank">產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估產業人才投資方案訓練效益評估</a></td>
+                            <td class="nowrap">2022/5/12</td>
+                            <td>
+                              <div class="downloadBtnBlock"><a href="#">PDF</a></div>
                             </td>
                           </tr>
                         </tbody>
-                    </table>
-    
+                      </table>
+            
                 </div>
               </div>
             </section>
