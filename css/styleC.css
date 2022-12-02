@@ -11630,6 +11630,22 @@ table td.center {
   box-shadow: none;
   background: none;
 }
+.innerpage .center_block {
+  position: relative;
+}
+.innerpage .function_panel {
+  position: unset;
+  min-height: 0;
+  padding: 0;
+}
+.innerpage .function_panel .publish_time {
+  margin-bottom: 20px;
+}
+.innerpage .function_panel .share,
+.innerpage .function_panel .function {
+  top: -10px;
+  position: absolute;
+}
 
 .header {
   background: #e1e8ef;

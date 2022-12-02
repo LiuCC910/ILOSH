@@ -117,6 +117,22 @@
     box-shadow: none;
     background: none;
   }
+  .center_block {
+    position: relative;
+  }
+  .function_panel {
+    position: unset;
+    min-height: 0;
+    padding: 0;
+    .publish_time {
+      margin-bottom: 20px;
+    }
+    .share,
+    .function {
+      top: -10px;
+      position: absolute;
+    }
+  }
 }
 
 .header {
