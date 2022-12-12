@@ -886,6 +886,7 @@ h2.title {
     }
     .contentBlock {
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
     }
     .pic {
