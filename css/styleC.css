@@ -10104,6 +10104,7 @@ body.large_size .innerpage {
 @media screen and (max-width: 767px) {
   .searchBlock .searchBtn {
     min-width: 150px;
+    margin: 20px 0 0;
   }
 }
 @media screen and (max-width: 575px) {
@@ -11865,6 +11866,16 @@ footer {
   line-height: 1;
   z-index: 9;
 }
+@media screen and (max-width: 767px) {
+  .mpBanner .container .titleBox {
+    padding: 100px 0 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mpBanner .container .titleBox {
+    padding: 80px 0 0;
+  }
+}
 .mpBanner .container .titleBox::before {
   content: "";
   position: absolute;
@@ -11972,6 +11983,12 @@ footer {
   background: rgb(51, 13, 105);
   background: linear-gradient(to right, rgb(51, 13, 105) 0%, rgb(48, 201, 205) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#330d69", endColorstr="#30c9cd",GradientType=1 );
+}
+@media screen and (max-width: 767px) {
+  .searchBlock .container {
+    background: linear-gradient(to bottom, rgb(51, 13, 105) 0%, rgb(48, 201, 205) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#330d69", endColorstr="#30c9cd",GradientType=1 );
+  }
 }
 .searchBlock .container .searchBtn {
   background: #034f78;
