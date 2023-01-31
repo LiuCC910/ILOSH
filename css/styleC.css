@@ -11855,6 +11855,28 @@ footer {
   right: 40px;
 }
 
+.innerpage .searchBlock .label {
+  color: #fff !important;
+}
+.innerpage .searchBlock .departmentBox select {
+  color: #fff !important;
+  background-image: url(../images/select_arrow.svg);
+}
+.innerpage .searchBlock .container {
+  background: rgb(51, 13, 105);
+  background: linear-gradient(to right, rgb(51, 13, 105) 0%, rgb(48, 201, 205) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#330d69", endColorstr="#30c9cd",GradientType=1 ) !important;
+}
+@media screen and (max-width: 767px) {
+  .innerpage .searchBlock .container {
+    background: linear-gradient(to bottom, rgb(51, 13, 105) 0%, rgb(48, 201, 205) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#330d69", endColorstr="#30c9cd",GradientType=1 ) !important;
+  }
+}
+.innerpage .searchBlock .container .searchBtn {
+  background: #034f78 !important;
+}
+
 .mpBanner .container {
   overflow: hidden;
   padding: 0px 50px 30px;

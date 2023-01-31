@@ -368,3 +368,32 @@ footer {
 .function_panel .function {
   right: 40px;
 }
+
+.innerpage {
+  .searchBlock {
+    .label {
+      color: #fff !important;
+    }
+    .departmentBox select {
+      color: #fff !important;
+      background-image: url(../images/select_arrow.svg);
+    }
+    .container {
+      background: rgb(51, 13, 105);
+      background: -moz-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+      background: -webkit-linear-gradient(left, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+      background: linear-gradient(to right, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d69', endColorstr='#30c9cd',GradientType=1 ) !important;
+      @include screen('mobile') {
+        background: -moz-linear-gradient(top, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+        background: -webkit-linear-gradient(top, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+        background: linear-gradient(to bottom, rgba(51, 13, 105, 1) 0%, rgba(48, 201, 205, 1) 100%) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d69', endColorstr='#30c9cd',GradientType=1 ) !important;
+      }
+
+      .searchBtn {
+        background: #034f78 !important;
+      }
+    }
+  }
+}
