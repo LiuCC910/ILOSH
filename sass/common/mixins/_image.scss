@@ -12,6 +12,7 @@ img {
 //https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
 @mixin aspect-ratio($width, $height) {
   overflow: hidden;
+  line-height: 0;
   &:before {
     display: inline-block;
     content: '';

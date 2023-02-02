@@ -2916,6 +2916,7 @@ img.loaded {
   position: relative;
   background: #f1f1f1;
   overflow: hidden;
+  line-height: 0;
 }
 .img-container:before {
   display: inline-block;
@@ -8265,6 +8266,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .thumbnail .img-container {
   overflow: hidden;
+  line-height: 0;
   margin-bottom: 0.5em;
 }
 .thumbnail .img-container:before {
@@ -8605,6 +8607,7 @@ table.table_sprite tr:nth-child(even) {
 
 .styleLayout1 .mpSlider .img-container {
   overflow: hidden;
+  line-height: 0;
 }
 .styleLayout1 .mpSlider .img-container:before {
   display: inline-block;
@@ -8625,6 +8628,7 @@ table.table_sprite tr:nth-child(even) {
 @media screen and (max-width: 767px) {
   .styleLayout1 .mpSlider .img-container {
     overflow: hidden;
+    line-height: 0;
   }
   .styleLayout1 .mpSlider .img-container:before {
     display: inline-block;
@@ -8646,6 +8650,7 @@ table.table_sprite tr:nth-child(even) {
 
 .styleLayout2 .mpSlider .img-container {
   overflow: hidden;
+  line-height: 0;
 }
 .styleLayout2 .mpSlider .img-container:before {
   display: inline-block;
@@ -8666,6 +8671,7 @@ table.table_sprite tr:nth-child(even) {
 @media screen and (max-width: 767px) {
   .styleLayout2 .mpSlider .img-container {
     overflow: hidden;
+    line-height: 0;
   }
   .styleLayout2 .mpSlider .img-container:before {
     display: inline-block;
@@ -8780,6 +8786,7 @@ table.table_sprite tr:nth-child(even) {
 .lightbox_slider .img-container {
   margin: 0px 15px;
   overflow: hidden;
+  line-height: 0;
   overflow: hidden;
 }
 .lightbox_slider .img-container:before {
@@ -8872,6 +8879,7 @@ table.table_sprite tr:nth-child(even) {
 .lightbox_slider_block .img-container {
   margin: 0px 15px;
   overflow: hidden;
+  line-height: 0;
   overflow: hidden;
 }
 .lightbox_slider_block .img-container:before {
@@ -9113,6 +9121,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .Syncing_slider .img-container {
   overflow: hidden;
+  line-height: 0;
 }
 .Syncing_slider .img-container:before {
   display: inline-block;
@@ -14432,6 +14441,7 @@ h2.title {
   display: block;
   position: relative;
   overflow: hidden;
+  line-height: 0;
 }
 .leftblock_banner .item a:before {
   display: inline-block;
