@@ -11396,15 +11396,6 @@ table td.center {
 .header .navigation .secNavList .font_size ul li a::before {
   font-size: 14px;
 }
-.header .navigation .secNavList .font_size ul li:nth-child(1) a::before {
-  content: "A -";
-}
-.header .navigation .secNavList .font_size ul li:nth-child(2) a::before {
-  content: "A";
-}
-.header .navigation .secNavList .font_size ul li:nth-child(3) a::before {
-  content: "A +";
-}
 .header .navigation .secNavList .loginBtn {
   display: none;
 }
