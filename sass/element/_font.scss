@@ -123,21 +123,21 @@ kbd {
           font-size: 1.125em;
         }
       }
-      &:nth-child(1) a {
-        &::before {
-          content: '小';
-        }
-      }
-      &:nth-child(2) a {
-        &::before {
-          content: '中';
-        }
-      }
-      &:nth-child(3) a {
-        &::before {
-          content: '大';
-        }
-      }
+      // &:nth-child(1) a {
+      //   &::before {
+      //     content: '小';
+      //   }
+      // }
+      // &:nth-child(2) a {
+      //   &::before {
+      //     content: '中';
+      //   }
+      // }
+      // &:nth-child(3) a {
+      //   &::before {
+      //     content: '大';
+      //   }
+      // }
     }
   }
   @include screen('mobile') {

@@ -7,14 +7,12 @@
 @import '../vendor/fancybox/jquery.fancybox.css';
 .swal-icon--error {
   border-color: #f27474;
-  -webkit-animation: animateErrorIcon 0.5s;
   animation: animateErrorIcon 0.5s;
 }
 
 .swal-icon--error__x-mark {
   position: relative;
   display: block;
-  -webkit-animation: animateXMark 0.5s;
   animation: animateXMark 0.5s;
 }
 
@@ -37,17 +35,6 @@
   transform: rotate(-45deg);
   right: 16px;
 }
-
-@-webkit-keyframes animateErrorIcon {
-  0% {
-    transform: rotateX(100deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
 @keyframes animateErrorIcon {
   0% {
     transform: rotateX(100deg);
@@ -55,27 +42,6 @@
   }
   to {
     transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes animateXMark {
-  0% {
-    transform: scale(0.4);
-    margin-top: 26px;
-    opacity: 0;
-  }
-  50% {
-    transform: scale(0.4);
-    margin-top: 26px;
-    opacity: 0;
-  }
-  80% {
-    transform: scale(1.15);
-    margin-top: -6px;
-  }
-  to {
-    transform: scale(1);
-    margin-top: 0;
     opacity: 1;
   }
 }
@@ -102,7 +68,6 @@
 }
 .swal-icon--warning {
   border-color: #f8bb86;
-  -webkit-animation: pulseWarning 0.75s infinite alternate;
   animation: pulseWarning 0.75s infinite alternate;
 }
 
@@ -126,15 +91,6 @@
   border-radius: 50%;
   margin-left: -4px;
   bottom: -11px;
-}
-
-@-webkit-keyframes pulseWarning {
-  0% {
-    border-color: #f8d486;
-  }
-  to {
-    border-color: #f8bb86;
-  }
 }
 @keyframes pulseWarning {
   0% {
@@ -176,7 +132,6 @@
   left: 30px;
   transform: rotate(-45deg);
   transform-origin: 0 60px;
-  -webkit-animation: rotatePlaceholder 4.25s ease-in;
   animation: rotatePlaceholder 4.25s ease-in;
 }
 
@@ -218,7 +173,6 @@
   left: 14px;
   top: 46px;
   transform: rotate(45deg);
-  -webkit-animation: animateSuccessTip 0.75s;
   animation: animateSuccessTip 0.75s;
 }
 
@@ -227,23 +181,7 @@
   right: 8px;
   top: 38px;
   transform: rotate(-45deg);
-  -webkit-animation: animateSuccessLong 0.75s;
   animation: animateSuccessLong 0.75s;
-}
-
-@-webkit-keyframes rotatePlaceholder {
-  0% {
-    transform: rotate(-45deg);
-  }
-  5% {
-    transform: rotate(-45deg);
-  }
-  12% {
-    transform: rotate(-405deg);
-  }
-  to {
-    transform: rotate(-405deg);
-  }
 }
 @keyframes rotatePlaceholder {
   0% {
@@ -257,33 +195,6 @@
   }
   to {
     transform: rotate(-405deg);
-  }
-}
-@-webkit-keyframes animateSuccessTip {
-  0% {
-    width: 0;
-    left: 1px;
-    top: 19px;
-  }
-  54% {
-    width: 0;
-    left: 1px;
-    top: 19px;
-  }
-  70% {
-    width: 50px;
-    left: -8px;
-    top: 37px;
-  }
-  84% {
-    width: 17px;
-    left: 21px;
-    top: 48px;
-  }
-  to {
-    width: 25px;
-    left: 14px;
-    top: 45px;
   }
 }
 @keyframes animateSuccessTip {
@@ -311,28 +222,6 @@
     width: 25px;
     left: 14px;
     top: 45px;
-  }
-}
-@-webkit-keyframes animateSuccessLong {
-  0% {
-    width: 0;
-    right: 46px;
-    top: 54px;
-  }
-  65% {
-    width: 0;
-    right: 46px;
-    top: 54px;
-  }
-  84% {
-    width: 55px;
-    right: 0;
-    top: 35px;
-  }
-  to {
-    width: 47px;
-    right: 8px;
-    top: 38px;
   }
 }
 @keyframes animateSuccessLong {
@@ -598,31 +487,13 @@
   border-radius: 7px;
   background-color: hsla(0deg, 0%, 100%, 0.9);
   transition: background 0.2s;
-  -webkit-animation: swal-loading-anim 1s infinite;
   animation: swal-loading-anim 1s infinite;
 }
 .swal-button__loader div:nth-child(3n+2) {
-  -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 }
 .swal-button__loader div:nth-child(3n+3) {
-  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
-}
-
-@-webkit-keyframes swal-loading-anim {
-  0% {
-    opacity: 0.4;
-  }
-  20% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.4;
-  }
 }
 @keyframes swal-loading-anim {
   0% {
@@ -668,7 +539,6 @@
   opacity: 1;
   pointer-events: auto;
   box-sizing: border-box;
-  -webkit-animation: showSweetAlert 0.3s;
   animation: showSweetAlert 0.3s;
   will-change: transform;
 }
@@ -693,23 +563,6 @@
 @media (max-width: 500px) {
   .swal-modal {
     width: calc(100% - 20px);
-  }
-}
-@-webkit-keyframes showSweetAlert {
-  0% {
-    transform: scale(1);
-  }
-  1% {
-    transform: scale(0.5);
-  }
-  45% {
-    transform: scale(1.05);
-  }
-  80% {
-    transform: scale(0.95);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @keyframes showSweetAlert {
@@ -2354,15 +2207,6 @@ kbd kbd {
 .font_size ul li a.large {
   font-size: 1.125em;
 }
-.font_size ul li:nth-child(1) a::before {
-  content: "小";
-}
-.font_size ul li:nth-child(2) a::before {
-  content: "中";
-}
-.font_size ul li:nth-child(3) a::before {
-  content: "大";
-}
 @media screen and (max-width: 767px) {
   .font_size {
     display: none;
@@ -2809,7 +2653,6 @@ kbd kbd {
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
   font-size: 0.813em;
@@ -2889,17 +2732,7 @@ img.lazy {
 }
 img.loaded {
   visibility: visible;
-  -webkit-animation: lazy_animation 0.5s ease-out;
-          animation: lazy_animation 0.5s ease-out;
-}
-
-@-webkit-keyframes lazy_animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation: lazy_animation 0.5s ease-out;
 }
 
 @keyframes lazy_animation {
@@ -3568,7 +3401,6 @@ em[tooltip]:hover, em[tooltip]:focus {
   text-transform: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   pointer-events: none;
   position: absolute;
@@ -3674,23 +3506,10 @@ em[tooltip]:hover, em[tooltip]:focus {
   transform: translate(0.5em, -50%);
 }
 
-@-webkit-keyframes tooltips-vert {
-  to {
-    opacity: 0.9;
-    transform: translate(-50%, 0);
-  }
-}
-
 @keyframes tooltips-vert {
   to {
     opacity: 0.9;
     transform: translate(-50%, 0);
-  }
-}
-@-webkit-keyframes tooltips-horz {
-  to {
-    opacity: 0.9;
-    transform: translate(0, -50%);
   }
 }
 @keyframes tooltips-horz {
@@ -3706,16 +3525,14 @@ em[tooltip]:hover, em[tooltip]:focus {
 [tooltip][flow^=up]:hover:after,
 [tooltip][flow^=down]:hover:before,
 [tooltip][flow^=down]:hover:after {
-  -webkit-animation: tooltips-vert 300ms ease-out forwards;
-          animation: tooltips-vert 300ms ease-out forwards;
+  animation: tooltips-vert 300ms ease-out forwards;
 }
 
 [tooltip][flow^=left]:hover:before,
 [tooltip][flow^=left]:hover:after,
 [tooltip][flow^=right]:hover:before,
 [tooltip][flow^=right]:hover:after {
-  -webkit-animation: tooltips-horz 300ms ease-out forwards;
-          animation: tooltips-horz 300ms ease-out forwards;
+  animation: tooltips-horz 300ms ease-out forwards;
 }
 
 .tooltip {
@@ -4186,8 +4003,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   height: 30px;
   display: block;
   background: url("../images/bells.svg") no-repeat;
-  -webkit-animation: swing 2s infinite;
-          animation: swing 2s infinite;
+  animation: swing 2s infinite;
 }
 .header .navigation .secNavList .loginBtn i::after {
   content: "";
@@ -4404,17 +4220,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: block !important;
 }
 
-@-webkit-keyframes showMenu {
-  0% {
-    left: 50%;
-    transform: translateX(-40%);
-  }
-  100% {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
 @keyframes showMenu {
   0% {
     left: 50%;
@@ -4525,8 +4330,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   top: auto;
   list-style: none;
   text-align: left;
-  -webkit-animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-          animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   font-size: 0.875em;
 }
 .menu ul li ul li {
@@ -4564,8 +4368,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul ul {
   top: 0;
   left: 100%;
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   font-size: 1em;
 }
 
@@ -5076,8 +4879,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   z-index: 999;
   top: 0;
   left: 0;
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   display: block;
 }
 .megamenu ul li ul li.hasChild > ul li {
@@ -5090,8 +4892,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .megamenu ul li ul ul {
   top: 0;
   left: 100%;
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   font-size: 1em;
 }
 
@@ -5929,7 +5730,6 @@ select::-ms-expand {
   border-bottom: 0;
 }
 .flex-form.form_inline .form_grp .form_title {
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
 }
@@ -5962,8 +5762,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_grp .tel input[type=text]:first-child ~ input,
-.flex-form .form_grp .tel select:first-child ~ input,
-.flex-form .form_grp .tel input[type=tel]:first-child ~ input {
+  .flex-form .form_grp .tel select:first-child ~ input,
+  .flex-form .form_grp .tel input[type=tel]:first-child ~ input {
     width: 100% !important;
     display: block !important;
   }
@@ -6060,7 +5860,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_grp .datepick > input[type=text],
-.flex-form .form_grp .datepick > input[type=date] {
+  .flex-form .form_grp .datepick > input[type=date] {
     width: calc(100% - 0.6em);
   }
 }
@@ -6183,9 +5983,9 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_content .form_grp .form_content.form_inline input[type=text],
-.flex-form .form_content .form_grp .form_content.form_inline input[type=tel],
-.flex-form .form_content .form_grp .form_content.form_inline select,
-.flex-form .form_content .form_grp .form_content.form_inline .checkbox {
+  .flex-form .form_content .form_grp .form_content.form_inline input[type=tel],
+  .flex-form .form_content .form_grp .form_content.form_inline select,
+  .flex-form .form_content .form_grp .form_content.form_inline .checkbox {
     width: calc(100% - 0.6em);
     display: block;
   }
@@ -6595,8 +6395,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-6-6 > input,
-.flex-form .form_col-6-6 > select,
-.flex-form .form_col-6-6 > label {
+  .flex-form .form_col-6-6 > select,
+  .flex-form .form_col-6-6 > label {
     width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
@@ -6623,8 +6423,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-4-4-4 > input,
-.flex-form .form_col-4-4-4 > select,
-.flex-form .form_col-4-4-4 > label {
+  .flex-form .form_col-4-4-4 > select,
+  .flex-form .form_col-4-4-4 > label {
     width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
@@ -6658,8 +6458,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-3-3-3-3 > input,
-.flex-form .form_col-3-3-3-3 > select,
-.flex-form .form_col-3-3-3-3 > label {
+  .flex-form .form_col-3-3-3-3 > select,
+  .flex-form .form_col-3-3-3-3 > label {
     width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
@@ -6686,8 +6486,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-2-2-2-2-2-2 > input,
-.flex-form .form_col-2-2-2-2-2-2 > select,
-.flex-form .form_col-2-2-2-2-2-2 > label {
+  .flex-form .form_col-2-2-2-2-2-2 > select,
+  .flex-form .form_col-2-2-2-2-2-2 > label {
     width: calc(50% - 0.6em);
     flex-basis: calc(50% - 0.6em);
     max-width: calc(50% - 0.6em);
@@ -6726,8 +6526,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-3-9 > input,
-.flex-form .form_col-3-9 > select,
-.flex-form .form_col-3-9 > label {
+  .flex-form .form_col-3-9 > select,
+  .flex-form .form_col-3-9 > label {
     width: calc(25% - 0.6em);
     max-width: calc(25% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6742,8 +6542,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-3-9 > input:nth-child(2),
-.flex-form .form_col-3-9 > select:nth-child(2),
-.flex-form .form_col-3-9 > label:nth-child(2) {
+  .flex-form .form_col-3-9 > select:nth-child(2),
+  .flex-form .form_col-3-9 > label:nth-child(2) {
     width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
@@ -6782,8 +6582,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-9-3 > input,
-.flex-form .form_col-9-3 > select,
-.flex-form .form_col-9-3 > label {
+  .flex-form .form_col-9-3 > select,
+  .flex-form .form_col-9-3 > label {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6798,8 +6598,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-9-3 > input:nth-child(2),
-.flex-form .form_col-9-3 > select:nth-child(2),
-.flex-form .form_col-9-3 > label:nth-child(2) {
+  .flex-form .form_col-9-3 > select:nth-child(2),
+  .flex-form .form_col-9-3 > label:nth-child(2) {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6838,8 +6638,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-3-3-6 > input,
-.flex-form .form_col-3-3-6 > select,
-.flex-form .form_col-3-3-6 > label {
+  .flex-form .form_col-3-3-6 > select,
+  .flex-form .form_col-3-3-6 > label {
     width: calc(50% - 0.6em);
     max-width: calc(50% - 0.6em);
     flex-basis: calc(50% - 0.6em);
@@ -6854,8 +6654,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-3-3-6 > input:last-child,
-.flex-form .form_col-3-3-6 > select:last-child,
-.flex-form .form_col-3-3-6 > label:last-child {
+  .flex-form .form_col-3-3-6 > select:last-child,
+  .flex-form .form_col-3-3-6 > label:last-child {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6870,8 +6670,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-6-3-3 > .form_grp,
-.flex-form .form_col-6-3-3 > input[type=text],
-.flex-form .form_col-6-3-3 > select {
+  .flex-form .form_col-6-3-3 > input[type=text],
+  .flex-form .form_col-6-3-3 > select {
     width: 50%;
     max-width: 50%;
     flex-basis: 50%;
@@ -6886,8 +6686,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-6-3-3 > .form_grp:first-child,
-.flex-form .form_col-6-3-3 > input[type=text]:first-child,
-.flex-form .form_col-6-3-3 > select:first-child {
+  .flex-form .form_col-6-3-3 > input[type=text]:first-child,
+  .flex-form .form_col-6-3-3 > select:first-child {
     width: 100%;
     max-width: 100%;
     flex-basis: 100%;
@@ -6926,8 +6726,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-4-8 > input,
-.flex-form .form_col-4-8 > select,
-.flex-form .form_col-4-8 > label {
+  .flex-form .form_col-4-8 > select,
+  .flex-form .form_col-4-8 > label {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6942,8 +6742,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-4-8 > input:last-child,
-.flex-form .form_col-4-8 > select:last-child,
-.flex-form .form_col-4-8 > label:last-child {
+  .flex-form .form_col-4-8 > select:last-child,
+  .flex-form .form_col-4-8 > label:last-child {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6982,8 +6782,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-2-10 > input,
-.flex-form .form_col-2-10 > select,
-.flex-form .form_col-2-10 > label {
+  .flex-form .form_col-2-10 > select,
+  .flex-form .form_col-2-10 > label {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -6998,8 +6798,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-2-10 > input:last-child,
-.flex-form .form_col-2-10 > select:last-child,
-.flex-form .form_col-2-10 > label:last-child {
+  .flex-form .form_col-2-10 > select:last-child,
+  .flex-form .form_col-2-10 > label:last-child {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -7038,8 +6838,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-10-2 > input,
-.flex-form .form_col-10-2 > select,
-.flex-form .form_col-10-2 > label {
+  .flex-form .form_col-10-2 > select,
+  .flex-form .form_col-10-2 > label {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -7054,8 +6854,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-10-2 > input:first-child,
-.flex-form .form_col-10-2 > select:first-child,
-.flex-form .form_col-10-2 > label:first-child {
+  .flex-form .form_col-10-2 > select:first-child,
+  .flex-form .form_col-10-2 > label:first-child {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -7094,8 +6894,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-2-2-8 > input,
-.flex-form .form_col-2-2-8 > select,
-.flex-form .form_col-2-2-8 > label {
+  .flex-form .form_col-2-2-8 > select,
+  .flex-form .form_col-2-2-8 > label {
     width: calc(50% - 0.6em);
     max-width: calc(50% - 0.6em);
     flex-basis: calc(50% - 0.6em);
@@ -7110,8 +6910,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-2-2-8 > input:last-child,
-.flex-form .form_col-2-2-8 > select:last-child,
-.flex-form .form_col-2-2-8 > label:last-child {
+  .flex-form .form_col-2-2-8 > select:last-child,
+  .flex-form .form_col-2-2-8 > label:last-child {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -7150,8 +6950,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-8-2-2 > input,
-.flex-form .form_col-8-2-2 > select,
-.flex-form .form_col-8-2-2 > label {
+  .flex-form .form_col-8-2-2 > select,
+  .flex-form .form_col-8-2-2 > label {
     width: calc(50% - 0.6em);
     max-width: calc(50% - 0.6em);
     flex-basis: calc(50% - 0.6em);
@@ -7166,8 +6966,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-8-2-2 > input:first-child,
-.flex-form .form_col-8-2-2 > select:first-child,
-.flex-form .form_col-8-2-2 > label:first-child {
+  .flex-form .form_col-8-2-2 > select:first-child,
+  .flex-form .form_col-8-2-2 > label:first-child {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
@@ -7205,10 +7005,10 @@ select::-ms-expand {
 }
 @media screen and (max-width: 767px) {
   .flex-form .form_grp,
-.flex-form .check_grp,
-.flex-form .radio_grp,
-.flex-form .btn_grp,
-.flex-form .upload_grp {
+  .flex-form .check_grp,
+  .flex-form .radio_grp,
+  .flex-form .btn_grp,
+  .flex-form .upload_grp {
     flex-wrap: wrap;
   }
 }
@@ -7231,8 +7031,7 @@ select::-ms-expand {
   left: 0.6em;
   top: calc(50% - 0.5em);
   z-index: -1;
-  -webkit-animation: ripple 0.35s linear;
-          animation: ripple 0.35s linear;
+  animation: ripple 0.35s linear;
 }
 .flex-form .check_grp.form_inline label,
 .flex-form .radio_grp.form_inline label {
@@ -7344,7 +7143,7 @@ legend {
 }
 @media screen and (max-width: 575px) {
   label,
-legend {
+  legend {
     display: block;
   }
 }
@@ -7404,8 +7203,8 @@ textarea {
 }
 @media screen and (max-width: 767px) {
   input,
-select,
-textarea {
+  select,
+  textarea {
     width: 100%;
   }
 }
@@ -7706,13 +7505,6 @@ abbr[title] {
   left: auto;
 }
 
-@-webkit-keyframes ripple {
-  100% {
-    opacity: 0;
-    transform: scale(3.5);
-  }
-}
-
 @keyframes ripple {
   100% {
     opacity: 0;
@@ -7758,10 +7550,10 @@ table.table_sprite tr:nth-child(even) {
     background-color: transparent !important;
   }
   .table_list thead,
-.table_list tbody,
-.table_list th,
-.table_list td,
-.table_list tr {
+  .table_list tbody,
+  .table_list th,
+  .table_list td,
+  .table_list tr {
     display: block;
   }
   .table_list thead tr {
@@ -7822,7 +7614,7 @@ table.table_sprite tr:nth-child(even) {
 }
 @media screen and (max-width: 767px) {
   .fix_th_table th,
-.fix_th_table td {
+  .fix_th_table td {
     display: inline-block;
     margin-right: -6px;
     margin-left: 0;
@@ -7958,29 +7750,12 @@ table.table_sprite tr:nth-child(even) {
   z-index: 2;
 }
 
-@-webkit-keyframes arrow_left {
-  from {
-    left: -0.2em;
-  }
-  to {
-    left: 0.3em;
-  }
-}
-
 @keyframes arrow_left {
   from {
     left: -0.2em;
   }
   to {
     left: 0.3em;
-  }
-}
-@-webkit-keyframes arrow_right {
-  from {
-    right: -0.2em;
-  }
-  to {
-    right: 0.3em;
   }
 }
 @keyframes arrow_right {
@@ -8073,7 +7848,7 @@ table.table_sprite tr:nth-child(even) {
 }
 @media screen and (max-width: 767px) {
   .lp .list > ul > li span.dept,
-.lp .list ol > li span.dept {
+  .lp .list ol > li span.dept {
     display: block;
   }
 }
@@ -8315,8 +8090,7 @@ table.table_sprite tr:nth-child(even) {
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: 1px 1px 15px RGBA(0, 0, 0, 0.5);
-  -webkit-animation: scaleUp 0.5s ease-out;
-          animation: scaleUp 0.5s ease-out;
+  animation: scaleUp 0.5s ease-out;
 }
 .modal h2 {
   border-bottom: 1px solid #144b76;
@@ -8337,17 +8111,6 @@ table.table_sprite tr:nth-child(even) {
 }
 .modal .close:hover, .modal .close:focus {
   cursor: pointer;
-}
-
-@-webkit-keyframes scaleUp {
-  0% {
-    transform: scale(1) translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) translateY(0px);
-    opacity: 1;
-  }
 }
 
 @keyframes scaleUp {
@@ -8378,7 +8141,6 @@ table.table_sprite tr:nth-child(even) {
   box-sizing: border-box;
   -webkit-user-select: text;
   -moz-user-select: text;
-  -ms-user-select: text;
   user-select: text;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
@@ -10049,14 +9811,11 @@ body.large_size .innerpage {
 }
 @media screen and (max-width: 575px) {
   .searchBlock select + input,
-.searchBlock input + input {
+  .searchBlock input + input {
     margin: 5px 0 0 0;
   }
 }
 .searchBlock select::-moz-placeholder, .searchBlock input::-moz-placeholder {
-  color: #808080;
-}
-.searchBlock select:-ms-input-placeholder, .searchBlock input:-ms-input-placeholder {
   color: #808080;
 }
 .searchBlock select::placeholder,
@@ -10177,16 +9936,13 @@ body.large_size .innerpage {
   position: relative;
 }
 .procedureBlock .item:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .procedureBlock .item:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .procedureBlock .item:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 @media screen and (max-width: 767px) {
   .procedureBlock .item {
@@ -11117,27 +10873,11 @@ table td.center {
   box-shadow: 0 0 0 2px #d2884c;
 }
 
-@-webkit-keyframes scrollZ {
-  to {
-    transform: rotateY(180deg);
-  }
-}
-
 @keyframes scrollZ {
   to {
     transform: rotateY(180deg);
   }
 }
-@-webkit-keyframes bannerLine {
-  50% {
-    right: 0;
-    left: 0;
-  }
-  100% {
-    right: 0;
-    left: 100%;
-  }
-}
 @keyframes bannerLine {
   50% {
     right: 0;
@@ -11156,14 +10896,6 @@ table td.center {
   100% {
     right: 0;
     left: 100%;
-  }
-}
-@-webkit-keyframes bannerFade {
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes bannerFade {
@@ -11174,34 +10906,12 @@ table td.center {
     opacity: 0;
   }
 }
-@-webkit-keyframes leftAnimation {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 @keyframes leftAnimation {
   0% {
     transform: translateX(0px);
   }
   50% {
     transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@-webkit-keyframes rightAnimation {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(5px);
   }
   100% {
     transform: translateX(0px);
@@ -11216,14 +10926,6 @@ table td.center {
   }
   100% {
     transform: translateX(0px);
-  }
-}
-@-webkit-keyframes rightAnimationIn {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 @keyframes rightAnimationIn {
@@ -11331,7 +11033,7 @@ table td.center {
 }
 @media screen and (max-width: 767px) {
   .colorMenu,
-.controlMenu {
+  .controlMenu {
     display: none;
   }
 }
@@ -11652,13 +11354,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1a2e72", endColorstr="#1a2e72",GradientType=1 );
     background-size: 200%;
     background-position: center right;
-    -webkit-animation: renbow 20s linear infinite;
-            animation: renbow 20s linear infinite;
-  }
-  @-webkit-keyframes renbow {
-    to {
-      background-position-x: -100%;
-    }
+    animation: renbow 20s linear infinite;
   }
   @keyframes renbow {
     to {
@@ -11746,8 +11442,7 @@ a:focus {
     background: linear-gradient(to right, #144b76 0%, #0d5f76 25%, #00a556 50%, #0d5f76 75%, #144b76 100%);
     background-size: 200%;
     background-position: center right;
-    -webkit-animation: renbow 20s linear infinite;
-            animation: renbow 20s linear infinite;
+    animation: renbow 20s linear infinite;
   }
 }
 .colorStyleA a:focus {
@@ -11766,8 +11461,7 @@ a:focus {
     background: linear-gradient(to right, #ab274a 0%, #ab274a 25%, #d2884c 50%, #ab274a 75%, #ab274a 100%);
     background-size: 200%;
     background-position: center right;
-    -webkit-animation: renbow 20s linear infinite;
-            animation: renbow 20s linear infinite;
+    animation: renbow 20s linear infinite;
   }
 }
 .colorStyleB a:focus {
@@ -12195,8 +11889,7 @@ body {
   }
 }
 .mpSliderBlock .slick-dots li.slick-active button::before {
-  -webkit-animation: bannerLine 5000ms linear forwards;
-          animation: bannerLine 5000ms linear forwards;
+  animation: bannerLine 5000ms linear forwards;
 }
 @media screen and (max-width: 767px) {
   .mpSliderBlock .slick-dots li.slick-active button {
@@ -12376,8 +12069,7 @@ body {
   color: #00a556;
 }
 .newsBlock .tabSet .tabContent .moreBtn:hover::after {
-  -webkit-animation: leftAnimation 1.8s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99) infinite;
-          animation: leftAnimation 1.8s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99) infinite;
+  animation: leftAnimation 1.8s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99) infinite;
 }
 
 .colorStyleA .mpSliderBlock .txtBox .title {
@@ -13152,44 +12844,34 @@ h2.title {
   font-size: 1em;
 }
 .listBlock li.wow:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .listBlock li.wow:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .listBlock li.wow:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .listBlock li.wow:nth-child(4) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .listBlock li.wow:nth-child(5) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 .listBlock li.wow:nth-child(6) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .listBlock li.wow:nth-child(7) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 .listBlock li.wow:nth-child(8) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 .listBlock li.wow:nth-child(9) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 .listBlock li.wow:nth-child(10) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .listBlock li:hover a {
   background: #efefef;
@@ -13246,14 +12928,14 @@ h2.title {
 
 @media screen and (max-width: 767px) {
   .listGrid .list > ul,
-.listGrid .list ol {
+  .listGrid .list ol {
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 575px) {
   .listGrid .list > ul,
-.listGrid .list ol {
+  .listGrid .list ol {
     max-width: 344px;
     margin: 0 auto;
   }
@@ -13266,20 +12948,20 @@ h2.title {
 }
 @media screen and (max-width: 767px) {
   .listGrid .list > ul > li,
-.listGrid .list ol > li {
+  .listGrid .list ol > li {
     width: calc((100% - 40px) / 2) !important;
     margin: 20px 10px 0;
     padding: 0;
     border: #ddd 1px solid;
   }
   .listGrid .list > ul > li:nth-child(2n+1),
-.listGrid .list ol > li:nth-child(2n+1) {
+  .listGrid .list ol > li:nth-child(2n+1) {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 575px) {
   .listGrid .list > ul > li,
-.listGrid .list ol > li {
+  .listGrid .list ol > li {
     width: 100% !important;
     margin: 0px auto 20px !important;
   }
@@ -13298,7 +12980,7 @@ h2.title {
 }
 @media screen and (max-width: 767px) {
   .listGrid .list > ul > li > a,
-.listGrid .list ol > li > a {
+  .listGrid .list ol > li > a {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -13324,7 +13006,7 @@ h2.title {
 }
 @media screen and (max-width: 767px) {
   .listGrid .list > ul > li .pic,
-.listGrid .list ol > li .pic {
+  .listGrid .list ol > li .pic {
     margin: 0 0 20px 0;
   }
 }
@@ -13935,7 +13617,7 @@ h2.title {
 }
 @media screen and (max-width: 991px) {
   .vdi.vdi_reservation .weekBox table th,
-.vdi.vdi_reservation .weekBox table td {
+  .vdi.vdi_reservation .weekBox table td {
     padding: 15px;
     display: flex;
     width: 100%;
@@ -14477,9 +14159,6 @@ h2.title {
 .login .form_grp input::-moz-placeholder {
   color: #888;
 }
-.login .form_grp input:-ms-input-placeholder {
-  color: #888;
-}
 .login .form_grp input::placeholder {
   color: #888;
 }
@@ -14928,17 +14607,17 @@ h2.title {
 }
 @media print {
   .main,
-.content, body {
+  .content, body {
     background: none;
   }
   /* -------------------------------不需要列印的區塊，請放置於這----//*/
   header,
-.fatfooter,
-footer,
-.accesskey,
-.submenu,
-.breadcrumb,
-.category {
+  .fatfooter,
+  footer,
+  .accesskey,
+  .submenu,
+  .breadcrumb,
+  .category {
     display: none;
   }
   /* -------------------------------各別顯示設定----//*/
@@ -14979,7 +14658,7 @@ footer,
     width: 260px !important;
   }
   .main,
-.content {
+  .content {
     position: relative;
     min-height: 1px;
     padding-left: 0;
@@ -14994,33 +14673,33 @@ footer,
     padding-top: 0px !important;
   }
   .main:before, .main:after,
-.content:before,
-.content:after {
+  .content:before,
+  .content:after {
     content: "";
     display: table;
   }
   .main:after,
-.content:after {
+  .content:after {
     clear: both;
   }
   .main img.float_left,
-.content img.float_left {
+  .content img.float_left {
     float: right;
     max-width: 50%;
     margin: 0px 1em 1em 0;
   }
   .main img.float_right,
-.content img.float_right {
+  .content img.float_right {
     float: right;
     max-width: 50%;
     margin: 0px 0 1em 1em;
   }
   .main a:link,
-.main a:visited,
-.main a,
-.content a:link,
-.content a:visited,
-.content a {
+  .main a:visited,
+  .main a,
+  .content a:link,
+  .content a:visited,
+  .content a {
     background: transparent;
     color: #222;
     font-weight: bold;
@@ -15029,28 +14708,28 @@ footer,
     word-wrap: break-word;
   }
   .main p a,
-.content p a {
+  .content p a {
     word-wrap: break-word;
   }
   .main p a[href^=http]:after,
-.content p a[href^=http]:after {
+  .content p a[href^=http]:after {
     content: " (" attr(href) ")";
     font-size: 90%;
   }
   .main p a[href^="#"]:after,
-.content p a[href^="#"]:after {
+  .content p a[href^="#"]:after {
     display: none;
   }
   .main abbr[title]:after,
-.content abbr[title]:after {
+  .content abbr[title]:after {
     content: " (" attr(title) ")";
   }
   .main table,
-.content table {
+  .content table {
     background: #fff;
   }
   .main li,
-.content li {
+  .content li {
     content: "» ";
   }
   /* 檔案下載*/
@@ -15060,20 +14739,20 @@ footer,
     width: 100% !important;
   }
   .file_download .update,
-.file_download .file_view {
+  .file_download .file_view {
     float: none !important;
     width: 30% !important;
     display: inline-block !important;
     margin-left: 3em;
   }
   *,
-*:before,
-*:after,
-*:first-letter,
-p:first-line,
-div:first-line,
-blockquote:first-line,
-li:first-line {
+  *:before,
+  *:after,
+  *:first-letter,
+  p:first-line,
+  div:first-line,
+  blockquote:first-line,
+  li:first-line {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
@@ -15118,7 +14797,7 @@ li:first-line {
     vertical-align: middle;
   }
   .innerBanner,
-.no-print {
+  .no-print {
     display: none;
   }
   .innerpage > .container {
@@ -15129,11 +14808,11 @@ li:first-line {
     page-break-inside: avoid;
   }
   .listGrid .list > ul > li time,
-.listGrid .list ol > li time {
+  .listGrid .list ol > li time {
     font-size: 13px;
   }
   .listGrid .list > ul > li span.dept,
-.listGrid .list ol > li span.dept {
+  .listGrid .list ol > li span.dept {
     color: #000 !important;
     padding: 2px 10px 3px 0;
   }
@@ -15148,19 +14827,19 @@ li:first-line {
     padding: 1em 2em;
   }
   .publications_cp .downloadBlock .downloadTitle a,
-.publications_cp .downloadBlock table th:nth-child(4),
-.publications_cp .downloadBlock table td:nth-child(4),
-.publications_cp .topBlock ul.download,
-.function_panel .publish_time:before,
-.infoListBlock .infoList th:nth-child(6),
-.infoListBlock .infoList td:nth-child(6),
-.file_download li span.file_doc a,
-.file_download li span.file_docx a,
-.file_download li span.file_odt a,
-.searchBlock,
-.icon_back,
-.tooltip,
-.tag {
+  .publications_cp .downloadBlock table th:nth-child(4),
+  .publications_cp .downloadBlock table td:nth-child(4),
+  .publications_cp .topBlock ul.download,
+  .function_panel .publish_time:before,
+  .infoListBlock .infoList th:nth-child(6),
+  .infoListBlock .infoList td:nth-child(6),
+  .file_download li span.file_doc a,
+  .file_download li span.file_docx a,
+  .file_download li span.file_odt a,
+  .searchBlock,
+  .icon_back,
+  .tooltip,
+  .tag {
     display: none;
   }
   .tableList table td {
@@ -15174,11 +14853,11 @@ li:first-line {
     margin-bottom: 0;
   }
   .listGrid .list > ul > li .info + .txt,
-.listGrid .list ol > li .info + .txt {
+  .listGrid .list ol > li .info + .txt {
     margin-top: 5px;
   }
   .listGrid .list > ul > li > a,
-.listGrid .list ol > li > a {
+  .listGrid .list ol > li > a {
     padding: 2px 0;
   }
   .publications_cp .topBlock {
@@ -15202,7 +14881,7 @@ li:first-line {
     white-space: nowrap;
   }
   .titleBox .en,
-.titleBox .zh {
+  .titleBox .zh {
     font-size: 30px;
     margin: 0 10px;
   }
@@ -15220,26 +14899,11 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 .animated {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 .animated.hinge {
-  -webkit-animation-duration: 2s;
   animation-duration: 2s;
-}
-
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -15253,17 +14917,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounce {
-  -webkit-animation-name: bounce;
   animation-name: bounce;
-}
-
-@-webkit-keyframes flash {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
-  }
 }
 @keyframes flash {
   0%, 50%, 100% {
@@ -15274,22 +14928,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .flash {
-  -webkit-animation-name: flash;
   animation-name: flash;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -15302,20 +14944,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .pulse {
-  -webkit-animation-name: pulse;
   animation-name: pulse;
-}
-
-@-webkit-keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
-  }
 }
 @keyframes shake {
   0%, 100% {
@@ -15329,26 +14958,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .shake {
-  -webkit-animation-name: shake;
   animation-name: shake;
-}
-
-@-webkit-keyframes swing {
-  20% {
-    transform: rotate(15deg);
-  }
-  40% {
-    transform: rotate(-10deg);
-  }
-  60% {
-    transform: rotate(5deg);
-  }
-  80% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 @keyframes swing {
   20% {
@@ -15369,26 +14979,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .swing {
   transform-origin: top center;
-  -webkit-animation-name: swing;
   animation-name: swing;
-}
-
-@-webkit-keyframes tada {
-  0% {
-    transform: scale(1);
-  }
-  10%, 20% {
-    transform: scale(0.9) rotate(-3deg);
-  }
-  30%, 50%, 70%, 90% {
-    transform: scale(1.1) rotate(3deg);
-  }
-  40%, 60%, 80% {
-    transform: scale(1.1) rotate(-3deg);
-  }
-  100% {
-    transform: scale(1) rotate(0);
-  }
 }
 @keyframes tada {
   0% {
@@ -15408,34 +14999,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .tada {
-  -webkit-animation-name: tada;
   animation-name: tada;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-@-webkit-keyframes wobble {
-  0% {
-    transform: translateX(0%);
-  }
-  15% {
-    transform: translateX(-25%) rotate(-5deg);
-  }
-  30% {
-    transform: translateX(20%) rotate(3deg);
-  }
-  45% {
-    transform: translateX(-15%) rotate(-3deg);
-  }
-  60% {
-    transform: translateX(10%) rotate(2deg);
-  }
-  75% {
-    transform: translateX(-5%) rotate(-1deg);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 @keyframes wobble {
   0% {
     transform: translateX(0%);
@@ -15460,25 +15027,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .wobble {
-  -webkit-animation-name: wobble;
   animation-name: wobble;
-}
-
-@-webkit-keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 @keyframes bounceIn {
   0% {
@@ -15497,25 +15046,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceIn {
-  -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
-}
-
-@-webkit-keyframes bounceInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 @keyframes bounceInDown {
   0% {
@@ -15534,25 +15065,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceInDown {
-  -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
-}
-
-@-webkit-keyframes bounceInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(30px);
-  }
-  80% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 @keyframes bounceInLeft {
   0% {
@@ -15571,25 +15084,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceInLeft {
-  -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
-}
-
-@-webkit-keyframes bounceInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(-30px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 @keyframes bounceInRight {
   0% {
@@ -15608,25 +15103,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceInRight {
-  -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
-}
-
-@-webkit-keyframes bounceInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-30px);
-  }
-  80% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 @keyframes bounceInUp {
   0% {
@@ -15645,25 +15122,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceInUp {
-  -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp;
-}
-
-@-webkit-keyframes bounceOut {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.95);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
 }
 @keyframes bounceOut {
   0% {
@@ -15682,22 +15141,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceOut {
-  -webkit-animation-name: bounceOut;
   animation-name: bounceOut;
-}
-
-@-webkit-keyframes bounceOutDown {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(2000px);
-  }
 }
 @keyframes bounceOutDown {
   0% {
@@ -15713,22 +15157,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceOutDown {
-  -webkit-animation-name: bounceOutDown;
   animation-name: bounceOutDown;
-}
-
-@-webkit-keyframes bounceOutLeft {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    opacity: 1;
-    transform: translateX(20px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
 }
 @keyframes bounceOutLeft {
   0% {
@@ -15744,22 +15173,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceOutLeft {
-  -webkit-animation-name: bounceOutLeft;
   animation-name: bounceOutLeft;
-}
-
-@-webkit-keyframes bounceOutRight {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    opacity: 1;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
 }
 @keyframes bounceOutRight {
   0% {
@@ -15775,22 +15189,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceOutRight {
-  -webkit-animation-name: bounceOutRight;
   animation-name: bounceOutRight;
-}
-
-@-webkit-keyframes bounceOutUp {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
 }
 @keyframes bounceOutUp {
   0% {
@@ -15806,17 +15205,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .bounceOutUp {
-  -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 @keyframes fadeIn {
   0% {
@@ -15827,19 +15216,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeIn {
-  -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 @keyframes fadeInDown {
   0% {
@@ -15852,19 +15229,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInDown {
-  -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-}
-
-@-webkit-keyframes fadeInDownBig {
-  0% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 @keyframes fadeInDownBig {
   0% {
@@ -15877,19 +15242,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInDownBig {
-  -webkit-animation-name: fadeInDownBig;
   animation-name: fadeInDownBig;
-}
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 @keyframes fadeInLeft {
   0% {
@@ -15902,19 +15255,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
-}
-
-@-webkit-keyframes fadeInLeftBig {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 @keyframes fadeInLeftBig {
   0% {
@@ -15927,19 +15268,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInLeftBig {
-  -webkit-animation-name: fadeInLeftBig;
   animation-name: fadeInLeftBig;
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 @keyframes fadeInRight {
   0% {
@@ -15952,19 +15281,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInRight {
-  -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
-}
-
-@-webkit-keyframes fadeInRightBig {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 @keyframes fadeInRightBig {
   0% {
@@ -15977,19 +15294,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInRightBig {
-  -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 @keyframes fadeInUp {
   0% {
@@ -16002,19 +15307,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeInUpBig {
-  0% {
-    opacity: 0;
-    transform: translateY(2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 @keyframes fadeInUpBig {
   0% {
@@ -16027,17 +15320,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeInUpBig {
-  -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig;
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 @keyframes fadeOut {
   0% {
@@ -16048,19 +15331,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOut {
-  -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
-}
-
-@-webkit-keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
 }
 @keyframes fadeOutDown {
   0% {
@@ -16073,19 +15344,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
-}
-
-@-webkit-keyframes fadeOutDownBig {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(2000px);
-  }
 }
 @keyframes fadeOutDownBig {
   0% {
@@ -16098,19 +15357,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutDownBig {
-  -webkit-animation-name: fadeOutDownBig;
   animation-name: fadeOutDownBig;
-}
-
-@-webkit-keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
 }
 @keyframes fadeOutLeft {
   0% {
@@ -16123,19 +15370,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutLeft {
-  -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
-}
-
-@-webkit-keyframes fadeOutLeftBig {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
 }
 @keyframes fadeOutLeftBig {
   0% {
@@ -16148,19 +15383,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutLeftBig {
-  -webkit-animation-name: fadeOutLeftBig;
   animation-name: fadeOutLeftBig;
-}
-
-@-webkit-keyframes fadeOutRight {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
 }
 @keyframes fadeOutRight {
   0% {
@@ -16173,19 +15396,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutRight {
-  -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
-}
-
-@-webkit-keyframes fadeOutRightBig {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
 }
 @keyframes fadeOutRightBig {
   0% {
@@ -16198,19 +15409,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutRightBig {
-  -webkit-animation-name: fadeOutRightBig;
   animation-name: fadeOutRightBig;
-}
-
-@-webkit-keyframes fadeOutUp {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
 }
 @keyframes fadeOutUp {
   0% {
@@ -16223,19 +15422,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutUp {
-  -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
-}
-
-@-webkit-keyframes fadeOutUpBig {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
 }
 @keyframes fadeOutUpBig {
   0% {
@@ -16248,86 +15435,34 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .fadeOutUpBig {
-  -webkit-animation-name: fadeOutUpBig;
   animation-name: fadeOutUpBig;
-}
-
-@-webkit-keyframes flip {
-  0% {
-    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  40% {
-    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  50% {
-    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  80% {
-    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
 }
 @keyframes flip {
   0% {
     transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   40% {
     transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
     transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   80% {
     transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   100% {
     transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
 }
 .animated.flip {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
-  -webkit-animation-name: flip;
   animation-name: flip;
-}
-
-@-webkit-keyframes flipInX {
-  0% {
-    transform: perspective(400px) rotateX(90deg);
-    opacity: 0;
-  }
-  40% {
-    transform: perspective(400px) rotateX(-10deg);
-  }
-  70% {
-    transform: perspective(400px) rotateX(10deg);
-  }
-  100% {
-    transform: perspective(400px) rotateX(0deg);
-    opacity: 1;
-  }
 }
 @keyframes flipInX {
   0% {
@@ -16348,25 +15483,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .flipInX {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
-  -webkit-animation-name: flipInX;
   animation-name: flipInX;
-}
-
-@-webkit-keyframes flipInY {
-  0% {
-    transform: perspective(400px) rotateY(90deg);
-    opacity: 0;
-  }
-  40% {
-    transform: perspective(400px) rotateY(-10deg);
-  }
-  70% {
-    transform: perspective(400px) rotateY(10deg);
-  }
-  100% {
-    transform: perspective(400px) rotateY(0deg);
-    opacity: 1;
-  }
 }
 @keyframes flipInY {
   0% {
@@ -16387,19 +15504,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .flipInY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
-  -webkit-animation-name: flipInY;
   animation-name: flipInY;
-}
-
-@-webkit-keyframes flipOutX {
-  0% {
-    transform: perspective(400px) rotateX(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(400px) rotateX(90deg);
-    opacity: 0;
-  }
 }
 @keyframes flipOutX {
   0% {
@@ -16412,21 +15517,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .flipOutX {
-  -webkit-animation-name: flipOutX;
   animation-name: flipOutX;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
-}
-
-@-webkit-keyframes flipOutY {
-  0% {
-    transform: perspective(400px) rotateY(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(400px) rotateY(90deg);
-    opacity: 0;
-  }
 }
 @keyframes flipOutY {
   0% {
@@ -16441,27 +15534,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .flipOutY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
-  -webkit-animation-name: flipOutY;
   animation-name: flipOutY;
-}
-
-@-webkit-keyframes lightSpeedIn {
-  0% {
-    transform: translateX(100%) skewX(-30deg);
-    opacity: 0;
-  }
-  60% {
-    transform: translateX(-20%) skewX(30deg);
-    opacity: 1;
-  }
-  80% {
-    transform: translateX(0%) skewX(-15deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0%) skewX(0deg);
-    opacity: 1;
-  }
 }
 @keyframes lightSpeedIn {
   0% {
@@ -16482,21 +15555,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .lightSpeedIn {
-  -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
-  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-}
-
-@-webkit-keyframes lightSpeedOut {
-  0% {
-    transform: translateX(0%) skewX(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%) skewX(-30deg);
-    opacity: 0;
-  }
 }
 @keyframes lightSpeedOut {
   0% {
@@ -16509,23 +15569,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .lightSpeedOut {
-  -webkit-animation-name: lightSpeedOut;
   animation-name: lightSpeedOut;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-}
-
-@-webkit-keyframes rotateIn {
-  0% {
-    transform-origin: center center;
-    transform: rotate(-200deg);
-    opacity: 0;
-  }
-  100% {
-    transform-origin: center center;
-    transform: rotate(0);
-    opacity: 1;
-  }
 }
 @keyframes rotateIn {
   0% {
@@ -16540,21 +15585,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateIn {
-  -webkit-animation-name: rotateIn;
   animation-name: rotateIn;
-}
-
-@-webkit-keyframes rotateInDownLeft {
-  0% {
-    transform-origin: left bottom;
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  100% {
-    transform-origin: left bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
 }
 @keyframes rotateInDownLeft {
   0% {
@@ -16569,21 +15600,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateInDownLeft {
-  -webkit-animation-name: rotateInDownLeft;
   animation-name: rotateInDownLeft;
-}
-
-@-webkit-keyframes rotateInDownRight {
-  0% {
-    transform-origin: right bottom;
-    transform: rotate(90deg);
-    opacity: 0;
-  }
-  100% {
-    transform-origin: right bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
 }
 @keyframes rotateInDownRight {
   0% {
@@ -16598,21 +15615,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateInDownRight {
-  -webkit-animation-name: rotateInDownRight;
   animation-name: rotateInDownRight;
-}
-
-@-webkit-keyframes rotateInUpLeft {
-  0% {
-    transform-origin: left bottom;
-    transform: rotate(90deg);
-    opacity: 0;
-  }
-  100% {
-    transform-origin: left bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
 }
 @keyframes rotateInUpLeft {
   0% {
@@ -16627,21 +15630,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateInUpLeft {
-  -webkit-animation-name: rotateInUpLeft;
   animation-name: rotateInUpLeft;
-}
-
-@-webkit-keyframes rotateInUpRight {
-  0% {
-    transform-origin: right bottom;
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  100% {
-    transform-origin: right bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
 }
 @keyframes rotateInUpRight {
   0% {
@@ -16656,21 +15645,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateInUpRight {
-  -webkit-animation-name: rotateInUpRight;
   animation-name: rotateInUpRight;
-}
-
-@-webkit-keyframes rotateOut {
-  0% {
-    transform-origin: center center;
-    transform: rotate(0);
-    opacity: 1;
-  }
-  100% {
-    transform-origin: center center;
-    transform: rotate(200deg);
-    opacity: 0;
-  }
 }
 @keyframes rotateOut {
   0% {
@@ -16685,21 +15660,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateOut {
-  -webkit-animation-name: rotateOut;
   animation-name: rotateOut;
-}
-
-@-webkit-keyframes rotateOutDownLeft {
-  0% {
-    transform-origin: left bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
-  100% {
-    transform-origin: left bottom;
-    transform: rotate(90deg);
-    opacity: 0;
-  }
 }
 @keyframes rotateOutDownLeft {
   0% {
@@ -16714,21 +15675,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateOutDownLeft {
-  -webkit-animation-name: rotateOutDownLeft;
   animation-name: rotateOutDownLeft;
-}
-
-@-webkit-keyframes rotateOutDownRight {
-  0% {
-    transform-origin: right bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
-  100% {
-    transform-origin: right bottom;
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
 }
 @keyframes rotateOutDownRight {
   0% {
@@ -16743,21 +15690,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateOutDownRight {
-  -webkit-animation-name: rotateOutDownRight;
   animation-name: rotateOutDownRight;
-}
-
-@-webkit-keyframes rotateOutUpLeft {
-  0% {
-    transform-origin: left bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
-  100% {
-    transform-origin: left bottom;
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
 }
 @keyframes rotateOutUpLeft {
   0% {
@@ -16772,21 +15705,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateOutUpLeft {
-  -webkit-animation-name: rotateOutUpLeft;
   animation-name: rotateOutUpLeft;
-}
-
-@-webkit-keyframes rotateOutUpRight {
-  0% {
-    transform-origin: right bottom;
-    transform: rotate(0);
-    opacity: 1;
-  }
-  100% {
-    transform-origin: right bottom;
-    transform: rotate(90deg);
-    opacity: 0;
-  }
 }
 @keyframes rotateOutUpRight {
   0% {
@@ -16801,18 +15720,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rotateOutUpRight {
-  -webkit-animation-name: rotateOutUpRight;
   animation-name: rotateOutUpRight;
-}
-
-@-webkit-keyframes slideInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 @keyframes slideInDown {
   0% {
@@ -16824,18 +15732,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .slideInDown {
-  -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
-}
-
-@-webkit-keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 @keyframes slideInLeft {
   0% {
@@ -16847,18 +15744,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .slideInLeft {
-  -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
-}
-
-@-webkit-keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 @keyframes slideInRight {
   0% {
@@ -16870,18 +15756,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .slideInRight {
-  -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
-}
-
-@-webkit-keyframes slideOutLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
 }
 @keyframes slideOutLeft {
   0% {
@@ -16893,18 +15768,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .slideOutLeft {
-  -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft;
-}
-
-@-webkit-keyframes slideOutRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
 }
 @keyframes slideOutRight {
   0% {
@@ -16916,18 +15780,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .slideOutRight {
-  -webkit-animation-name: slideOutRight;
   animation-name: slideOutRight;
-}
-
-@-webkit-keyframes slideOutUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
 }
 @keyframes slideOutUp {
   0% {
@@ -16939,65 +15792,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .slideOutUp {
-  -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
-}
-
-@-webkit-keyframes hinge {
-  0% {
-    transform: rotate(0);
-    transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-  20%, 60% {
-    transform: rotate(80deg);
-    transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-  40% {
-    transform: rotate(60deg);
-    transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-  80% {
-    transform: rotate(60deg) translateY(0);
-    opacity: 1;
-    transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-  100% {
-    transform: translateY(700px);
-    opacity: 0;
-  }
 }
 @keyframes hinge {
   0% {
     transform: rotate(0);
     transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   20%, 60% {
     transform: rotate(80deg);
     transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   40% {
     transform: rotate(60deg);
     transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   80% {
     transform: rotate(60deg) translateY(0);
     opacity: 1;
     transform-origin: top left;
-    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   100% {
@@ -17006,21 +15822,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .hinge {
-  -webkit-animation-name: hinge;
   animation-name: hinge;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-@-webkit-keyframes rollIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%) rotate(-120deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px) rotate(0deg);
-  }
-}
 @keyframes rollIn {
   0% {
     opacity: 0;
@@ -17032,21 +15837,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rollIn {
-  -webkit-animation-name: rollIn;
   animation-name: rollIn;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-@-webkit-keyframes rollOut {
-  0% {
-    opacity: 1;
-    transform: translateX(0px) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%) rotate(120deg);
-  }
-}
 @keyframes rollOut {
   0% {
     opacity: 1;
@@ -17058,7 +15852,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .rollOut {
-  -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
 
@@ -17236,8 +16029,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-radius: var(--adp-border-radius);
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
 .air-datepicker-nav--action:hover {
   background: var(--adp-background-color-hover);
@@ -17316,7 +16108,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .air-datepicker-time {
   display: grid;
-  grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
   grid-column-gap: 12px;
   align-items: center;
@@ -17544,7 +16335,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, -webkit-max-content);
   grid-template-rows: repeat(4, max-content);
   grid-template-areas: var(--adp-grid-areas);
   font-family: var(--adp-font-family), sans-serif;
