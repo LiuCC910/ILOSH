@@ -1910,7 +1910,9 @@ a:focus {
   }
 }
 .accesskey:focus {
-  color: #313131;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: 0 0px 0px 2px #000 inset, 0 0 0 1px #fff !important;
 }
 
 a.goCenter {
