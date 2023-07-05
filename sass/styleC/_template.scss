@@ -1,4 +1,5 @@
 .menu > ul {
+  padding: 0 0 1em;
   justify-content: space-between;
   & > li {
     flex-basis: auto;
@@ -31,13 +32,13 @@
   @include screen('mobile') {
     margin-top: 60px;
   }
-  &::before {
-    content: '';
-    height: 80px;
-    display: block;
-    // background: url('../images/inner_bannerC.jpg') center top no-repeat;
-    // background-size: cover;
-  }
+  // &::before {
+  //   content: '';
+  //   height: 80px;
+  //   display: block;
+  //   // background: url('../images/inner_bannerC.jpg') center top no-repeat;
+  //   // background-size: cover;
+  // }
   .blockC {
     position: absolute;
     max-width: 1200px;
@@ -79,6 +80,7 @@
   }
   //內頁標題
   h2.pageTitle {
+    display: none;
     position: absolute;
     left: 50px;
     top: 0%;
@@ -116,6 +118,7 @@
     border: none;
     box-shadow: none;
     background: none;
+    padding: 20px 50px 30px;
   }
   .center_block {
     position: relative;
