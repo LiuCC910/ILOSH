@@ -257,4 +257,11 @@
     font-size: 30px;
     margin: 0 10px;
   }
+  .innerpage .center_block .tableList {
+    flex-direction: column;
+    & > ul,
+    .downloadBlock {
+      width: 100%;
+    }
+  }
 }

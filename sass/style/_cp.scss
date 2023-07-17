@@ -397,11 +397,12 @@ h2.title {
       flex-direction: column;
     }
     & > ul {
-      // width: 60%;
+      width: 70%;
       flex-grow: 1;
       padding: 0;
       margin-top: 0;
       @include screen('tablet') {
+        width: 100%;
         align-self: stretch;
       }
       li {
@@ -447,13 +448,13 @@ h2.title {
       color: #333;
     }
     .downloadBlock {
-      width: 100%;
-      width: calc(40% - 20px);
+      width: calc(30% - 20px);
       padding: 30px;
       border-radius: 10px;
       border: 1px solid #ddd;
       margin-left: 20px;
       @include screen('tablet') {
+        width: 100%;
         margin-left: 0;
       }
       .title {

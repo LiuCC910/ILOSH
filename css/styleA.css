@@ -138,7 +138,7 @@
 .swal-icon--success__ring {
   width: 80px;
   height: 80px;
-  border: 4px solid hsla(98deg, 55%, 69%, 0.2);
+  border: 4px solid hsla(98, 55%, 69%, 0.2);
   border-radius: 50%;
   box-sizing: content-box;
   position: absolute;
@@ -485,7 +485,7 @@
   margin: 2px;
   opacity: 0.4;
   border-radius: 7px;
-  background-color: hsla(0deg, 0%, 100%, 0.9);
+  background-color: hsla(0, 0%, 100%, 0.9);
   transition: background 0.2s;
   animation: swal-loading-anim 1s infinite;
 }
@@ -1910,9 +1910,8 @@ a:focus {
   }
 }
 .accesskey:focus {
-    background: #fff !important;
-    color: #000 !important;
-    box-shadow: 0 0px 0px 2px #000 inset, 0 0 0 1px #fff !important;
+  color: #313131;
+  box-shadow: 0 0px 0px 2px #fff inset, 0 0 0 2px #000 !important;
 }
 
 a.goCenter {
@@ -12508,12 +12507,14 @@ h2.title {
   }
 }
 .tableBlock .tableList > ul {
+  width: 70%;
   flex-grow: 1;
   padding: 0;
   margin-top: 0;
 }
 @media screen and (max-width: 991px) {
   .tableBlock .tableList > ul {
+    width: 100%;
     align-self: stretch;
   }
 }
@@ -12565,8 +12566,7 @@ h2.title {
   color: #333;
 }
 .tableBlock .tableList .downloadBlock {
-  width: 100%;
-  width: calc(40% - 20px);
+  width: calc(30% - 20px);
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -12574,6 +12574,7 @@ h2.title {
 }
 @media screen and (max-width: 991px) {
   .tableBlock .tableList .downloadBlock {
+    width: 100%;
     margin-left: 0;
   }
 }
@@ -14751,6 +14752,13 @@ h2.title {
     font-size: 30px;
     margin: 0 10px;
   }
+  .innerpage .center_block .tableList {
+    flex-direction: column;
+  }
+  .innerpage .center_block .tableList > ul,
+  .innerpage .center_block .tableList .downloadBlock {
+    width: 100%;
+  }
 }
 /*!
 Animate.css - http://daneden.me/animate
@@ -15326,7 +15334,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .animated.flip {
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
   animation-name: flip;
 }
@@ -15347,7 +15354,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .flipInX {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipInX;
 }
@@ -15368,7 +15374,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .flipInY {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipInY;
 }
@@ -15384,7 +15389,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .flipOutX {
   animation-name: flipOutX;
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
 }
 @keyframes flipOutY {
@@ -15398,7 +15402,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 .flipOutY {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipOutY;
 }
