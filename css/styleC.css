@@ -13720,12 +13720,15 @@ h2.title {
   opacity: 0;
   left: -999999px;
 }
-.signup .infoBottom input:focus + label, .signup .infoBottom input:checked + label {
+.signup .infoBottom input:checked + label {
   color: #4c4da5;
 }
-.signup .infoBottom input:focus + label::before, .signup .infoBottom input:checked + label::before {
+.signup .infoBottom input:checked + label::before {
   color: #4c4da5;
-  content: "\e001";
+  content: "\e002";
+}
+.signup .infoBottom input:focus + label {
+  box-shadow: 0px 0px 0px 2px #4c4da5;
 }
 .signup .infoBottom label {
   line-height: 1;
@@ -13741,7 +13744,7 @@ h2.title {
   position: absolute;
   left: 0;
   top: -1px;
-  content: "\e002";
+  content: "\e003";
 }
 
 .login {
@@ -13838,6 +13841,9 @@ h2.title {
 }
 .loginOk .txt a:hover {
   background: #efefef;
+}
+.loginOk .txt a:focus {
+  box-shadow: 0px 0px 0px 2px #ff5001;
 }
 
 .reservationList .container {

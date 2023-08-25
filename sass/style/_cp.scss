@@ -1850,14 +1850,19 @@ h2.title {
       position: absolute;
       opacity: 0;
       left: -999999px;
-      &:focus,
       &:checked {
         & + label {
           color: lighten($secondaryColor, 10);
           &::before {
             color: lighten($secondaryColor, 10);
-            content: '\e001';
+            content: '\e002';
           }
+        }
+      }
+
+      &:focus {
+        & + label {
+          box-shadow: 0px 0px 0px 2px lighten($secondaryColor, 10);
         }
       }
     }
@@ -1874,7 +1879,7 @@ h2.title {
         position: absolute;
         left: 0;
         top: -1px;
-        content: '\e002';
+        content: '\e003';
       }
     }
   }
@@ -1971,6 +1976,9 @@ h2.title {
       }
       &:hover {
         background: #efefef;
+      }
+      &:focus {
+        box-shadow: 0px 0px 0px 2px $color-orange;
       }
     }
   }

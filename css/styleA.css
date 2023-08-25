@@ -11441,6 +11441,22 @@ table td.center {
     width: calc(100% - 75px);
   }
 }
+.mpSliderBlock .mpSlider .img-container .picBox > a {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.mpSliderBlock .mpSlider .img-container .picBox > a:focus::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  display: block;
+  z-index: 9;
+  box-shadow: 0px 0px 0px 2px #ff7334 inset;
+}
+.mpSliderBlock .mpSlider .slick-dots li.slick-active button:focus {
+  box-shadow: 0 0 0 2px #fbff03 !important;
+}
 .mpSliderBlock .mpSlider .slick-arrow {
   display: none !important;
   background-color: transparent;
@@ -13968,12 +13984,15 @@ h2.title {
   opacity: 0;
   left: -999999px;
 }
-.signup .infoBottom input:focus + label, .signup .infoBottom input:checked + label {
+.signup .infoBottom input:checked + label {
   color: #ff7334;
 }
-.signup .infoBottom input:focus + label::before, .signup .infoBottom input:checked + label::before {
+.signup .infoBottom input:checked + label::before {
   color: #ff7334;
-  content: "\e001";
+  content: "\e002";
+}
+.signup .infoBottom input:focus + label {
+  box-shadow: 0px 0px 0px 2px #ff7334;
 }
 .signup .infoBottom label {
   line-height: 1;
@@ -13989,7 +14008,7 @@ h2.title {
   position: absolute;
   left: 0;
   top: -1px;
-  content: "\e002";
+  content: "\e003";
 }
 
 .login {
@@ -14086,6 +14105,9 @@ h2.title {
 }
 .loginOk .txt a:hover {
   background: #efefef;
+}
+.loginOk .txt a:focus {
+  box-shadow: 0px 0px 0px 2px #c6461a;
 }
 
 .reservationList .container {
