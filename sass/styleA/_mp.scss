@@ -591,3 +591,8 @@
     display: block;
   }
 }
+
+.searchBlock select:focus,
+.searchBlock input:focus {
+  box-shadow: 0 0 0 2px #ff0000 !important;
+}
