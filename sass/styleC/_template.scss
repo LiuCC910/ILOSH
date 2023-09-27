@@ -369,7 +369,10 @@ footer {
 }
 
 .function_panel .function {
-  right: 40px;
+  right: 40px !important;
+}
+.function_panel .function.switchBlock {
+  right: 115px !important;
 }
 
 .innerpage {

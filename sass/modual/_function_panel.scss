@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  z-index: 9;
 
   @include screen('mobile') {
     margin: 0.6em 0;

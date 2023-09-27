@@ -274,16 +274,19 @@ $(function () {
   // password_toggle
   var passShow = false;
   $('.password_toggle').each(function (index, el) {
+    $(this).attr('title', '顯示密碼');
     $(this)
       .find('.btn-icon')
       .off()
       .click(function (e) {
         if (!passShow) {
+          $(this).attr('title', '隱藏密碼');
           $(this).children('i').removeClass().addClass('i_show');
           $(this).parents('.password_toggle').find('input[type="password"]').attr('type', 'text');
           passShow = true;
           // console.log(passShow);
         } else {
+          $(this).attr('title', '顯示密碼');
           $(this).children('i').removeClass().addClass('i_hide');
           $(this).parents('.password_toggle').find('input[type="text"]').attr('type', 'password');
           passShow = false;

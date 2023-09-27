@@ -10,6 +10,7 @@ $dlColor: #157efb, #77170e;
 $aTagColor: #32307c, #ab274a;
 $aTagHover: lighten(nth($aTagColor, 1), 0), lighten(nth($aTagColor, 2), 0);
 $aTagFocus: lighten(nth($aTagColor, 1), 0), lighten(nth($aTagColor, 2), 0);
+$focusNew: red, green;
 // $color: #049160, #751829;
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換

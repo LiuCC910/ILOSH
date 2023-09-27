@@ -162,6 +162,11 @@
       background: #034f78;
     }
   }
+  select:focus,
+  input:focus,
+  button:focus {
+    box-shadow: 0 0 0 2px #ff0000 !important;
+  }
 }
 
 //其他色系/////////////////////////////////////////////

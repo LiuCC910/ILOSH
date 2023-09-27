@@ -846,6 +846,7 @@ h2.title {
   .function_panel {
     position: absolute;
     right: 50px;
+    z-index: 9;
   }
   .downloadBtnBlock {
     display: flex;

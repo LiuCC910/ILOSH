@@ -232,13 +232,13 @@ body {
   }
 }
 
-a:focus {
-  outline: none;
-  box-shadow: 0 0px 0px 2px nth($secColor, 1) !important;
-  @include screen('mobile') {
-    box-shadow: none;
-  }
-}
+// a:focus {
+//   outline: none;
+//   box-shadow: 0 0px 0px 2px nth($secColor, 1) !important;
+//   @include screen('mobile') {
+//     box-shadow: none;
+//   }
+// }
 
 //其他色系/////////////////////////////////////////////
 @each $item in $colorStyle {
@@ -290,13 +290,13 @@ a:focus {
         }
       }
     }
-    a:focus {
-      @if $item == nth($colorStyle, 1) {
-        box-shadow: 0 0px 0px 2px nth($secColor, 1) !important;
-      } @else {
-        box-shadow: 0 0px 0px 2px nth($secColor, 2) !important;
-      }
-    }
+    // a:focus {
+    //   @if $item == nth($colorStyle, 1) {
+    //     box-shadow: 0 0px 0px 2px nth($secColor, 1) !important;
+    //   } @else {
+    //     box-shadow: 0 0px 0px 2px nth($secColor, 2) !important;
+    //   }
+    // }
 
     .searchBlock {
       .container {

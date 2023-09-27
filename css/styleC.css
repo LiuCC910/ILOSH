@@ -1911,7 +1911,6 @@ a:focus {
 }
 .accesskey:focus {
   color: #313131;
-  box-shadow: 0 0px 0px 2px #fff inset, 0 0 0 2px #000 !important;
 }
 
 a.goCenter {
@@ -5359,16 +5358,7 @@ footer .footerIcon {
 footer .footerIcon a {
   display: block;
   position: relative;
-}
-footer .footerIcon a:focus:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 0px 0px 1px #159ba0 inset;
-  z-index: 99;
+  line-height: 0;
 }
 
 .footerMenu {
@@ -8987,6 +8977,7 @@ table.table_sprite tr:nth-child(even) {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  z-index: 9;
 }
 @media screen and (max-width: 767px) {
   .function_panel {
@@ -10345,13 +10336,7 @@ table td.center {
 }
 
 .colorStyleA a:focus {
-  outline: none;
-  box-shadow: 0 0px 0px 2px #32307c inset;
-}
-@media screen and (max-width: 767px) {
-  .colorStyleA a:focus {
-    box-shadow: none;
-  }
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA a.goCenter {
   background: #32307c;
@@ -10370,13 +10355,7 @@ table td.center {
 }
 
 .colorStyleB a:focus {
-  outline: none;
-  box-shadow: 0 0px 0px 2px #ab274a inset;
-}
-@media screen and (max-width: 767px) {
-  .colorStyleB a:focus {
-    box-shadow: none;
-  }
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB a.goCenter {
   background: #77170e;
@@ -10400,17 +10379,20 @@ table td.center {
 .colorStyleA .font_size ul li a {
   background: #f1f1f1;
 }
-.colorStyleA .font_size ul li a:hover, .colorStyleA .font_size ul li a:focus {
+.colorStyleA .font_size ul li a:hover {
   background: #32307c;
 }
 .colorStyleA .font_size ul li a:focus {
-  box-shadow: 0 0 0 2px #30c9cd;
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .font_size ul li a.active {
   background: #32307c;
 }
-.colorStyleA .font_size ul li a.active:hover, .colorStyleA .font_size ul li a.active:focus {
+.colorStyleA .font_size ul li a.active:hover {
   background: #32307c;
+}
+.colorStyleA .font_size ul li a.active:focus {
+  box-shadow: 0 0 0 2px red;
 }
 
 .colorStyleB .font_size > a:hover, .colorStyleB .font_size > a:focus {
@@ -10419,17 +10401,20 @@ table td.center {
 .colorStyleB .font_size ul li a {
   background: #f1f1f1;
 }
-.colorStyleB .font_size ul li a:hover, .colorStyleB .font_size ul li a:focus {
+.colorStyleB .font_size ul li a:hover {
   background: #ab274a;
 }
 .colorStyleB .font_size ul li a:focus {
-  box-shadow: 0 0 0 2px #cf402c;
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .font_size ul li a.active {
   background: #ab274a;
 }
-.colorStyleB .font_size ul li a.active:hover, .colorStyleB .font_size ul li a.active:focus {
+.colorStyleB .font_size ul li a.active:hover {
   background: #ab274a;
+}
+.colorStyleB .font_size ul li a.active:focus {
+  box-shadow: 0 0 0 2px green;
 }
 
 .colorStyleA .menu > ul > li:hover > a {
@@ -10438,11 +10423,17 @@ table td.center {
 .colorStyleA .menu > ul > li:hover > a:after {
   border: 2px solid #32307c;
 }
-.colorStyleA .menu ul li ul li a:hover, .colorStyleA .menu ul li ul li a:focus {
+.colorStyleA .menu ul li ul li a:hover {
   background: #32307c;
 }
-.colorStyleA .menu ul li ul li.hasChild > a:hover, .colorStyleA .menu ul li ul li.hasChild > a:focus {
+.colorStyleA .menu ul li ul li a:focus {
+  box-shadow: 0 0 0 2px red;
+}
+.colorStyleA .menu ul li ul li.hasChild > a:hover {
   background: #32307c;
+}
+.colorStyleA .menu ul li ul li.hasChild > a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 
 .colorStyleB .menu > ul > li:hover > a {
@@ -10451,11 +10442,17 @@ table td.center {
 .colorStyleB .menu > ul > li:hover > a:after {
   border: 2px solid #ab274a;
 }
-.colorStyleB .menu ul li ul li a:hover, .colorStyleB .menu ul li ul li a:focus {
+.colorStyleB .menu ul li ul li a:hover {
   background: #ab274a;
 }
-.colorStyleB .menu ul li ul li.hasChild > a:hover, .colorStyleB .menu ul li ul li.hasChild > a:focus {
+.colorStyleB .menu ul li ul li a:focus {
+  box-shadow: 0 0 0 2px green;
+}
+.colorStyleB .menu ul li ul li.hasChild > a:hover {
   background: #77170e;
+}
+.colorStyleB .menu ul li ul li.hasChild > a:focus {
+  box-shadow: 0 0 0 2px green;
 }
 
 .sidebar .menu > ul > li:hover > a {
@@ -10516,7 +10513,7 @@ table td.center {
 }
 .colorStyleA .tabSet .tabContent button:focus,
 .colorStyleA .tabSet .tabContent a:focus {
-  box-shadow: 0 0px 0px 2px #30c9cd inset;
+  box-shadow: 0 0 0 2px red inset;
 }
 
 .colorStyleB .tabSet .tabItems .item::before {
@@ -10525,7 +10522,7 @@ table td.center {
 }
 .colorStyleB .tabSet .tabContent button:focus,
 .colorStyleB .tabSet .tabContent a:focus {
-  box-shadow: 0 0px 0px 2px #cf402c inset;
+  box-shadow: 0 0 0 2px green inset;
 }
 
 .colorStyleA .function_panel .function ul li.active a {
@@ -10536,16 +10533,22 @@ table td.center {
 .colorStyleA .function_panel .function ul li.active a:before {
   filter: invert(100%);
 }
-.colorStyleA .function_panel .function ul li a:hover, .colorStyleA .function_panel .function ul li a:focus {
+.colorStyleA .function_panel .function ul li a:hover {
   background: #32307c;
   border-color: #32307c;
   color: #fff;
 }
-.colorStyleA .function_panel .function ul li a:hover:before, .colorStyleA .function_panel .function ul li a:focus:before {
+.colorStyleA .function_panel .function ul li a:hover:before {
   filter: invert(100%);
 }
-.colorStyleA .function_panel .share a.shareButton:hover, .colorStyleA .function_panel .share a.shareButton:focus {
+.colorStyleA .function_panel .function ul li a:focus {
+  box-shadow: 0 0 0 2px red;
+}
+.colorStyleA .function_panel .share a.shareButton:hover {
   background: #32307c;
+}
+.colorStyleA .function_panel .share a.shareButton:focus {
+  box-shadow: 0 0 0 2px red;
 }
 
 .colorStyleB .function_panel .function ul li.active a {
@@ -10556,18 +10559,27 @@ table td.center {
 .colorStyleB .function_panel .function ul li.active a:before {
   filter: invert(100%);
 }
-.colorStyleB .function_panel .function ul li a:hover, .colorStyleB .function_panel .function ul li a:focus {
+.colorStyleB .function_panel .function ul li a:hover {
   background: #ab274a;
   border-color: #ab274a;
   color: #fff;
 }
-.colorStyleB .function_panel .function ul li a:hover:before, .colorStyleB .function_panel .function ul li a:focus:before {
+.colorStyleB .function_panel .function ul li a:hover:before {
   filter: invert(100%);
 }
-.colorStyleB .function_panel .share a.shareButton:hover, .colorStyleB .function_panel .share a.shareButton:focus {
+.colorStyleB .function_panel .function ul li a:focus {
+  box-shadow: 0 0 0 2px green;
+}
+.colorStyleB .function_panel .share a.shareButton:hover {
   background: #ab274a;
 }
+.colorStyleB .function_panel .share a.shareButton:focus {
+  box-shadow: 0 0 0 2px green;
+}
 
+.colorStyleA .mpSliderBlock .mpSlider .img-container .picBox > a:focus {
+  box-shadow: 0px 0px 0px 2px red inset;
+}
 .colorStyleA .procedureBlock .titleBox .en {
   color: #30c9cd;
 }
@@ -10596,12 +10608,15 @@ table td.center {
 }
 .colorStyleA .infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:focus,
 .colorStyleA .infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:focus {
-  box-shadow: 0 0 0 2px #30c9cd;
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .infoListBlock .infoList thead th {
   background: #000;
 }
 
+.colorStyleB .mpSliderBlock .mpSlider .img-container .picBox > a:focus {
+  box-shadow: 0px 0px 0px 2px green inset;
+}
 .colorStyleB .procedureBlock .titleBox .en {
   color: #77170e;
 }
@@ -10630,7 +10645,7 @@ table td.center {
 }
 .colorStyleB .infoListBlock .infoList th:nth-child(6) .downloadBtnBlock a:focus,
 .colorStyleB .infoListBlock .infoList td:nth-child(6) .downloadBtnBlock a:focus {
-  box-shadow: 0 0 0 2px #cf402c;
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .infoListBlock .infoList thead th {
   background: #000;
@@ -10640,9 +10655,12 @@ table td.center {
   color: #32307c;
   text-decoration: none;
 }
-.colorStyleA .cp a:hover, .colorStyleA .cp a:focus {
+.colorStyleA .cp a:hover {
   color: #32307c;
   cursor: pointer;
+}
+.colorStyleA .cp a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .cp blockquote {
   border-left: 5px solid #32307c;
@@ -10673,9 +10691,12 @@ table td.center {
   color: #ab274a;
   text-decoration: none;
 }
-.colorStyleB .cp a:hover, .colorStyleB .cp a:focus {
+.colorStyleB .cp a:hover {
   color: #ab274a;
   cursor: pointer;
+}
+.colorStyleB .cp a:focus {
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .cp blockquote {
   border-left: 5px solid #77170e;
@@ -10705,50 +10726,86 @@ table td.center {
 .colorStyleA .cascading li a {
   border-bottom: 2px solid #32307c;
 }
-.colorStyleA .cascading li a:hover, .colorStyleA .cascading li a:focus {
+.colorStyleA .cascading li a:hover {
   color: #32307c !important;
+}
+.colorStyleA .cascading li a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 
 .colorStyleB .cascading li a {
   border-bottom: 2px solid #77170e;
 }
-.colorStyleB .cascading li a:hover, .colorStyleB .cascading li a:focus {
+.colorStyleB .cascading li a:hover {
   color: #77170e !important;
 }
+.colorStyleB .cascading li a:focus {
+  box-shadow: 0 0 0 2px green;
+}
 
-.colorStyleA footer a:hover, .colorStyleA footer a:focus {
+.colorStyleA footer a:hover {
   color: #30c9cd;
 }
-.colorStyleA footer .footer_link li a:hover, .colorStyleA footer .footer_link li a:focus {
+.colorStyleA footer a:focus {
+  box-shadow: 0 0 0 2px red;
+}
+.colorStyleA footer .footer_link li a:hover {
   color: #30c9cd;
+}
+.colorStyleA footer .footer_link li a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .footerMenu ul li a:hover {
   color: #58d5d8;
 }
+.colorStyleA .footerIcon a:focus {
+  box-shadow: 0 0 0 2px red;
+}
+.colorStyleA .footerInfo .accesskey:focus {
+  color: #fff;
+}
 
-.colorStyleB footer a:hover, .colorStyleB footer a:focus {
+.colorStyleB footer a:hover {
   color: #cf402c;
 }
-.colorStyleB footer .footer_link li a:hover, .colorStyleB footer .footer_link li a:focus {
+.colorStyleB footer a:focus {
+  box-shadow: 0 0 0 2px green;
+}
+.colorStyleB footer .footer_link li a:hover {
   color: #cf402c;
+}
+.colorStyleB footer .footer_link li a:focus {
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .footerMenu ul li a:hover {
   color: #db6453;
 }
+.colorStyleB .footerIcon a:focus {
+  box-shadow: 0 0 0 2px green;
+}
+.colorStyleB .footerInfo .accesskey:focus {
+  color: #fff;
+}
 
-.colorStyleA .category a:hover, .colorStyleA .category a:focus {
+.colorStyleA .category a:hover {
   background: #32307c;
   background: linear-gradient(180deg, #32307c 59%, #413ea1 100%);
   border: #32307c solid 1px;
+}
+.colorStyleA .category a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .category a.active {
   background: #32307c;
   border: 1px solid #32307c;
 }
 
-.colorStyleB .category a:hover, .colorStyleB .category a:focus {
+.colorStyleB .category a:hover {
   background: linear-gradient(180deg, #ab274a 59%, #d1345e 100%);
   border: #ab274a solid 1px;
+}
+.colorStyleB .category a:focus {
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .category a.active {
   background: #ab274a;
@@ -10758,8 +10815,11 @@ table td.center {
 .colorStyleA .lp table td a {
   color: #32307c;
 }
-.colorStyleA .lp table td a:hover, .colorStyleA .lp table td a:focus {
+.colorStyleA .lp table td a:hover {
   color: #32307c;
+}
+.colorStyleA .lp table td a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .lp .list > ul > li > a:hover,
 .colorStyleA .lp .list ol > li > a:hover {
@@ -10773,8 +10833,11 @@ table td.center {
 .colorStyleB .lp table td a {
   color: #77170e;
 }
-.colorStyleB .lp table td a:hover, .colorStyleB .lp table td a:focus {
+.colorStyleB .lp table td a:hover {
   color: #ab274a;
+}
+.colorStyleB .lp table td a:focus {
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .lp .list > ul > li > a:hover,
 .colorStyleB .lp .list ol > li > a:hover {
@@ -10788,9 +10851,12 @@ table td.center {
 .colorStyleA .pagination span {
   color: #413ea1;
 }
-.colorStyleA .pagination .page li a:hover, .colorStyleA .pagination .page li a:focus {
+.colorStyleA .pagination .page li a:hover {
   background: #32307c;
   border: #32307c solid 1px;
+}
+.colorStyleA .pagination .page li a:focus {
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .pagination .page li.active a {
   background: #32307c;
@@ -10803,9 +10869,12 @@ table td.center {
 .colorStyleB .pagination span {
   color: #a52013;
 }
-.colorStyleB .pagination .page li a:hover, .colorStyleB .pagination .page li a:focus {
+.colorStyleB .pagination .page li a:hover {
   background: #ab274a;
   border: #ab274a solid 1px;
+}
+.colorStyleB .pagination .page li a:focus {
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .pagination .page li.active a {
   background: #ab274a;
@@ -10826,7 +10895,7 @@ table td.center {
   border: 1px solid #141432;
 }
 .colorStyleA .btn-submit:focus {
-  box-shadow: 0 0px 0px 2px #32307c !important;
+  box-shadow: 0 0 0 2px red;
 }
 .colorStyleA .btn-submit.active {
   background: #39378e;
@@ -10842,7 +10911,7 @@ table td.center {
   border: 1px solid #581426;
 }
 .colorStyleB .btn-submit:focus {
-  box-shadow: 0 0px 0px 2px #ab274a !important;
+  box-shadow: 0 0 0 2px green;
 }
 .colorStyleB .btn-submit.active {
   background: #c02c53;
@@ -10858,7 +10927,7 @@ table td.center {
   background: #30c9cd;
 }
 .colorStyleA .header .navigation .secNavList .loginBtn:focus {
-  box-shadow: 0 0 0 2px #30c9cd;
+  box-shadow: 0 0 0 2px red;
 }
 
 .colorStyleB .header > .container .sidebarCtrl span {
@@ -10871,7 +10940,7 @@ table td.center {
   background: #cf402c;
 }
 .colorStyleB .header .navigation .secNavList .loginBtn:focus {
-  box-shadow: 0 0 0 2px #cf402c;
+  box-shadow: 0 0 0 2px green;
 }
 
 @keyframes scrollZ {
@@ -11527,7 +11596,11 @@ footer {
 }
 
 .function_panel .function {
-  right: 40px;
+  right: 40px !important;
+}
+
+.function_panel .function.switchBlock {
+  right: 115px !important;
 }
 
 .innerpage .searchBlock .label {
@@ -11691,6 +11764,11 @@ footer {
 }
 .searchBlock .container .searchBtn {
   background: #034f78;
+}
+.searchBlock select:focus,
+.searchBlock input:focus,
+.searchBlock button:focus {
+  box-shadow: 0 0 0 2px #ff0000 !important;
 }
 
 .mpBanner {
@@ -12753,6 +12831,7 @@ h2.title {
 .publications_cp .function_panel {
   position: absolute;
   right: 50px;
+  z-index: 9;
 }
 .publications_cp .downloadBtnBlock {
   display: flex;

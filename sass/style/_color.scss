@@ -4,17 +4,26 @@
   #{$item} {
     //accordion//////////////////
     // tab的外框線
+    // a:focus {
+    //   outline: none;
+    //   @if $item == nth($colorStyle, 1) {
+    //     box-shadow: 0 0px 0px 2px nth($aTagFocus, 1) inset;
+    //   } @else {
+    //     box-shadow: 0 0px 0px 2px nth($aTagFocus, 2) inset;
+    //   }
+    //   @include screen('mobile') {
+    //     box-shadow: none;
+    //   }
+    // }
+
     a:focus {
-      outline: none;
       @if $item == nth($colorStyle, 1) {
-        box-shadow: 0 0px 0px 2px nth($aTagFocus, 1) inset;
+        box-shadow: 0 0 0 2px nth($focusNew, 1);
       } @else {
-        box-shadow: 0 0px 0px 2px nth($aTagFocus, 2) inset;
-      }
-      @include screen('mobile') {
-        box-shadow: none;
+        box-shadow: 0 0 0 2px nth($focusNew, 2);
       }
     }
+
     a.goCenter {
       @if $item == nth($colorStyle, 1) {
         background: nth($mainColor, 1);
@@ -76,8 +85,7 @@
         li {
           a {
             background: #f1f1f1;
-            &:hover,
-            &:focus {
+            &:hover {
               @if $item == nth($colorStyle, 1) {
                 background: nth($aTagHover, 1);
               } @else {
@@ -86,9 +94,9 @@
             }
             &:focus {
               @if $item == nth($colorStyle, 1) {
-                box-shadow: 0 0 0 2px nth($secColor, 1);
+                box-shadow: 0 0 0 2px nth($focusNew, 1);
               } @else {
-                box-shadow: 0 0 0 2px nth($secColor, 2);
+                box-shadow: 0 0 0 2px nth($focusNew, 2);
               }
             }
             &.active {
@@ -97,12 +105,18 @@
               } @else {
                 background: nth($aTagHover, 2);
               }
-              &:hover,
-              &:focus {
+              &:hover {
                 @if $item == nth($colorStyle, 1) {
                   background: nth($aTagHover, 1);
                 } @else {
                   background: nth($aTagHover, 2);
+                }
+              }
+              &:focus {
+                @if $item == nth($colorStyle, 1) {
+                  box-shadow: 0 0 0 2px nth($focusNew, 1);
+                } @else {
+                  box-shadow: 0 0 0 2px nth($focusNew, 2);
                 }
               }
             }
@@ -144,24 +158,36 @@
           ul {
             li {
               a {
-                &:hover,
-                &:focus {
+                &:hover {
                   @if $item == nth($colorStyle, 1) {
                     background: nth($aTagHover, 1);
                   } @else {
                     background: nth($aTagHover, 2);
                   }
                 }
+                &:focus {
+                  @if $item == nth($colorStyle, 1) {
+                    box-shadow: 0 0 0 2px nth($focusNew, 1);
+                  } @else {
+                    box-shadow: 0 0 0 2px nth($focusNew, 2);
+                  }
+                }
               }
             }
             li.hasChild {
               > a {
-                &:hover,
-                &:focus {
+                &:hover {
                   @if $item == nth($colorStyle, 1) {
                     background: nth($mainColor, 1);
                   } @else {
                     background: nth($mainColor, 2);
+                  }
+                }
+                &:focus {
+                  @if $item == nth($colorStyle, 1) {
+                    box-shadow: 0 0 0 2px nth($focusNew, 1);
+                  } @else {
+                    box-shadow: 0 0 0 2px nth($focusNew, 2);
                   }
                 }
               }
@@ -256,12 +282,21 @@
       }
 
       .tabContent {
+        // button:focus,
+        // a:focus {
+        //   @if $item == nth($colorStyle, 1) {
+        //     box-shadow: 0 0px 0px 2px nth($secColor, 1) inset;
+        //   } @else {
+        //     box-shadow: 0 0px 0px 2px nth($secColor, 2) inset;
+        //   }
+        // }
+
         button:focus,
         a:focus {
           @if $item == nth($colorStyle, 1) {
-            box-shadow: 0 0px 0px 2px nth($secColor, 1) inset;
+            box-shadow: 0 0 0 2px nth($focusNew, 1) inset;
           } @else {
-            box-shadow: 0 0px 0px 2px nth($secColor, 2) inset;
+            box-shadow: 0 0 0 2px nth($focusNew, 2) inset;
           }
         }
       }
@@ -293,8 +328,7 @@
               }
             }
             a {
-              &:hover,
-              &:focus {
+              &:hover {
                 @if $item == nth($colorStyle, 1) {
                   background: darken(nth($aTagHover, 1), 0);
                   border-color: darken(nth($aTagHover, 1), 0);
@@ -307,6 +341,13 @@
                   filter: invert(100%);
                 }
               }
+              &:focus {
+                @if $item == nth($colorStyle, 1) {
+                  box-shadow: 0 0 0 2px nth($focusNew, 1);
+                } @else {
+                  box-shadow: 0 0 0 2px nth($focusNew, 2);
+                }
+              }
             }
           }
         }
@@ -317,12 +358,18 @@
     .function_panel {
       .share {
         a.shareButton {
-          &:hover,
-          &:focus {
+          &:hover {
             @if $item == nth($colorStyle, 1) {
               background: darken(nth($aTagHover, 1), 0);
             } @else {
               background: darken(nth($aTagHover, 2), 0);
+            }
+          }
+          &:focus {
+            @if $item == nth($colorStyle, 1) {
+              box-shadow: 0 0 0 2px nth($focusNew, 1);
+            } @else {
+              box-shadow: 0 0 0 2px nth($focusNew, 2);
             }
           }
         }
@@ -335,6 +382,24 @@
 //mp/////////////////////////////////////////////
 @each $item in $colorStyle {
   #{$item} {
+    .mpSliderBlock {
+      .mpSlider {
+        .img-container {
+          .picBox {
+            & > a {
+              &:focus {
+                @if $item == nth($colorStyle, 1) {
+                  box-shadow: 0px 0px 0px 2px nth($focusNew, 1) inset;
+                } @else {
+                  box-shadow: 0px 0px 0px 2px nth($focusNew, 2) inset;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     //mp1 申請程序
     .procedureBlock {
       .titleBox {
@@ -429,11 +494,18 @@
                 } @else {
                   background: nth($dlColor, 2);
                 }
+                // &:focus {
+                //   @if $item == nth($colorStyle, 1) {
+                //     box-shadow: 0 0 0 2px nth($secColor, 1);
+                //   } @else {
+                //     box-shadow: 0 0 0 2px nth($secColor, 2);
+                //   }
+                // }
                 &:focus {
                   @if $item == nth($colorStyle, 1) {
-                    box-shadow: 0 0 0 2px nth($secColor, 1);
+                    box-shadow: 0 0 0 2px nth($focusNew, 1);
                   } @else {
-                    box-shadow: 0 0 0 2px nth($secColor, 2);
+                    box-shadow: 0 0 0 2px nth($focusNew, 2);
                   }
                 }
               }
@@ -462,14 +534,21 @@
           color: nth($aTagColor, 2);
         }
         text-decoration: none;
-        &:hover,
-        &:focus {
+        &:hover {
           @if $item == nth($colorStyle, 1) {
             color: nth($aTagHover, 1);
           } @else {
             color: nth($aTagHover, 2);
           }
           cursor: pointer;
+        }
+
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            box-shadow: 0 0 0 2px nth($focusNew, 1);
+          } @else {
+            box-shadow: 0 0 0 2px nth($focusNew, 2);
+          }
         }
       }
 
@@ -554,12 +633,18 @@
           } @else {
             border-bottom: 2px solid nth($mainColor, 2);
           }
-          &:hover,
-          &:focus {
+          &:hover {
             @if $item == nth($colorStyle, 1) {
               color: nth($mainColor, 1) !important;
             } @else {
               color: nth($mainColor, 2) !important;
+            }
+          }
+          &:focus {
+            @if $item == nth($colorStyle, 1) {
+              box-shadow: 0 0 0 2px nth($focusNew, 1);
+            } @else {
+              box-shadow: 0 0 0 2px nth($focusNew, 2);
             }
           }
         }
@@ -573,12 +658,18 @@
   #{$item} {
     footer {
       a {
-        &:hover,
-        &:focus {
+        &:hover {
           @if $item == nth($colorStyle, 1) {
             color: nth($secColor, 1);
           } @else {
             color: nth($secColor, 2);
+          }
+        }
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            box-shadow: 0 0 0 2px nth($focusNew, 1);
+          } @else {
+            box-shadow: 0 0 0 2px nth($focusNew, 2);
           }
         }
       }
@@ -586,12 +677,19 @@
       .footer_link {
         li {
           a {
-            &:hover,
-            &:focus {
+            &:hover {
               @if $item == nth($colorStyle, 1) {
                 color: nth($secColor, 1);
               } @else {
                 color: nth($secColor, 2);
+              }
+            }
+
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                box-shadow: 0 0 0 2px nth($focusNew, 1);
+              } @else {
+                box-shadow: 0 0 0 2px nth($focusNew, 2);
               }
             }
           }
@@ -614,6 +712,22 @@
         }
       }
     }
+
+    .footerIcon a {
+      &:focus {
+        @if $item == nth($colorStyle, 1) {
+          box-shadow: 0 0 0 2px nth($focusNew, 1);
+        } @else {
+          box-shadow: 0 0 0 2px nth($focusNew, 2);
+        }
+      }
+    }
+
+    .footerInfo .accesskey {
+      &:focus {
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -625,8 +739,7 @@
         @if $item == nth($colorStyle, 1) {
         } @else {
         }
-        &:hover,
-        &:focus {
+        &:hover {
           @if $item == nth($colorStyle, 1) {
             background: nth($aTagHover, 1);
             background: linear-gradient(180deg, nth($aTagHover, 1) 59%, lighten(nth($aTagHover, 1), 10) 100%);
@@ -634,6 +747,13 @@
           } @else {
             background: linear-gradient(180deg, nth($aTagHover, 2) 59%, lighten(nth($aTagHover, 2), 10) 100%);
             border: nth($aTagHover, 2) solid 1px;
+          }
+        }
+        &:focus {
+          @if $item == nth($colorStyle, 1) {
+            box-shadow: 0 0 0 2px nth($focusNew, 1);
+          } @else {
+            box-shadow: 0 0 0 2px nth($focusNew, 2);
           }
         }
         &.active {
@@ -662,12 +782,18 @@
             } @else {
               color: nth($mainColor, 2);
             }
-            &:hover,
-            &:focus {
+            &:hover {
               @if $item == nth($colorStyle, 1) {
                 color: nth($aTagHover, 1);
               } @else {
                 color: nth($aTagHover, 2);
+              }
+            }
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                box-shadow: 0 0 0 2px nth($focusNew, 1);
+              } @else {
+                box-shadow: 0 0 0 2px nth($focusNew, 2);
               }
             }
           }
@@ -714,14 +840,20 @@
       .page {
         li {
           a {
-            &:hover,
-            &:focus {
+            &:hover {
               @if $item == nth($colorStyle, 1) {
                 background: nth($aTagHover, 1);
                 border: nth($aTagHover, 1) solid 1px;
               } @else {
                 background: nth($aTagHover, 2);
                 border: nth($aTagHover, 2) solid 1px;
+              }
+            }
+            &:focus {
+              @if $item == nth($colorStyle, 1) {
+                box-shadow: 0 0 0 2px nth($focusNew, 1);
+              } @else {
+                box-shadow: 0 0 0 2px nth($focusNew, 2);
               }
             }
           }
@@ -773,11 +905,18 @@
           border: 1px solid darken(nth($aTagHover, 2), 20);
         }
       }
+      // &:focus {
+      //   @if $item == nth($colorStyle, 1) {
+      //     box-shadow: 0 0px 0px 2px nth($aTagFocus, 1) !important;
+      //   } @else {
+      //     box-shadow: 0 0px 0px 2px nth($aTagFocus, 2) !important;
+      //   }
+      // }
       &:focus {
         @if $item == nth($colorStyle, 1) {
-          box-shadow: 0 0px 0px 2px nth($aTagFocus, 1) !important;
+          box-shadow: 0 0 0 2px nth($focusNew, 1);
         } @else {
-          box-shadow: 0 0px 0px 2px nth($aTagFocus, 2) !important;
+          box-shadow: 0 0 0 2px nth($focusNew, 2);
         }
       }
       &.active {
@@ -822,11 +961,18 @@
                 background: nth($secColor, 2);
               }
             }
+            // &:focus {
+            //   @if $item == nth($colorStyle, 1) {
+            //     box-shadow: 0 0 0 2px nth($secColor, 1);
+            //   } @else {
+            //     box-shadow: 0 0 0 2px nth($secColor, 2);
+            //   }
+            // }
             &:focus {
               @if $item == nth($colorStyle, 1) {
-                box-shadow: 0 0 0 2px nth($secColor, 1);
+                box-shadow: 0 0 0 2px nth($focusNew, 1);
               } @else {
-                box-shadow: 0 0 0 2px nth($secColor, 2);
+                box-shadow: 0 0 0 2px nth($focusNew, 2);
               }
             }
           }

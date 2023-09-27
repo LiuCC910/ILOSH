@@ -242,7 +242,6 @@
     display: block;
     background: url('../images/index/reserve_arrow.svg') no-repeat;
   }
-  &:focus,
   &:hover {
     color: #fff;
     &:before {
@@ -253,6 +252,10 @@
       animation: rightAnimation 1s infinite $cubic;
     }
   }
+
+  // &:focus {
+  //   box-shadow: 0 0 0 2px yellow inset !important;
+  // }
 }
 //title區塊
 .titleBox {
@@ -593,6 +596,11 @@
 }
 
 .searchBlock select:focus,
-.searchBlock input:focus {
+.searchBlock input:focus,
+.searchBlock button:focus {
   box-shadow: 0 0 0 2px #ff0000 !important;
+}
+
+html {
+  scroll-padding-top: 150px;
 }
