@@ -139,6 +139,10 @@ $(function () {
       .on('keydown', function (e) {
         if (e.originalEvent.key === 'Tab' && !e.originalEvent.shiftKey) {
           e.preventDefault();
+          hideSidebar();
+          setTimeout(() => {
+            $('#aC').focus();
+          }, 100);
         }
       });
   });
